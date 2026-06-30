@@ -1,7 +1,6 @@
 # 🧠 Local AI Data Analyst
 
-A **ChatGPT-style AI chatbot** that helps you analyze data, PDFs, and images conversationally using **Groq API** (LLaMA 3.3 70B + LLaMA 3.2 Vision).  
-**Free API key** — no credit card required.
+A **ChatGPT-style AI chatbot** that helps you analyze data, PDFs, and images conversationally using **Groq API** 
 
 ---
 
