@@ -1,7 +1,0 @@
-streamlit
-pandas
-requests
-matplotlib
-openpyxl
-pypdf
-python-dotenv
