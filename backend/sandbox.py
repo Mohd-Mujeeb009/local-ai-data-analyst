@@ -2,19 +2,34 @@
 Restricted execution of model-generated pandas code.
 
 The LLM writes a short pandas snippet; we run it against the real DataFrame so
-answers are computed rather than guessed. Since that code is untrusted, it is
-screened by an AST whitelist before it ever reaches `exec`, then run with a
-stripped namespace and a wall-clock timeout.
+answers are computed rather than guessed. That code is untrusted, so it is
+screened by an AST allowlist before it runs, and then run in a separate process
+with hard resource limits.
 
-The screen is deliberately conservative: anything it does not explicitly
-recognise is rejected. A false rejection costs one retry; a false acceptance
-costs arbitrary code execution.
+Two independent layers, because either alone is insufficient:
+
+  1. The AST screen decides what code is *permitted to exist*. It is an
+     ALLOWLIST. An earlier blocklist version of this screen was escapable in
+     one line - `pd.io.common.get_handle(path, 'w')` wrote arbitrary files and
+     `np.ctypeslib.load_library` loaded libc - because every module reachable
+     by walking the pandas/numpy object graph was implicitly permitted. A
+     blocklist here has to be exhaustive over a graph that grows with every
+     dependency release, which is not a property anyone can maintain.
+
+  2. The subprocess bounds what permitted code is *able to consume*. The screen
+     cannot reason about cost: `df.merge(df, how='cross')` is ordinary pandas
+     and will exhaust memory on a large frame. Only an OS limit stops that.
 """
 
 import ast
-import threading
+import os
+import pickle
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
 
-from backend.config import CODE_TIMEOUT_SECONDS
+from backend.config import CODE_TIMEOUT_SECONDS, SANDBOX_MEMORY_MB
 
 # Builtins the generated code is allowed to touch. Everything else - including
 # open, eval, exec, __import__, getattr, compile - is absent from the namespace.
@@ -27,39 +42,78 @@ SAFE_BUILTINS = {
     "zip": zip,
 }
 
-# Names the snippet may reference. Injected by the executor.
+# Names the snippet may reference at module level. Injected by the executor.
 ALLOWED_NAMES = {"df", "pd", "np", "result"} | set(SAFE_BUILTINS)
 
-# Attribute names that are never allowed, regardless of receiver. These are the
-# usual escapes out of a restricted namespace via the object graph.
-FORBIDDEN_ATTRS = {
-    "eval", "exec", "compile", "open", "system", "popen", "spawn", "query",
-    # numpy file IO, which is not covered by the read_/to_ rule below
-    "fromfile", "tofile", "load", "save", "savez", "savez_compressed",
-    "memmap", "genfromtxt", "loadtxt", "savetxt", "fromregex",
-    "__class__", "__bases__", "__subclasses__", "__globals__", "__code__",
-    "__closure__", "__dict__", "__mro__", "__builtins__", "__import__",
-    "__getattribute__", "__reduce__", "__reduce_ex__",
+# Roots whose attribute chains are depth-limited. `pd.to_datetime` is a
+# function; `pd.io.common.get_handle` is a walk into the module graph. One level
+# is the line between the two.
+DEPTH_LIMITED_ROOTS = {"pd", "np"}
+
+# Attributes permitted on any value: DataFrame, Series, GroupBy, Index, and the
+# .str/.dt accessors. Analysis vocabulary only - nothing that reaches a file,
+# a socket, a database, or the interpreter.
+ALLOWED_ATTRS = {
+    # aggregation and statistics
+    "sum", "mean", "median", "min", "max", "count", "size", "nunique", "std",
+    "var", "quantile", "mode", "prod", "agg", "aggregate", "apply", "map",
+    "transform", "describe", "corr", "cov", "skew", "kurt", "sem", "any",
+    "all", "idxmax", "idxmin", "value_counts", "rank", "first", "last",
+    "cumsum", "cumprod", "cummax", "cummin", "diff", "pct_change", "nlargest",
+    "nsmallest", "clip", "abs", "round", "corrwith", "cumcount", "ngroup",
+    # elementwise arithmetic and comparison, used for shares and ratios
+    "add", "sub", "mul", "div", "truediv", "floordiv", "mod", "pow",
+    "radd", "rsub", "rmul", "rdiv", "gt", "lt", "ge", "le", "eq", "ne",
+    # selection and ordering
+    "loc", "iloc", "at", "iat", "head", "tail", "sample", "filter", "take",
+    "get", "where", "mask", "between", "isin", "unique", "drop",
+    "drop_duplicates", "duplicated", "sort_values", "sort_index", "nth",
+    # reshaping
+    "groupby", "pivot", "pivot_table", "melt", "stack", "unstack", "merge",
+    "join", "assign", "explode", "transpose", "squeeze", "reindex", "align",
+    "combine_first", "rename", "rename_axis", "reset_index", "set_index",
+    "add_prefix", "add_suffix", "swaplevel", "droplevel", "select_dtypes",
+    # cleaning and typing
+    "astype", "copy", "fillna", "dropna", "isna", "notna", "isnull", "notnull",
+    "replace", "infer_objects", "convert_dtypes",
+    # time series and windows
+    "resample", "rolling", "expanding", "ewm", "shift", "asfreq", "tz_localize",
+    "tz_convert", "to_period", "to_timestamp", "normalize", "floor", "ceil",
+    "date", "time", "year", "month", "day", "hour", "minute", "second",
+    "dayofweek", "day_name", "month_name", "quarter", "dayofyear",
+    "days_in_month", "is_month_start", "is_month_end", "is_quarter_start",
+    "is_quarter_end", "is_year_start", "is_year_end", "days", "seconds",
+    "total_seconds", "weekday", "strftime", "isocalendar",
+    # string accessor
+    "contains", "startswith", "endswith", "lower", "upper", "title", "strip",
+    "lstrip", "rstrip", "split", "rsplit", "extract", "findall", "match",
+    "zfill", "pad", "capitalize", "swapcase", "find", "cat", "len", "slice",
+    "removeprefix", "removesuffix",
+    # accessors and metadata
+    "str", "dt", "index", "columns", "values", "shape", "dtypes", "dtype",
+    "name", "names", "empty", "ndim", "array", "T", "nlevels", "is_unique",
+    # in-memory conversion
+    "to_frame", "to_list", "tolist", "to_dict", "to_numpy", "to_records",
+    "to_string", "items", "keys",
 }
 
-# Every pandas `read_*` reaches a file, URL, database or clipboard, so the whole
-# prefix is refused. `to_*` is mostly file IO too, but a handful are pure
-# in-memory conversions that idiomatic pandas depends on - those are named here
-# and everything else with the prefix is blocked.
-SAFE_TO_CONVERTERS = {
-    "to_frame", "to_series", "to_list", "to_dict", "to_numpy", "to_records",
-    "to_string", "to_datetime", "to_numeric", "to_timedelta", "to_period",
-    "to_timestamp", "to_pydatetime", "to_flat_index", "to_julian_date",
+# Attributes permitted directly on `pd` or `np`, one level deep.
+ALLOWED_MODULE_ATTRS = {
+    # pandas constructors and helpers
+    "DataFrame", "Series", "Index", "MultiIndex", "Categorical", "Grouper",
+    "concat", "merge", "pivot_table", "crosstab", "cut", "qcut", "date_range",
+    "period_range", "timedelta_range", "to_datetime", "to_numeric",
+    "to_timedelta", "factorize", "get_dummies", "melt", "unique", "isna",
+    "notna", "NA", "NaT", "Timestamp", "Timedelta", "Period", "IndexSlice",
+    # numpy functions and constants
+    "mean", "median", "sum", "std", "var", "min", "max", "abs", "round",
+    "sqrt", "log", "log2", "log10", "exp", "power", "where", "nan", "inf",
+    "percentile", "quantile", "corrcoef", "arange", "linspace", "array",
+    "isnan", "isinf", "isfinite", "clip", "dot", "cumsum", "cumprod", "sign",
+    "floor", "ceil", "maximum", "minimum", "argmax", "argmin", "sort",
+    "concatenate", "histogram", "digitize", "pi", "e", "number",
+    "average", "count_nonzero", "nan_to_num", "int64", "float64", "bool_",
 }
-
-
-def _forbidden_attr(name):
-    """Report whether an attribute name is refused by the screen."""
-    if name in FORBIDDEN_ATTRS or name.startswith("_"):
-        return True
-    if name.startswith("read_"):
-        return True
-    return name.startswith("to_") and name not in SAFE_TO_CONVERTERS
 
 # Node types the snippet may contain. Comprehensions and lambdas are allowed
 # because idiomatic pandas leans on them; imports, `with`, `try`, `global`,
@@ -85,125 +139,259 @@ class UnsafeCodeError(ValueError):
 
 
 class CodeTimeoutError(RuntimeError):
-    """Raised when generated code exceeds the wall-clock budget."""
+    """Raised when generated code exceeds its wall-clock or CPU budget."""
+
+
+class CodeMemoryError(RuntimeError):
+    """Raised when generated code exceeds its memory budget."""
+
+
+def _attribute_root(node):
+    """
+    Return the Name at the base of an unbroken attribute chain, or None.
+
+    `pd.io.common` roots at Name("pd"). `pd.to_datetime(x).dt` roots at None,
+    because a Call interrupts the chain - that `.dt` is an attribute of a
+    result, not a walk into the pandas package.
+    """
+    current = node
+    while isinstance(current, ast.Attribute):
+        current = current.value
+    return current if isinstance(current, ast.Name) else None
+
+
+def _attribute_depth(node):
+    """Count how many attribute hops separate `node` from its root Name."""
+    depth = 0
+    current = node
+    while isinstance(current, ast.Attribute):
+        depth += 1
+        current = current.value
+    return depth
+
+
+def _check_attribute(node):
+    """
+    Screen one attribute access.
+
+    Raises:
+        UnsafeCodeError: If the attribute is not permitted.
+    """
+    name = node.attr
+
+    # Dunder and private attributes are the classic route out of a restricted
+    # namespace via the object graph (__class__ -> __subclasses__ -> anything).
+    if name.startswith("_"):
+        raise UnsafeCodeError(f"Disallowed attribute access: .{name}")
+
+    root = _attribute_root(node)
+    if root is not None and root.id in DEPTH_LIMITED_ROOTS:
+        if _attribute_depth(node) > 1:
+            raise UnsafeCodeError(
+                f"Disallowed module traversal: {root.id}...{name}. "
+                f"Only single-level access such as {root.id}.to_datetime is permitted."
+            )
+        if name not in ALLOWED_MODULE_ATTRS:
+            raise UnsafeCodeError(f"Disallowed attribute access: {root.id}.{name}")
+        return
+
+    if name not in ALLOWED_ATTRS:
+        raise UnsafeCodeError(
+            f"Disallowed attribute access: .{name}. "
+            "Only pandas analysis methods are permitted."
+        )
 
 
 def validate(code):
     """
-    Screen a code string against the AST whitelist.
+    Screen a code string against the AST allowlist.
 
     Args:
         code: The pandas snippet produced by the model.
 
+    Returns:
+        ast.Module: The parsed tree, for callers that want to inspect it.
+
     Raises:
         UnsafeCodeError: If the snippet fails to parse or contains anything
-            outside the whitelist.
+            outside the allowlist.
     """
     try:
         tree = ast.parse(code, mode="exec")
     except SyntaxError as exc:
         raise UnsafeCodeError(f"Generated code is not valid Python: {exc.msg}") from exc
 
-    for node in ast.walk(tree):
-        if not isinstance(node, ALLOWED_NODES):
-            raise UnsafeCodeError(
-                f"Disallowed syntax: {type(node).__name__}. "
-                "Only plain pandas expressions are permitted."
-            )
-
-        if isinstance(node, ast.Attribute) and _forbidden_attr(node.attr):
-            raise UnsafeCodeError(f"Disallowed attribute access: .{node.attr}")
-
-        # Comprehension and lambda targets are bound locally, so they are
-        # resolved separately rather than required in the global allowlist.
-        if (
-            isinstance(node, ast.Name)
-            and node.id not in ALLOWED_NAMES
-            and not _is_locally_bound(tree, node.id)
-        ):
-            raise UnsafeCodeError(
-                f"Unknown name '{node.id}'. Only df, pd and np are available."
-            )
-
+    # Module scope: the injected names plus whatever the snippet assigns at top
+    # level. A genuine use-before-assignment is a NameError inside the child,
+    # which is a reporting problem rather than a safety one.
+    scope = set(ALLOWED_NAMES) | _module_assignments(tree)
+    _check_tree(tree, scope)
     return tree
 
 
-def _is_locally_bound(tree, name):
-    """Report whether `name` is introduced by a comprehension, lambda or assignment."""
-    for node in ast.walk(tree):
-        if isinstance(node, ast.comprehension):
-            for target in ast.walk(node.target):
-                if isinstance(target, ast.Name) and target.id == name:
-                    return True
-        elif isinstance(node, ast.Lambda):
-            args = node.args
-            for arg in [*args.args, *args.posonlyargs, *args.kwonlyargs]:
-                if arg.arg == name:
-                    return True
-        elif isinstance(node, (ast.Assign, ast.AugAssign, ast.AnnAssign)):
+def _module_assignments(tree):
+    """Collect names bound by top-level assignment statements."""
+    names = set()
+    for node in tree.body:
+        if isinstance(node, (ast.Assign, ast.AugAssign, ast.AnnAssign)):
             targets = node.targets if isinstance(node, ast.Assign) else [node.target]
             for target in targets:
-                for sub in ast.walk(target):
-                    if isinstance(sub, ast.Name) and sub.id == name:
-                        return True
-    return False
+                names |= _target_names(target)
+    return names
+
+
+def _target_names(target):
+    """Collect the names bound by an assignment or comprehension target."""
+    return {n.id for n in ast.walk(target) if isinstance(n, ast.Name)}
+
+
+def _check_tree(node, scope):
+    """
+    Recursively screen a node against the set of names visible to it.
+
+    Scope is carried down rather than pooled across the whole tree: a name
+    introduced by one comprehension is visible inside that comprehension and
+    nowhere else. Pooling them would let `[x for x in df.columns]` authorise a
+    bare `x` elsewhere in the snippet.
+
+    Raises:
+        UnsafeCodeError: On disallowed syntax, attributes or names.
+    """
+    if not isinstance(node, ALLOWED_NODES):
+        raise UnsafeCodeError(
+            f"Disallowed syntax: {type(node).__name__}. "
+            "Only plain pandas expressions are permitted."
+        )
+
+    if isinstance(node, ast.Attribute):
+        _check_attribute(node)
+        _check_tree(node.value, scope)
+        return
+
+    if isinstance(node, ast.Name):
+        if node.id not in scope:
+            raise UnsafeCodeError(
+                f"Unknown name '{node.id}'. Only df, pd and np are available."
+            )
+        return
+
+    if isinstance(node, (ast.ListComp, ast.SetComp, ast.GeneratorExp, ast.DictComp)):
+        inner = set(scope)
+        for generator in node.generators:
+            # The iterable is evaluated in the scope established so far, before
+            # this generator's own target is bound.
+            _check_tree(generator.iter, inner)
+            inner |= _target_names(generator.target)
+            for condition in generator.ifs:
+                _check_tree(condition, inner)
+        if isinstance(node, ast.DictComp):
+            _check_tree(node.key, inner)
+            _check_tree(node.value, inner)
+        else:
+            _check_tree(node.elt, inner)
+        return
+
+    if isinstance(node, ast.Lambda):
+        args = node.args
+        for default in [*args.defaults, *[d for d in args.kw_defaults if d]]:
+            _check_tree(default, scope)  # defaults evaluate in the outer scope
+        inner = set(scope) | {
+            a.arg for a in [*args.posonlyargs, *args.args, *args.kwonlyargs]
+        }
+        _check_tree(node.body, inner)
+        return
+
+    for child in ast.iter_child_nodes(node):
+        _check_tree(child, scope)
 
 
 def execute(code, df):
     """
-    Validate and run a generated pandas snippet against a DataFrame.
+    Validate and run a generated pandas snippet in an isolated subprocess.
 
     The snippet is expected to bind its answer to a name called `result`.
 
+    A fresh interpreter per query costs roughly a second of startup. That is
+    paid alongside an LLM call that costs several, and it buys the only bound
+    that actually holds: a runaway or allocation-heavy expression dies with its
+    own process instead of taking the Streamlit server down.
+
     Args:
         code: The pandas snippet.
-        df: The DataFrame to expose as `df`. Passed as a copy so generated code
-            cannot mutate the session's data.
+        df: The DataFrame to expose as `df`. It is serialised to the child, so
+            generated code cannot mutate the session's data.
 
     Returns:
         The value bound to `result`.
 
     Raises:
         UnsafeCodeError: If the snippet fails the AST screen.
-        CodeTimeoutError: If it runs longer than CODE_TIMEOUT_SECONDS.
-        RuntimeError: If it raises, or never assigns `result`.
+        CodeTimeoutError: If it exceeds CODE_TIMEOUT_SECONDS or its CPU budget.
+        CodeMemoryError: If it exceeds SANDBOX_MEMORY_MB.
+        RuntimeError: If it raises, never assigns `result`, or dies unexpectedly.
     """
-    import numpy as np
-    import pandas as pd
-
     validate(code)
 
-    namespace = {
-        "__builtins__": SAFE_BUILTINS,
-        "df": df.copy(),
-        "pd": pd,
-        "np": np,
-    }
+    project_root = Path(__file__).resolve().parent.parent
 
-    box = {}
+    with tempfile.TemporaryDirectory(prefix="analyst_sandbox_") as workdir:
+        input_path = Path(workdir) / "job.pkl"
+        output_path = Path(workdir) / "out.pkl"
 
-    def run():
-        try:
-            exec(code, namespace)  # noqa: S102 - screened above, restricted namespace
-        except Exception as exc:  # surfaced to the caller, not swallowed
-            box["error"] = exc
+        with open(input_path, "wb") as handle:
+            pickle.dump(
+                {
+                    "code": code,
+                    "df": df,
+                    "builtins": SAFE_BUILTINS,
+                    "memory_mb": SANDBOX_MEMORY_MB,
+                    "cpu_seconds": CODE_TIMEOUT_SECONDS,
+                },
+                handle,
+            )
 
-    # A daemon thread gives us a wall-clock bound. Python cannot forcibly kill a
-    # thread, so a runaway snippet is abandoned rather than stopped - acceptable
-    # because the namespace holds no resources worth reclaiming.
-    worker = threading.Thread(target=run, daemon=True)
-    worker.start()
-    worker.join(timeout=CODE_TIMEOUT_SECONDS)
+        # PYTHONPATH rather than cwd, so the worker resolves `backend` no matter
+        # where Streamlit was started from.
+        env = dict(os.environ)
+        env["PYTHONPATH"] = str(project_root) + os.pathsep + env.get("PYTHONPATH", "")
 
-    if worker.is_alive():
-        raise CodeTimeoutError(
-            f"Analysis exceeded {CODE_TIMEOUT_SECONDS}s and was abandoned."
+        process = subprocess.Popen(
+            [sys.executable, "-m", "backend.sandbox_worker",
+             str(input_path), str(output_path)],
+            cwd=str(project_root),
+            env=env,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.PIPE,
         )
 
-    if "error" in box:
-        raise RuntimeError(f"{type(box['error']).__name__}: {box['error']}")
+        try:
+            _, stderr = process.communicate(timeout=CODE_TIMEOUT_SECONDS)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            process.communicate()
+            raise CodeTimeoutError(
+                f"Analysis exceeded {CODE_TIMEOUT_SECONDS}s and was terminated."
+            ) from None
 
-    if "result" not in namespace:
-        raise RuntimeError("Generated code did not assign a variable named 'result'.")
+        if not output_path.exists():
+            detail = (stderr or b"").decode("utf-8", "replace").strip()
+            # A child killed by the kernel's OOM reaper or an rlimit leaves no
+            # output file; MemoryError in the message distinguishes it from a
+            # genuine crash.
+            if "MemoryError" in detail or process.returncode in (-9, 137):
+                raise CodeMemoryError(
+                    f"Analysis exceeded the {SANDBOX_MEMORY_MB} MB memory limit."
+                )
+            raise RuntimeError(
+                f"Analysis process exited with code {process.returncode}"
+                + (f": {detail.splitlines()[-1]}" if detail else "")
+            )
 
-    return namespace["result"]
+        with open(output_path, "rb") as handle:
+            status, payload = pickle.load(handle)
+
+    if status == "memory":
+        raise CodeMemoryError(f"Analysis {payload}.")
+    if status == "error":
+        raise RuntimeError(payload)
+    return payload

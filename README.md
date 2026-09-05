@@ -112,7 +112,8 @@ budget, code timeout, and history depth.
 │   ├── prompts.py          # planner / explainer / document / vision prompts
 │   ├── context.py          # schema description — never bulk data
 │   ├── file_handler.py     # loading with size and format guards
-│   ├── sandbox.py          # AST whitelist + restricted exec + timeout
+│   ├── sandbox.py          # AST allowlist + subprocess isolation
+│   ├── sandbox_worker.py   # the isolated child process
 │   ├── analysis.py         # plan → execute → explain pipeline
 │   └── llm_client.py       # Groq client, streaming, model resolution
 ├── frontend/
@@ -120,28 +121,55 @@ budget, code timeout, and history depth.
 │   ├── state.py            # session state
 │   └── charts.py           # spec-driven chart rendering
 ├── examples/               # sample dataset
-└── tests/                  # 99 tests
+└── tests/                  # 127 tests
 ```
 
 ### The sandbox
 
-Generated code is untrusted, so it is screened before it runs:
+Generated code is untrusted. Two independent layers contain it, because either
+one alone is insufficient.
 
-- **AST whitelist** — only expressions, assignments, comprehensions and lambdas.
-  No imports, loops, `with`, `try`, function or class definitions, or `del`.
-- **Attribute blocklist** — every leading-underscore attribute is refused, which
-  closes the `__class__` / `__subclasses__` route out of a restricted namespace.
-- **Name whitelist** — only `df`, `pd`, `np` and locally-bound names resolve.
-- **No file or network IO** — every `read_*` is refused, as is every `to_*` other
-  than a named set of in-memory converters, closing `pd.read_csv`, `df.to_csv`
-  and `np.fromfile` as exfiltration paths.
+**Layer 1 — an AST allowlist decides what code may exist.**
+
+- **Syntax allowlist** — expressions, assignments, comprehensions and lambdas
+  only. No imports, loops, `with`, `try`, function or class definitions, `del`.
+- **Attribute allowlist** — roughly 200 permitted pandas analysis methods.
+  Anything not on the list is refused, including every leading-underscore
+  attribute, which closes the `__class__` → `__subclasses__` route.
+- **Depth limit on `pd` and `np`** — `pd.to_datetime` is a function call and is
+  allowed; `pd.io.common.get_handle` is a walk into the module graph and is not.
+- **Scope-aware name resolution** — a name bound by a comprehension or lambda is
+  visible only inside it.
 - **No builtins** — `open`, `eval`, `exec`, `__import__` and `getattr` are absent
-  from the namespace entirely, not merely discouraged.
-- **Timeout** — execution is abandoned after 10 seconds.
-- **Copied frame** — generated code cannot mutate your session data.
+  from the namespace, not merely discouraged.
 
-This is defence in depth for a single-user local tool. It is not a substitute for
-OS-level isolation if you expose the app to untrusted users.
+This layer is an allowlist because a blocklist here was escapable in one line.
+Two confirmed escapes are now regression tests: `pd.io.common.get_handle` wrote
+arbitrary files and `np.ctypeslib.load_library` loaded libc into the process.
+Both passed a name-based blocklist, because every module reachable by walking
+the pandas and numpy object graph was implicitly permitted — a set that grows
+with every dependency release.
+
+**Layer 2 — a subprocess bounds what permitted code may consume.**
+
+The screen cannot reason about cost. `df.merge(df, how='cross')` is ordinary
+pandas that no allowlist should reject, and it will exhaust memory on a large
+frame. So each snippet runs in a fresh interpreter with:
+
+- a 10-second wall-clock kill, escalating to SIGKILL;
+- `RLIMIT_AS` capped at 2 GB and `RLIMIT_CPU` at 10 seconds;
+- a serialised copy of the frame, so your session data cannot be mutated.
+
+That costs about 0.7 s of interpreter startup per query, paid alongside an LLM
+call that costs several.
+
+> **Platform note:** `RLIMIT_AS` and `RLIMIT_CPU` are POSIX-only. On Windows the
+> hard memory cap is unavailable — a `MemoryError` raised inside the child is
+> still caught and reported, but there is no OS-enforced ceiling. The wall-clock
+> kill works on every platform. Deploy on Linux if the memory bound matters.
+
+This is defence in depth for a single-user tool. It is not a substitute for
+container or VM isolation if you expose the app to untrusted users.
 
 ---
 

@@ -38,7 +38,8 @@ MAX_PREVIEW_ROWS = 5          # sample rows shown to the model
 MAX_SCHEMA_COLUMNS = 60       # truncate very wide schemas
 MAX_RESULT_CHARS = 4_000      # cap the executed result fed back to the model
 HISTORY_TURNS = 8             # how many prior messages to resend
-CODE_TIMEOUT_SECONDS = 10     # wall clock limit for generated pandas
+CODE_TIMEOUT_SECONDS = 10     # wall clock and CPU limit for generated pandas
+SANDBOX_MEMORY_MB = 2048      # address-space cap for the sandbox child (POSIX only)
 
 
 def candidates(raw):
