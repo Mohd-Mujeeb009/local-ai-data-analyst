@@ -11,17 +11,25 @@ import os
 
 # --- Models -----------------------------------------------------------------
 # Ordered by preference. The first one the account can actually reach wins.
+#
+# The Llama entries below are all past their Groq shutdown date for free and
+# developer tiers (llama-3.3-70b-versatile and llama-3.1-8b-instant on
+# 2026-08-16, llama-4-scout on 2026-07-17). They are kept as trailing fallbacks
+# only because enterprise accounts with committed spend are unaffected, and
+# `resolve_model` probes availability before choosing. The replacements at the
+# front are the ones Groq itself recommends for those retirements.
 TEXT_MODEL_CANDIDATES = [
     os.environ.get("GROQ_TEXT_MODEL", "").strip(),
-    "llama-3.3-70b-versatile",
-    "llama-3.1-8b-instant",
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
+    "llama-3.3-70b-versatile",  # enterprise tier only since 2026-08-16
 ]
 
 VISION_MODEL_CANDIDATES = [
     os.environ.get("GROQ_VISION_MODEL", "").strip(),
-    "meta-llama/llama-4-scout-17b-16e-instruct",
-    "meta-llama/llama-4-maverick-17b-128e-instruct",
-    "llama-3.2-11b-vision-preview",
+    "qwen/qwen3.6-27b",
+    "qwen/qwen3.8-27b",
+    "meta-llama/llama-4-scout-17b-16e-instruct",  # enterprise tier only since 2026-07-17
 ]
 
 # --- Generation settings ----------------------------------------------------

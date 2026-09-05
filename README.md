@@ -56,7 +56,8 @@ the work instead of trusting it.
 - **Self-correcting.** If generated code fails, the error is fed back for one
   informed retry.
 - **Model fallback.** Model IDs resolve through a candidate list at runtime, so a
-  provider retirement degrades instead of breaking.
+  provider retirement degrades to the next option instead of breaking. If none
+  are reachable it says which it tried and how to override.
 
 ---
 
@@ -95,8 +96,8 @@ The key can come from the sidebar, a `.env` file, or Streamlit secrets. Copy
 | Variable | Default | Purpose |
 |---|---|---|
 | `GROQ_API_KEY` | — | Your Groq key. Sidebar entry overrides it. |
-| `GROQ_TEXT_MODEL` | `llama-3.3-70b-versatile` | Override the text model. |
-| `GROQ_VISION_MODEL` | `meta-llama/llama-4-scout-17b-16e-instruct` | Override the vision model. |
+| `GROQ_TEXT_MODEL` | `openai/gpt-oss-120b` | Override the text model. |
+| `GROQ_VISION_MODEL` | `qwen/qwen3.6-27b` | Override the vision model. |
 
 Limits live in [`backend/config.py`](backend/config.py) — upload size, PDF
 budget, code timeout, and history depth.

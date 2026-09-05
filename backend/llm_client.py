@@ -85,14 +85,23 @@ def resolve_model(api_key, kind="text"):
     )
     reachable = available_models(api_key)
 
-    # An empty set means the listing itself failed; fall back to the first
-    # candidate and let the actual completion call report the real error.
-    chosen = next((m for m in wanted if m in reachable), None) if reachable else wanted[0]
-
-    if not chosen:
+    if not reachable:
         raise LLMError(
-            f"None of the configured {kind} models are available on this account. "
-            f"Tried: {', '.join(wanted)}. Set GROQ_{kind.upper()}_MODEL to override."
+            "Could not list models on this account. Check the API key and network, "
+            "then try again."
+        )
+
+    chosen = next((m for m in wanted if m in reachable), None)
+    if not chosen:
+        # Previously this fell back to wanted[0] and let the completion call
+        # fail with a bare provider 400. Naming the candidates turns a confusing
+        # error into an actionable one, which matters because model retirements
+        # are the most common way this app breaks.
+        raise LLMError(
+            f"None of the configured {kind} models are available on this account.\n"
+            f"Tried: {', '.join(wanted)}.\n"
+            f"Set GROQ_{kind.upper()}_MODEL to a model ID from "
+            "https://console.groq.com/docs/models"
         )
 
     _model_cache[cache_key] = chosen
