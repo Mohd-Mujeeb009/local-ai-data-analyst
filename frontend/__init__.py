@@ -1,1 +1,1 @@
-# Frontend package for Local AI Data Analyst
+# Frontend package for AI Data Analyst

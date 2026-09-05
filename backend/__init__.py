@@ -1,1 +1,1 @@
-# Backend package for Local AI Data Analyst
+# Backend package for AI Data Analyst
