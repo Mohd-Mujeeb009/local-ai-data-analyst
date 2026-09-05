@@ -1,0 +1,1456 @@
+order_date,product,category,region,channel,sales_rep,units,unit_price,discount,revenue
+2025-01-01,Aurora Laptop 14,Laptops,East,Online,L. Dubois,7,1299.0,0.15,8888.41
+2025-01-01,Aurora Laptop 16,Laptops,West,Online,A. Rahman,10,1699.0,0,19538.5
+2025-01-02,Nimbus Tablet Mini,Tablets,North,Partner,K. Tanaka,9,429.0,0.1,2779.92
+2025-01-02,Nimbus Tablet Mini,Tablets,West,Partner,A. Rahman,9,429.0,0,3088.8
+2025-01-02,Nimbus Tablet 11,Tablets,West,Retail,A. Rahman,5,649.0,0,2920.5
+2025-01-03,Vertex Monitor 27,Displays,North,Retail,L. Dubois,10,379.0,0,3411.0
+2025-01-03,Pulse Headphones,Audio,North,Partner,A. Rahman,5,249.0,0.05,946.2
+2025-01-04,Pulse Headphones,Audio,East,Partner,A. Rahman,4,249.0,0,796.8
+2025-01-04,Aurora Laptop 14,Laptops,South,Retail,K. Tanaka,7,1299.0,0,8183.7
+2025-01-04,Pulse Headphones,Audio,West,Partner,J. Okafor,3,249.0,0,597.6
+2025-01-04,Pulse Earbuds,Audio,East,Online,A. Rahman,2,129.0,0.15,252.19
+2025-01-04,Cobalt Mouse,Accessories,South,Partner,J. Okafor,1,59.0,0.15,40.12
+2025-01-04,Nimbus Tablet 11,Tablets,West,Retail,L. Dubois,3,649.0,0.15,1489.46
+2025-01-05,Pulse Earbuds,Audio,North,Online,M. Silva,11,129.0,0,1631.85
+2025-01-05,Vertex Monitor 27,Displays,East,Online,M. Silva,5,379.0,0.15,1852.36
+2025-01-05,Nimbus Tablet Mini,Tablets,West,Retail,K. Tanaka,8,429.0,0.15,2625.48
+2025-01-06,Pulse Headphones,Audio,South,Online,L. Dubois,5,249.0,0.15,1216.99
+2025-01-06,Vertex Monitor 27,Displays,West,Retail,J. Okafor,2,379.0,0,682.2
+2025-01-06,Cobalt Keyboard,Accessories,West,Online,J. Okafor,5,89.0,0,511.75
+2025-01-07,Cobalt Mouse,Accessories,North,Retail,L. Dubois,1,59.0,0.05,50.45
+2025-01-07,Vertex Monitor 32,Displays,East,Partner,A. Rahman,6,549.0,0.15,2239.92
+2025-01-07,Cobalt Keyboard,Accessories,East,Partner,A. Rahman,5,89.0,0,356.0
+2025-01-07,Pulse Headphones,Audio,West,Online,M. Silva,1,249.0,0.15,243.4
+2025-01-07,Cobalt Keyboard,Accessories,South,Partner,M. Silva,6,89.0,0,427.2
+2025-01-08,Cobalt Mouse,Accessories,South,Online,A. Rahman,4,59.0,0.1,244.26
+2025-01-08,Cobalt Mouse,Accessories,East,Retail,A. Rahman,7,59.0,0,371.7
+2025-01-08,Pulse Earbuds,Audio,East,Online,A. Rahman,12,129.0,0,1780.2
+2025-01-08,Vertex Monitor 32,Displays,North,Partner,J. Okafor,10,549.0,0,4392.0
+2025-01-08,Vertex Monitor 32,Displays,South,Retail,L. Dubois,1,549.0,0,494.1
+2025-01-08,Nimbus Tablet Mini,Tablets,East,Retail,M. Silva,5,429.0,0.15,1640.92
+2025-01-09,Cobalt Keyboard,Accessories,West,Online,L. Dubois,5,89.0,0,511.75
+2025-01-09,Cobalt Keyboard,Accessories,South,Partner,A. Rahman,6,89.0,0,427.2
+2025-01-09,Aurora Laptop 16,Laptops,North,Online,A. Rahman,8,1699.0,0,15630.8
+2025-01-09,Cobalt Keyboard,Accessories,South,Retail,K. Tanaka,5,89.0,0.15,340.43
+2025-01-09,Nimbus Tablet Mini,Tablets,South,Partner,J. Okafor,8,429.0,0.05,2608.32
+2025-01-10,Vertex Monitor 27,Displays,South,Online,K. Tanaka,3,379.0,0,1307.55
+2025-01-10,Pulse Earbuds,Audio,West,Retail,A. Rahman,1,129.0,0.15,98.68
+2025-01-10,Aurora Laptop 14,Laptops,West,Partner,A. Rahman,6,1299.0,0,6235.2
+2025-01-10,Nimbus Tablet Mini,Tablets,South,Online,M. Silva,3,429.0,0,1480.05
+2025-01-10,Vertex Monitor 32,Displays,South,Online,L. Dubois,4,549.0,0.05,2399.13
+2025-01-11,Aurora Laptop 14,Laptops,North,Online,K. Tanaka,9,1299.0,0,13444.65
+2025-01-11,Vertex Monitor 32,Displays,West,Online,A. Rahman,2,549.0,0.05,1199.56
+2025-01-12,Vertex Monitor 27,Displays,North,Retail,M. Silva,4,379.0,0.05,1296.18
+2025-01-12,Vertex Monitor 27,Displays,West,Online,M. Silva,7,379.0,0,3050.95
+2025-01-12,Nimbus Tablet Mini,Tablets,North,Partner,A. Rahman,5,429.0,0,1716.0
+2025-01-13,Cobalt Mouse,Accessories,West,Partner,J. Okafor,4,59.0,0.1,169.92
+2025-01-13,Aurora Laptop 14,Laptops,North,Online,K. Tanaka,8,1299.0,0,11950.8
+2025-01-14,Cobalt Mouse,Accessories,South,Partner,A. Rahman,5,59.0,0.1,212.4
+2025-01-14,Cobalt Mouse,Accessories,North,Retail,M. Silva,4,59.0,0,212.4
+2025-01-15,Pulse Earbuds,Audio,South,Retail,J. Okafor,2,129.0,0.05,220.59
+2025-01-15,Pulse Headphones,Audio,West,Retail,K. Tanaka,11,249.0,0,2465.1
+2025-01-15,Cobalt Mouse,Accessories,North,Online,J. Okafor,3,59.0,0.1,183.19
+2025-01-16,Pulse Headphones,Audio,South,Retail,M. Silva,8,249.0,0,1792.8
+2025-01-16,Nimbus Tablet 11,Tablets,West,Partner,M. Silva,1,649.0,0.15,441.32
+2025-01-16,Cobalt Mouse,Accessories,North,Partner,A. Rahman,8,59.0,0.15,320.96
+2025-01-16,Nimbus Tablet 11,Tablets,East,Online,L. Dubois,3,649.0,0,2239.05
+2025-01-16,Nimbus Tablet 11,Tablets,East,Retail,M. Silva,2,649.0,0,1168.2
+2025-01-16,Cobalt Keyboard,Accessories,West,Retail,A. Rahman,2,89.0,0,160.2
+2025-01-17,Pulse Headphones,Audio,North,Online,J. Okafor,6,249.0,0,1718.1
+2025-01-17,Vertex Monitor 32,Displays,West,Partner,A. Rahman,7,549.0,0,3074.4
+2025-01-17,Aurora Laptop 16,Laptops,South,Partner,J. Okafor,7,1699.0,0.1,8562.96
+2025-01-17,Vertex Monitor 27,Displays,South,Online,M. Silva,5,379.0,0,2179.25
+2025-01-17,Aurora Laptop 14,Laptops,East,Online,L. Dubois,4,1299.0,0,5975.4
+2025-01-18,Cobalt Mouse,Accessories,South,Online,J. Okafor,1,59.0,0,67.85
+2025-01-18,Vertex Monitor 27,Displays,North,Online,J. Okafor,5,379.0,0.05,2070.29
+2025-01-18,Pulse Headphones,Audio,South,Partner,K. Tanaka,1,249.0,0,199.2
+2025-01-18,Aurora Laptop 14,Laptops,West,Online,M. Silva,5,1299.0,0,7469.25
+2025-01-18,Nimbus Tablet Mini,Tablets,South,Online,J. Okafor,7,429.0,0.15,2935.43
+2025-01-19,Pulse Earbuds,Audio,East,Online,L. Dubois,6,129.0,0.15,756.58
+2025-01-19,Vertex Monitor 27,Displays,East,Online,M. Silva,4,379.0,0,1743.4
+2025-01-19,Nimbus Tablet 11,Tablets,East,Online,M. Silva,6,649.0,0.15,3806.38
+2025-01-19,Vertex Monitor 27,Displays,North,Retail,J. Okafor,7,379.0,0.1,2148.93
+2025-01-19,Pulse Headphones,Audio,North,Partner,J. Okafor,2,249.0,0.1,358.56
+2025-01-20,Vertex Monitor 27,Displays,North,Partner,L. Dubois,9,379.0,0,2728.8
+2025-01-20,Pulse Earbuds,Audio,North,Partner,K. Tanaka,11,129.0,0.15,964.92
+2025-01-20,Pulse Earbuds,Audio,West,Partner,L. Dubois,3,129.0,0,309.6
+2025-01-20,Nimbus Tablet 11,Tablets,South,Retail,J. Okafor,3,649.0,0.15,1489.46
+2025-01-21,Cobalt Mouse,Accessories,East,Retail,A. Rahman,3,59.0,0.1,143.37
+2025-01-21,Pulse Headphones,Audio,East,Online,M. Silva,2,249.0,0.15,486.79
+2025-01-21,Vertex Monitor 32,Displays,West,Retail,J. Okafor,7,549.0,0.15,2939.89
+2025-01-21,Cobalt Keyboard,Accessories,West,Partner,L. Dubois,6,89.0,0.1,384.48
+2025-01-21,Pulse Earbuds,Audio,North,Online,M. Silva,8,129.0,0.15,1008.78
+2025-01-21,Nimbus Tablet Mini,Tablets,South,Online,L. Dubois,6,429.0,0.05,2812.09
+2025-01-22,Vertex Monitor 32,Displays,West,Partner,J. Okafor,6,549.0,0.1,2371.68
+2025-01-22,Vertex Monitor 27,Displays,West,Retail,A. Rahman,5,379.0,0,1705.5
+2025-01-23,Nimbus Tablet Mini,Tablets,South,Partner,K. Tanaka,8,429.0,0.1,2471.04
+2025-01-23,Aurora Laptop 14,Laptops,South,Online,L. Dubois,1,1299.0,0.15,1269.77
+2025-01-23,Cobalt Keyboard,Accessories,East,Retail,L. Dubois,7,89.0,0.1,504.63
+2025-01-23,Vertex Monitor 27,Displays,West,Online,J. Okafor,5,379.0,0,2179.25
+2025-01-23,Pulse Headphones,Audio,West,Partner,M. Silva,2,249.0,0,398.4
+2025-01-24,Aurora Laptop 16,Laptops,East,Online,A. Rahman,5,1699.0,0.1,8792.32
+2025-01-24,Nimbus Tablet 11,Tablets,South,Online,J. Okafor,7,649.0,0.05,4963.23
+2025-01-24,Nimbus Tablet Mini,Tablets,North,Retail,A. Rahman,3,429.0,0.05,1100.38
+2025-01-24,Nimbus Tablet Mini,Tablets,West,Retail,A. Rahman,7,429.0,0.1,2432.43
+2025-01-24,Cobalt Mouse,Accessories,West,Retail,K. Tanaka,8,59.0,0.05,403.56
+2025-01-25,Cobalt Keyboard,Accessories,South,Retail,M. Silva,3,89.0,0,240.3
+2025-01-25,Vertex Monitor 27,Displays,West,Online,J. Okafor,1,379.0,0.05,414.06
+2025-01-25,Vertex Monitor 32,Displays,South,Partner,A. Rahman,5,549.0,0.1,1976.4
+2025-01-25,Vertex Monitor 27,Displays,North,Online,J. Okafor,4,379.0,0.05,1656.23
+2025-01-25,Aurora Laptop 14,Laptops,East,Retail,J. Okafor,3,1299.0,0,3507.3
+2025-01-25,Vertex Monitor 32,Displays,East,Retail,M. Silva,4,549.0,0.05,1877.58
+2025-01-26,Vertex Monitor 32,Displays,North,Partner,A. Rahman,2,549.0,0.1,790.56
+2025-01-26,Pulse Earbuds,Audio,South,Partner,A. Rahman,7,129.0,0,722.4
+2025-01-27,Nimbus Tablet Mini,Tablets,North,Partner,J. Okafor,11,429.0,0,3775.2
+2025-01-27,Nimbus Tablet 11,Tablets,West,Partner,M. Silva,10,649.0,0.05,4932.4
+2025-01-27,Pulse Earbuds,Audio,South,Partner,A. Rahman,9,129.0,0.1,835.92
+2025-01-28,Pulse Headphones,Audio,North,Partner,K. Tanaka,10,249.0,0.15,1693.2
+2025-01-28,Vertex Monitor 27,Displays,South,Online,J. Okafor,5,379.0,0.1,1961.32
+2025-01-28,Aurora Laptop 16,Laptops,East,Partner,A. Rahman,5,1699.0,0.1,6116.4
+2025-01-29,Cobalt Keyboard,Accessories,West,Partner,A. Rahman,4,89.0,0,284.8
+2025-01-29,Cobalt Keyboard,Accessories,East,Online,K. Tanaka,9,89.0,0,921.15
+2025-01-29,Pulse Earbuds,Audio,West,Partner,K. Tanaka,1,129.0,0,103.2
+2025-01-29,Nimbus Tablet 11,Tablets,East,Partner,K. Tanaka,7,649.0,0.05,3452.68
+2025-01-30,Cobalt Mouse,Accessories,East,Retail,A. Rahman,2,59.0,0,106.2
+2025-01-30,Pulse Headphones,Audio,West,Online,K. Tanaka,5,249.0,0.15,1216.99
+2025-01-30,Pulse Earbuds,Audio,North,Retail,J. Okafor,2,129.0,0,232.2
+2025-01-30,Vertex Monitor 32,Displays,South,Retail,M. Silva,5,549.0,0.1,2223.45
+2025-01-30,Cobalt Keyboard,Accessories,North,Partner,A. Rahman,4,89.0,0,284.8
+2025-01-31,Vertex Monitor 27,Displays,West,Partner,K. Tanaka,5,379.0,0.15,1288.6
+2025-01-31,Vertex Monitor 32,Displays,North,Online,J. Okafor,1,549.0,0,631.35
+2025-01-31,Vertex Monitor 27,Displays,South,Retail,L. Dubois,3,379.0,0.1,920.97
+2025-02-01,Vertex Monitor 27,Displays,East,Retail,K. Tanaka,2,379.0,0.15,579.87
+2025-02-01,Pulse Headphones,Audio,East,Retail,A. Rahman,4,249.0,0,896.4
+2025-02-01,Cobalt Keyboard,Accessories,South,Online,K. Tanaka,6,89.0,0,614.1
+2025-02-01,Pulse Headphones,Audio,East,Online,J. Okafor,5,249.0,0,1431.75
+2025-02-02,Aurora Laptop 14,Laptops,South,Retail,A. Rahman,2,1299.0,0,2338.2
+2025-02-02,Cobalt Keyboard,Accessories,East,Partner,A. Rahman,7,89.0,0.05,473.48
+2025-02-02,Aurora Laptop 14,Laptops,East,Retail,K. Tanaka,3,1299.0,0.05,3331.93
+2025-02-02,Pulse Earbuds,Audio,South,Online,A. Rahman,3,129.0,0,445.05
+2025-02-03,Vertex Monitor 32,Displays,North,Partner,A. Rahman,14,549.0,0.15,5226.48
+2025-02-03,Nimbus Tablet 11,Tablets,South,Partner,A. Rahman,6,649.0,0,3115.2
+2025-02-03,Cobalt Keyboard,Accessories,West,Partner,L. Dubois,5,89.0,0.1,320.4
+2025-02-03,Nimbus Tablet Mini,Tablets,West,Retail,K. Tanaka,7,429.0,0.1,2432.43
+2025-02-03,Pulse Headphones,Audio,North,Partner,A. Rahman,5,249.0,0.15,846.6
+2025-02-04,Nimbus Tablet Mini,Tablets,East,Partner,A. Rahman,8,429.0,0.1,2471.04
+2025-02-04,Nimbus Tablet 11,Tablets,North,Retail,L. Dubois,8,649.0,0.05,4439.16
+2025-02-04,Vertex Monitor 32,Displays,East,Online,K. Tanaka,6,549.0,0.15,3219.88
+2025-02-05,Nimbus Tablet Mini,Tablets,East,Partner,J. Okafor,11,429.0,0.1,3397.68
+2025-02-05,Vertex Monitor 27,Displays,North,Partner,J. Okafor,7,379.0,0,2122.4
+2025-02-06,Aurora Laptop 14,Laptops,South,Retail,L. Dubois,6,1299.0,0.1,6313.14
+2025-02-06,Pulse Headphones,Audio,West,Online,M. Silva,3,249.0,0.05,816.1
+2025-02-07,Cobalt Keyboard,Accessories,West,Retail,L. Dubois,6,89.0,0,480.6
+2025-02-07,Aurora Laptop 14,Laptops,West,Partner,J. Okafor,4,1299.0,0,4156.8
+2025-02-07,Cobalt Mouse,Accessories,North,Partner,L. Dubois,10,59.0,0,472.0
+2025-02-07,Aurora Laptop 14,Laptops,South,Retail,J. Okafor,2,1299.0,0,2338.2
+2025-02-07,Cobalt Mouse,Accessories,West,Partner,A. Rahman,5,59.0,0.05,224.2
+2025-02-07,Vertex Monitor 32,Displays,East,Retail,M. Silva,3,549.0,0,1482.3
+2025-02-08,Vertex Monitor 32,Displays,East,Partner,L. Dubois,7,549.0,0.05,2920.68
+2025-02-08,Aurora Laptop 14,Laptops,West,Online,L. Dubois,3,1299.0,0.05,4257.47
+2025-02-08,Aurora Laptop 14,Laptops,West,Retail,J. Okafor,5,1299.0,0,5845.5
+2025-02-08,Cobalt Keyboard,Accessories,East,Partner,J. Okafor,4,89.0,0,284.8
+2025-02-08,Pulse Headphones,Audio,South,Retail,K. Tanaka,1,249.0,0.05,212.89
+2025-02-09,Aurora Laptop 14,Laptops,South,Partner,K. Tanaka,4,1299.0,0.1,3741.12
+2025-02-09,Aurora Laptop 16,Laptops,South,Online,A. Rahman,5,1699.0,0.05,9280.79
+2025-02-10,Vertex Monitor 32,Displays,East,Partner,K. Tanaka,5,549.0,0.05,2086.2
+2025-02-10,Nimbus Tablet Mini,Tablets,West,Partner,K. Tanaka,2,429.0,0,686.4
+2025-02-10,Nimbus Tablet Mini,Tablets,South,Online,M. Silva,4,429.0,0.05,1874.73
+2025-02-11,Pulse Headphones,Audio,North,Retail,M. Silva,14,249.0,0.15,2666.79
+2025-02-11,Cobalt Mouse,Accessories,West,Online,L. Dubois,2,59.0,0,135.7
+2025-02-11,Cobalt Keyboard,Accessories,West,Retail,J. Okafor,6,89.0,0,480.6
+2025-02-11,Nimbus Tablet Mini,Tablets,West,Online,K. Tanaka,7,429.0,0,3453.45
+2025-02-11,Vertex Monitor 27,Displays,West,Partner,J. Okafor,3,379.0,0.15,773.16
+2025-02-11,Vertex Monitor 32,Displays,North,Online,K. Tanaka,2,549.0,0,1262.7
+2025-02-12,Cobalt Keyboard,Accessories,West,Online,J. Okafor,5,89.0,0.15,434.99
+2025-02-12,Vertex Monitor 27,Displays,South,Online,L. Dubois,1,379.0,0,435.85
+2025-02-13,Aurora Laptop 16,Laptops,East,Partner,K. Tanaka,7,1699.0,0.1,8562.96
+2025-02-13,Pulse Earbuds,Audio,West,Partner,M. Silva,6,129.0,0.15,526.32
+2025-02-13,Nimbus Tablet Mini,Tablets,North,Retail,A. Rahman,7,429.0,0,2702.7
+2025-02-13,Vertex Monitor 32,Displays,South,Partner,A. Rahman,4,549.0,0,1756.8
+2025-02-13,Pulse Headphones,Audio,East,Retail,J. Okafor,7,249.0,0.05,1490.26
+2025-02-14,Cobalt Keyboard,Accessories,West,Partner,A. Rahman,4,89.0,0,284.8
+2025-02-14,Cobalt Mouse,Accessories,West,Partner,J. Okafor,4,59.0,0.15,160.48
+2025-02-14,Vertex Monitor 32,Displays,South,Online,A. Rahman,3,549.0,0,1894.05
+2025-02-15,Pulse Headphones,Audio,South,Online,M. Silva,3,249.0,0.05,816.1
+2025-02-15,Cobalt Mouse,Accessories,East,Partner,M. Silva,7,59.0,0.05,313.88
+2025-02-15,Nimbus Tablet Mini,Tablets,West,Retail,J. Okafor,3,429.0,0,1158.3
+2025-02-15,Vertex Monitor 27,Displays,East,Partner,K. Tanaka,3,379.0,0,909.6
+2025-02-15,Pulse Headphones,Audio,North,Partner,A. Rahman,9,249.0,0.15,1523.88
+2025-02-16,Vertex Monitor 32,Displays,East,Online,J. Okafor,2,549.0,0.15,1073.29
+2025-02-16,Cobalt Mouse,Accessories,East,Partner,J. Okafor,3,59.0,0.15,120.36
+2025-02-16,Aurora Laptop 16,Laptops,North,Retail,J. Okafor,5,1699.0,0,7645.5
+2025-02-16,Aurora Laptop 16,Laptops,East,Retail,K. Tanaka,3,1699.0,0.15,3899.2
+2025-02-16,Nimbus Tablet 11,Tablets,South,Online,L. Dubois,4,649.0,0,2985.4
+2025-02-16,Cobalt Keyboard,Accessories,East,Online,K. Tanaka,1,89.0,0,102.35
+2025-02-17,Pulse Earbuds,Audio,North,Retail,K. Tanaka,9,129.0,0,1044.9
+2025-02-17,Cobalt Keyboard,Accessories,East,Online,A. Rahman,5,89.0,0.05,486.16
+2025-02-17,Pulse Headphones,Audio,North,Retail,L. Dubois,3,249.0,0,672.3
+2025-02-17,Vertex Monitor 27,Displays,East,Online,J. Okafor,10,379.0,0.15,3704.72
+2025-02-18,Aurora Laptop 14,Laptops,East,Partner,M. Silva,6,1299.0,0.05,5923.44
+2025-02-18,Vertex Monitor 27,Displays,North,Online,A. Rahman,8,379.0,0,3486.8
+2025-02-18,Pulse Headphones,Audio,West,Online,K. Tanaka,10,249.0,0,2863.5
+2025-02-18,Vertex Monitor 32,Displays,East,Partner,L. Dubois,10,549.0,0.15,3733.2
+2025-02-18,Vertex Monitor 27,Displays,South,Retail,K. Tanaka,2,379.0,0.1,613.98
+2025-02-19,Aurora Laptop 14,Laptops,East,Online,K. Tanaka,1,1299.0,0.05,1419.16
+2025-02-19,Nimbus Tablet Mini,Tablets,East,Online,M. Silva,9,429.0,0.15,3774.13
+2025-02-19,Aurora Laptop 14,Laptops,West,Retail,A. Rahman,5,1299.0,0,5845.5
+2025-02-19,Vertex Monitor 32,Displays,North,Partner,A. Rahman,8,549.0,0,3513.6
+2025-02-20,Nimbus Tablet Mini,Tablets,South,Partner,A. Rahman,8,429.0,0,2745.6
+2025-02-20,Cobalt Keyboard,Accessories,South,Partner,J. Okafor,6,89.0,0,427.2
+2025-02-20,Cobalt Mouse,Accessories,North,Retail,J. Okafor,14,59.0,0,743.4
+2025-02-20,Cobalt Keyboard,Accessories,East,Online,A. Rahman,11,89.0,0,1125.85
+2025-02-21,Nimbus Tablet Mini,Tablets,East,Online,M. Silva,10,429.0,0,4933.5
+2025-02-21,Aurora Laptop 14,Laptops,South,Partner,K. Tanaka,3,1299.0,0,3117.6
+2025-02-21,Vertex Monitor 32,Displays,East,Partner,A. Rahman,7,549.0,0.1,2766.96
+2025-02-21,Vertex Monitor 32,Displays,South,Partner,L. Dubois,9,549.0,0.15,3359.88
+2025-02-22,Vertex Monitor 32,Displays,North,Online,K. Tanaka,6,549.0,0.05,3598.69
+2025-02-22,Vertex Monitor 27,Displays,North,Retail,M. Silva,4,379.0,0,1364.4
+2025-02-22,Cobalt Mouse,Accessories,South,Online,M. Silva,1,59.0,0,67.85
+2025-02-22,Cobalt Mouse,Accessories,East,Retail,L. Dubois,7,59.0,0.05,353.11
+2025-02-23,Vertex Monitor 27,Displays,North,Partner,L. Dubois,5,379.0,0,1516.0
+2025-02-23,Nimbus Tablet Mini,Tablets,West,Retail,K. Tanaka,5,429.0,0.05,1833.98
+2025-02-23,Vertex Monitor 27,Displays,North,Retail,M. Silva,3,379.0,0.05,972.13
+2025-02-23,Pulse Headphones,Audio,East,Online,A. Rahman,3,249.0,0,859.05
+2025-02-23,Aurora Laptop 16,Laptops,West,Online,M. Silva,1,1699.0,0.15,1660.77
+2025-02-23,Nimbus Tablet 11,Tablets,North,Partner,A. Rahman,8,649.0,0.15,3530.56
+2025-02-24,Pulse Earbuds,Audio,West,Partner,M. Silva,4,129.0,0,412.8
+2025-02-24,Cobalt Mouse,Accessories,East,Retail,K. Tanaka,9,59.0,0,477.9
+2025-02-24,Nimbus Tablet Mini,Tablets,North,Retail,M. Silva,10,429.0,0.1,3474.9
+2025-02-24,Aurora Laptop 16,Laptops,East,Partner,L. Dubois,6,1699.0,0.1,7339.68
+2025-02-24,Cobalt Mouse,Accessories,North,Partner,M. Silva,11,59.0,0.15,441.32
+2025-02-25,Nimbus Tablet 11,Tablets,East,Partner,A. Rahman,6,649.0,0,3115.2
+2025-02-25,Nimbus Tablet 11,Tablets,South,Partner,K. Tanaka,1,649.0,0.15,441.32
+2025-02-26,Nimbus Tablet 11,Tablets,North,Online,K. Tanaka,7,649.0,0.05,4963.23
+2025-02-26,Pulse Earbuds,Audio,South,Retail,M. Silva,3,129.0,0,348.3
+2025-02-27,Cobalt Mouse,Accessories,North,Online,A. Rahman,11,59.0,0,746.35
+2025-02-27,Pulse Headphones,Audio,West,Partner,K. Tanaka,9,249.0,0.05,1703.16
+2025-02-27,Cobalt Mouse,Accessories,West,Retail,M. Silva,5,59.0,0,265.5
+2025-02-27,Vertex Monitor 27,Displays,North,Retail,L. Dubois,13,379.0,0.15,3769.15
+2025-02-27,Vertex Monitor 32,Displays,East,Online,A. Rahman,7,549.0,0,4419.45
+2025-02-27,Nimbus Tablet Mini,Tablets,East,Online,M. Silva,15,429.0,0,7400.25
+2025-02-28,Pulse Earbuds,Audio,North,Online,K. Tanaka,3,129.0,0,445.05
+2025-02-28,Cobalt Keyboard,Accessories,South,Partner,M. Silva,5,89.0,0.1,320.4
+2025-02-28,Aurora Laptop 16,Laptops,West,Partner,M. Silva,6,1699.0,0,8155.2
+2025-02-28,Cobalt Mouse,Accessories,West,Partner,K. Tanaka,5,59.0,0.05,224.2
+2025-03-01,Aurora Laptop 16,Laptops,West,Online,K. Tanaka,5,1699.0,0.1,8792.32
+2025-03-01,Pulse Earbuds,Audio,North,Retail,J. Okafor,4,129.0,0,464.4
+2025-03-01,Vertex Monitor 27,Displays,West,Partner,M. Silva,7,379.0,0.15,1804.04
+2025-03-01,Nimbus Tablet Mini,Tablets,East,Online,L. Dubois,6,429.0,0,2960.1
+2025-03-02,Cobalt Keyboard,Accessories,South,Retail,J. Okafor,1,89.0,0.15,68.08
+2025-03-02,Nimbus Tablet Mini,Tablets,North,Online,J. Okafor,10,429.0,0,4933.5
+2025-03-03,Cobalt Mouse,Accessories,South,Partner,K. Tanaka,10,59.0,0.15,401.2
+2025-03-03,Vertex Monitor 32,Displays,West,Partner,L. Dubois,8,549.0,0.1,3162.24
+2025-03-03,Pulse Earbuds,Audio,East,Online,M. Silva,3,129.0,0.15,378.29
+2025-03-04,Cobalt Mouse,Accessories,North,Retail,A. Rahman,9,59.0,0.1,430.11
+2025-03-04,Pulse Headphones,Audio,West,Retail,A. Rahman,8,249.0,0,1792.8
+2025-03-04,Aurora Laptop 16,Laptops,West,Retail,L. Dubois,6,1699.0,0.1,8257.14
+2025-03-04,Aurora Laptop 14,Laptops,West,Partner,L. Dubois,4,1299.0,0.05,3948.96
+2025-03-05,Aurora Laptop 14,Laptops,West,Online,A. Rahman,3,1299.0,0,4481.55
+2025-03-05,Cobalt Keyboard,Accessories,South,Online,L. Dubois,5,89.0,0.05,486.16
+2025-03-05,Cobalt Keyboard,Accessories,South,Retail,M. Silva,7,89.0,0,560.7
+2025-03-06,Vertex Monitor 27,Displays,East,Partner,M. Silva,1,379.0,0.15,257.72
+2025-03-06,Aurora Laptop 16,Laptops,East,Online,K. Tanaka,3,1699.0,0.1,5275.39
+2025-03-06,Pulse Headphones,Audio,East,Partner,J. Okafor,11,249.0,0.1,1972.08
+2025-03-06,Pulse Earbuds,Audio,North,Partner,J. Okafor,1,129.0,0.15,87.72
+2025-03-06,Pulse Earbuds,Audio,East,Partner,A. Rahman,5,129.0,0.1,464.4
+2025-03-07,Cobalt Keyboard,Accessories,West,Partner,J. Okafor,3,89.0,0,213.6
+2025-03-07,Cobalt Keyboard,Accessories,North,Partner,M. Silva,5,89.0,0,356.0
+2025-03-07,Pulse Headphones,Audio,South,Online,K. Tanaka,2,249.0,0,572.7
+2025-03-07,Nimbus Tablet Mini,Tablets,South,Online,L. Dubois,6,429.0,0,2960.1
+2025-03-08,Cobalt Keyboard,Accessories,North,Partner,L. Dubois,7,89.0,0,498.4
+2025-03-08,Nimbus Tablet 11,Tablets,West,Online,J. Okafor,5,649.0,0.1,3358.57
+2025-03-08,Vertex Monitor 32,Displays,North,Retail,J. Okafor,9,549.0,0,4446.9
+2025-03-08,Vertex Monitor 32,Displays,East,Partner,M. Silva,4,549.0,0,1756.8
+2025-03-08,Vertex Monitor 32,Displays,South,Retail,L. Dubois,2,549.0,0.15,839.97
+2025-03-08,Vertex Monitor 32,Displays,West,Retail,J. Okafor,4,549.0,0.05,1877.58
+2025-03-09,Cobalt Mouse,Accessories,South,Retail,K. Tanaka,1,59.0,0,53.1
+2025-03-09,Pulse Earbuds,Audio,North,Partner,A. Rahman,8,129.0,0,825.6
+2025-03-09,Nimbus Tablet 11,Tablets,East,Retail,J. Okafor,1,649.0,0.1,525.69
+2025-03-10,Aurora Laptop 16,Laptops,South,Retail,A. Rahman,9,1699.0,0.05,13073.8
+2025-03-10,Vertex Monitor 27,Displays,East,Online,A. Rahman,1,379.0,0.05,414.06
+2025-03-10,Pulse Earbuds,Audio,South,Online,M. Silva,4,129.0,0.15,504.39
+2025-03-10,Nimbus Tablet 11,Tablets,South,Online,K. Tanaka,6,649.0,0,4478.1
+2025-03-10,Nimbus Tablet 11,Tablets,West,Retail,M. Silva,1,649.0,0,584.1
+2025-03-11,Nimbus Tablet 11,Tablets,West,Online,J. Okafor,1,649.0,0,746.35
+2025-03-11,Pulse Headphones,Audio,North,Online,K. Tanaka,7,249.0,0.1,1804.0
+2025-03-11,Aurora Laptop 16,Laptops,North,Retail,L. Dubois,12,1699.0,0.1,16514.28
+2025-03-12,Cobalt Keyboard,Accessories,South,Partner,M. Silva,6,89.0,0.1,384.48
+2025-03-12,Nimbus Tablet Mini,Tablets,West,Online,A. Rahman,8,429.0,0.15,3354.78
+2025-03-13,Pulse Earbuds,Audio,North,Partner,L. Dubois,1,129.0,0.1,92.88
+2025-03-13,Aurora Laptop 14,Laptops,West,Retail,K. Tanaka,4,1299.0,0,4676.4
+2025-03-13,Pulse Earbuds,Audio,East,Partner,J. Okafor,11,129.0,0,1135.2
+2025-03-13,Aurora Laptop 16,Laptops,East,Online,M. Silva,6,1699.0,0,11723.1
+2025-03-13,Cobalt Keyboard,Accessories,East,Partner,K. Tanaka,8,89.0,0.05,541.12
+2025-03-13,Nimbus Tablet 11,Tablets,South,Online,K. Tanaka,9,649.0,0.15,5709.58
+2025-03-14,Pulse Headphones,Audio,South,Online,M. Silva,6,249.0,0,1718.1
+2025-03-14,Cobalt Keyboard,Accessories,West,Partner,M. Silva,1,89.0,0.05,67.64
+2025-03-15,Nimbus Tablet Mini,Tablets,East,Retail,M. Silva,4,429.0,0.15,1312.74
+2025-03-15,Pulse Headphones,Audio,North,Retail,K. Tanaka,4,249.0,0.05,851.58
+2025-03-16,Vertex Monitor 27,Displays,East,Online,M. Silva,1,379.0,0.1,392.26
+2025-03-16,Aurora Laptop 16,Laptops,West,Online,L. Dubois,4,1699.0,0.05,7424.63
+2025-03-16,Nimbus Tablet 11,Tablets,East,Retail,M. Silva,5,649.0,0,2920.5
+2025-03-16,Vertex Monitor 32,Displays,West,Online,K. Tanaka,5,549.0,0.15,2683.24
+2025-03-16,Pulse Earbuds,Audio,West,Online,K. Tanaka,3,129.0,0.1,400.54
+2025-03-17,Aurora Laptop 14,Laptops,North,Partner,K. Tanaka,1,1299.0,0.15,883.32
+2025-03-17,Pulse Earbuds,Audio,South,Online,A. Rahman,7,129.0,0.05,986.53
+2025-03-17,Nimbus Tablet 11,Tablets,North,Online,M. Silva,11,649.0,0.15,6978.37
+2025-03-17,Pulse Earbuds,Audio,West,Partner,M. Silva,7,129.0,0.05,686.28
+2025-03-18,Vertex Monitor 32,Displays,North,Partner,L. Dubois,7,549.0,0,3074.4
+2025-03-18,Pulse Earbuds,Audio,West,Retail,A. Rahman,4,129.0,0,464.4
+2025-03-18,Nimbus Tablet 11,Tablets,West,Partner,L. Dubois,3,649.0,0.05,1479.72
+2025-03-18,Aurora Laptop 16,Laptops,East,Retail,M. Silva,5,1699.0,0.1,6880.95
+2025-03-19,Nimbus Tablet Mini,Tablets,North,Online,K. Tanaka,5,429.0,0,2466.75
+2025-03-19,Nimbus Tablet 11,Tablets,West,Online,M. Silva,8,649.0,0,5970.8
+2025-03-19,Aurora Laptop 16,Laptops,East,Retail,J. Okafor,1,1699.0,0,1529.1
+2025-03-19,Pulse Earbuds,Audio,South,Online,K. Tanaka,9,129.0,0,1335.15
+2025-03-19,Aurora Laptop 14,Laptops,East,Partner,M. Silva,5,1299.0,0.1,4676.4
+2025-03-20,Cobalt Keyboard,Accessories,South,Partner,K. Tanaka,5,89.0,0.05,338.2
+2025-03-20,Cobalt Keyboard,Accessories,West,Retail,A. Rahman,5,89.0,0.1,360.45
+2025-03-20,Nimbus Tablet 11,Tablets,East,Partner,M. Silva,9,649.0,0.1,4205.52
+2025-03-20,Nimbus Tablet 11,Tablets,South,Online,L. Dubois,6,649.0,0.05,4254.19
+2025-03-20,Aurora Laptop 14,Laptops,North,Partner,J. Okafor,8,1299.0,0,8313.6
+2025-03-21,Cobalt Keyboard,Accessories,East,Online,J. Okafor,7,89.0,0,716.45
+2025-03-21,Cobalt Keyboard,Accessories,East,Online,L. Dubois,3,89.0,0,307.05
+2025-03-21,Nimbus Tablet 11,Tablets,South,Online,L. Dubois,2,649.0,0.15,1268.79
+2025-03-21,Cobalt Mouse,Accessories,East,Partner,A. Rahman,12,59.0,0,566.4
+2025-03-22,Pulse Headphones,Audio,South,Partner,L. Dubois,4,249.0,0.05,756.96
+2025-03-22,Aurora Laptop 14,Laptops,West,Partner,K. Tanaka,1,1299.0,0,1039.2
+2025-03-22,Nimbus Tablet Mini,Tablets,West,Retail,A. Rahman,3,429.0,0.05,1100.38
+2025-03-22,Aurora Laptop 14,Laptops,South,Retail,L. Dubois,1,1299.0,0,1169.1
+2025-03-22,Nimbus Tablet 11,Tablets,East,Partner,M. Silva,5,649.0,0,2596.0
+2025-03-22,Vertex Monitor 27,Displays,South,Retail,K. Tanaka,2,379.0,0,682.2
+2025-03-23,Pulse Headphones,Audio,West,Online,A. Rahman,3,249.0,0,859.05
+2025-03-23,Aurora Laptop 14,Laptops,East,Retail,M. Silva,5,1299.0,0,5845.5
+2025-03-24,Pulse Earbuds,Audio,South,Online,L. Dubois,3,129.0,0.05,422.8
+2025-03-24,Vertex Monitor 32,Displays,West,Retail,L. Dubois,4,549.0,0.05,1877.58
+2025-03-24,Vertex Monitor 32,Displays,South,Online,M. Silva,5,549.0,0.1,2841.07
+2025-03-24,Aurora Laptop 14,Laptops,North,Retail,K. Tanaka,1,1299.0,0.15,993.73
+2025-03-24,Pulse Headphones,Audio,North,Online,J. Okafor,7,249.0,0.05,1904.23
+2025-03-24,Pulse Headphones,Audio,East,Retail,L. Dubois,4,249.0,0.1,806.76
+2025-03-25,Pulse Earbuds,Audio,East,Online,L. Dubois,8,129.0,0.05,1127.46
+2025-03-25,Vertex Monitor 32,Displays,East,Partner,K. Tanaka,5,549.0,0,2196.0
+2025-03-25,Pulse Earbuds,Audio,East,Partner,J. Okafor,4,129.0,0,412.8
+2025-03-26,Cobalt Mouse,Accessories,West,Partner,M. Silva,6,59.0,0.15,240.72
+2025-03-26,Vertex Monitor 32,Displays,West,Online,L. Dubois,5,549.0,0.1,2841.07
+2025-03-26,Nimbus Tablet 11,Tablets,East,Partner,M. Silva,4,649.0,0.1,1869.12
+2025-03-27,Pulse Earbuds,Audio,West,Partner,M. Silva,8,129.0,0.1,743.04
+2025-03-27,Vertex Monitor 32,Displays,North,Retail,L. Dubois,6,549.0,0.05,2816.37
+2025-03-27,Pulse Headphones,Audio,North,Partner,M. Silva,9,249.0,0.05,1703.16
+2025-03-27,Cobalt Mouse,Accessories,South,Partner,L. Dubois,7,59.0,0.1,297.36
+2025-03-27,Vertex Monitor 27,Displays,South,Partner,A. Rahman,6,379.0,0,1819.2
+2025-03-27,Cobalt Mouse,Accessories,North,Online,K. Tanaka,10,59.0,0,678.5
+2025-03-28,Vertex Monitor 27,Displays,West,Partner,A. Rahman,5,379.0,0.15,1288.6
+2025-03-28,Nimbus Tablet 11,Tablets,South,Partner,K. Tanaka,3,649.0,0.1,1401.84
+2025-03-28,Pulse Earbuds,Audio,South,Retail,M. Silva,8,129.0,0.1,835.92
+2025-03-29,Pulse Earbuds,Audio,East,Partner,L. Dubois,1,129.0,0,103.2
+2025-03-29,Pulse Headphones,Audio,South,Retail,J. Okafor,4,249.0,0,896.4
+2025-03-29,Vertex Monitor 32,Displays,East,Retail,M. Silva,1,549.0,0.15,419.99
+2025-03-29,Pulse Headphones,Audio,North,Partner,L. Dubois,10,249.0,0.15,1693.2
+2025-03-29,Vertex Monitor 27,Displays,West,Retail,A. Rahman,7,379.0,0,2387.7
+2025-03-29,Pulse Headphones,Audio,North,Retail,M. Silva,3,249.0,0.05,638.68
+2025-03-30,Nimbus Tablet Mini,Tablets,South,Partner,J. Okafor,3,429.0,0,1029.6
+2025-03-30,Aurora Laptop 16,Laptops,South,Online,L. Dubois,5,1699.0,0,9769.25
+2025-03-30,Nimbus Tablet Mini,Tablets,South,Online,A. Rahman,4,429.0,0.05,1874.73
+2025-03-30,Nimbus Tablet 11,Tablets,North,Partner,K. Tanaka,6,649.0,0,3115.2
+2025-03-30,Vertex Monitor 32,Displays,West,Partner,M. Silva,5,549.0,0,2196.0
+2025-03-31,Aurora Laptop 16,Laptops,South,Partner,A. Rahman,11,1699.0,0.15,12708.52
+2025-03-31,Nimbus Tablet 11,Tablets,West,Online,K. Tanaka,6,649.0,0.05,4254.19
+2025-04-01,Pulse Headphones,Audio,North,Online,L. Dubois,7,249.0,0,2004.45
+2025-04-01,Cobalt Mouse,Accessories,North,Retail,L. Dubois,5,59.0,0.1,238.95
+2025-04-01,Vertex Monitor 32,Displays,South,Partner,M. Silva,12,549.0,0.05,5006.88
+2025-04-02,Aurora Laptop 16,Laptops,East,Online,J. Okafor,5,1699.0,0.15,8303.86
+2025-04-02,Aurora Laptop 14,Laptops,East,Retail,J. Okafor,1,1299.0,0.1,1052.19
+2025-04-02,Nimbus Tablet 11,Tablets,West,Retail,A. Rahman,4,649.0,0.15,1985.94
+2025-04-03,Nimbus Tablet 11,Tablets,West,Retail,A. Rahman,5,649.0,0,2920.5
+2025-04-03,Pulse Headphones,Audio,West,Online,M. Silva,3,249.0,0,859.05
+2025-04-03,Cobalt Mouse,Accessories,North,Retail,M. Silva,8,59.0,0.15,361.08
+2025-04-04,Aurora Laptop 14,Laptops,North,Retail,M. Silva,6,1299.0,0.1,6313.14
+2025-04-04,Aurora Laptop 16,Laptops,East,Retail,J. Okafor,9,1699.0,0.1,12385.71
+2025-04-04,Nimbus Tablet Mini,Tablets,South,Retail,M. Silva,7,429.0,0.1,2432.43
+2025-04-05,Cobalt Keyboard,Accessories,West,Partner,J. Okafor,6,89.0,0.15,363.12
+2025-04-05,Nimbus Tablet Mini,Tablets,North,Partner,L. Dubois,1,429.0,0,343.2
+2025-04-05,Aurora Laptop 16,Laptops,North,Partner,J. Okafor,6,1699.0,0.1,7339.68
+2025-04-05,Cobalt Mouse,Accessories,South,Online,J. Okafor,2,59.0,0,135.7
+2025-04-05,Cobalt Mouse,Accessories,West,Online,K. Tanaka,6,59.0,0.1,366.39
+2025-04-06,Vertex Monitor 32,Displays,South,Partner,K. Tanaka,1,549.0,0.1,395.28
+2025-04-06,Pulse Headphones,Audio,North,Retail,A. Rahman,6,249.0,0,1344.6
+2025-04-07,Cobalt Mouse,Accessories,North,Online,A. Rahman,2,59.0,0.1,122.13
+2025-04-07,Aurora Laptop 16,Laptops,West,Online,K. Tanaka,7,1699.0,0,13676.95
+2025-04-07,Nimbus Tablet 11,Tablets,South,Partner,M. Silva,8,649.0,0.05,3945.92
+2025-04-08,Vertex Monitor 32,Displays,West,Retail,L. Dubois,5,549.0,0,2470.5
+2025-04-08,Nimbus Tablet 11,Tablets,East,Online,J. Okafor,7,649.0,0.1,4702.01
+2025-04-08,Nimbus Tablet Mini,Tablets,North,Online,K. Tanaka,11,429.0,0,5426.85
+2025-04-08,Cobalt Keyboard,Accessories,West,Partner,M. Silva,4,89.0,0.05,270.56
+2025-04-08,Nimbus Tablet 11,Tablets,East,Online,A. Rahman,7,649.0,0.15,4440.78
+2025-04-09,Vertex Monitor 27,Displays,North,Online,K. Tanaka,7,379.0,0,3050.95
+2025-04-09,Cobalt Mouse,Accessories,North,Online,A. Rahman,9,59.0,0.15,519.05
+2025-04-10,Vertex Monitor 32,Displays,South,Partner,J. Okafor,6,549.0,0,2635.2
+2025-04-10,Cobalt Keyboard,Accessories,East,Online,L. Dubois,12,89.0,0.15,1043.97
+2025-04-10,Pulse Earbuds,Audio,East,Online,L. Dubois,5,129.0,0.15,630.49
+2025-04-10,Nimbus Tablet Mini,Tablets,West,Retail,A. Rahman,7,429.0,0,2702.7
+2025-04-10,Cobalt Keyboard,Accessories,South,Partner,M. Silva,3,89.0,0,213.6
+2025-04-11,Cobalt Keyboard,Accessories,East,Partner,K. Tanaka,2,89.0,0.05,135.28
+2025-04-11,Nimbus Tablet 11,Tablets,East,Retail,J. Okafor,7,649.0,0,4088.7
+2025-04-11,Pulse Headphones,Audio,South,Retail,L. Dubois,7,249.0,0,1568.7
+2025-04-11,Vertex Monitor 27,Displays,West,Partner,J. Okafor,2,379.0,0,606.4
+2025-04-11,Pulse Earbuds,Audio,North,Retail,A. Rahman,6,129.0,0,696.6
+2025-04-12,Nimbus Tablet Mini,Tablets,North,Retail,A. Rahman,2,429.0,0,772.2
+2025-04-12,Nimbus Tablet Mini,Tablets,South,Retail,M. Silva,5,429.0,0,1930.5
+2025-04-12,Pulse Headphones,Audio,North,Online,K. Tanaka,11,249.0,0,3149.85
+2025-04-12,Nimbus Tablet Mini,Tablets,South,Retail,L. Dubois,1,429.0,0,386.1
+2025-04-12,Pulse Earbuds,Audio,East,Retail,M. Silva,1,129.0,0,116.1
+2025-04-12,Pulse Earbuds,Audio,West,Retail,K. Tanaka,4,129.0,0,464.4
+2025-04-13,Nimbus Tablet Mini,Tablets,East,Retail,J. Okafor,1,429.0,0,386.1
+2025-04-13,Aurora Laptop 14,Laptops,East,Partner,L. Dubois,5,1299.0,0.1,4676.4
+2025-04-13,Vertex Monitor 27,Displays,East,Online,J. Okafor,4,379.0,0.1,1569.06
+2025-04-13,Vertex Monitor 32,Displays,East,Retail,K. Tanaka,5,549.0,0.05,2346.97
+2025-04-14,Nimbus Tablet 11,Tablets,East,Online,L. Dubois,8,649.0,0,5970.8
+2025-04-14,Aurora Laptop 14,Laptops,North,Online,A. Rahman,11,1299.0,0.15,13967.5
+2025-04-14,Aurora Laptop 14,Laptops,West,Online,J. Okafor,6,1299.0,0.15,7618.63
+2025-04-14,Aurora Laptop 14,Laptops,South,Partner,M. Silva,3,1299.0,0.05,2961.72
+2025-04-14,Aurora Laptop 14,Laptops,West,Partner,K. Tanaka,5,1299.0,0.1,4676.4
+2025-04-15,Aurora Laptop 14,Laptops,East,Partner,A. Rahman,6,1299.0,0,6235.2
+2025-04-15,Cobalt Keyboard,Accessories,West,Online,J. Okafor,6,89.0,0,614.1
+2025-04-16,Cobalt Mouse,Accessories,East,Retail,K. Tanaka,7,59.0,0,371.7
+2025-04-16,Aurora Laptop 16,Laptops,East,Retail,J. Okafor,4,1699.0,0.15,5198.94
+2025-04-16,Pulse Headphones,Audio,North,Partner,A. Rahman,8,249.0,0.15,1354.56
+2025-04-17,Vertex Monitor 27,Displays,West,Retail,J. Okafor,4,379.0,0,1364.4
+2025-04-17,Aurora Laptop 16,Laptops,West,Retail,M. Silva,5,1699.0,0.15,6498.68
+2025-04-18,Aurora Laptop 16,Laptops,North,Online,K. Tanaka,9,1699.0,0.1,15826.18
+2025-04-18,Pulse Headphones,Audio,North,Online,M. Silva,14,249.0,0.15,3407.56
+2025-04-18,Cobalt Keyboard,Accessories,North,Online,L. Dubois,10,89.0,0,1023.5
+2025-04-18,Nimbus Tablet 11,Tablets,West,Online,J. Okafor,4,649.0,0,2985.4
+2025-04-18,Cobalt Mouse,Accessories,South,Partner,M. Silva,6,59.0,0.1,254.88
+2025-04-18,Vertex Monitor 27,Displays,South,Partner,A. Rahman,2,379.0,0.15,515.44
+2025-04-19,Pulse Earbuds,Audio,North,Online,L. Dubois,1,129.0,0,148.35
+2025-04-19,Cobalt Mouse,Accessories,West,Retail,M. Silva,5,59.0,0,265.5
+2025-04-19,Vertex Monitor 32,Displays,West,Online,J. Okafor,1,549.0,0.05,599.78
+2025-04-19,Cobalt Mouse,Accessories,West,Online,M. Silva,7,59.0,0.1,427.45
+2025-04-19,Nimbus Tablet Mini,Tablets,North,Online,J. Okafor,4,429.0,0.15,1677.39
+2025-04-19,Vertex Monitor 27,Displays,East,Retail,A. Rahman,6,379.0,0,2046.6
+2025-04-20,Pulse Headphones,Audio,West,Retail,J. Okafor,4,249.0,0,896.4
+2025-04-20,Vertex Monitor 27,Displays,West,Partner,L. Dubois,3,379.0,0.1,818.64
+2025-04-21,Aurora Laptop 16,Laptops,North,Online,M. Silva,6,1699.0,0.1,10550.79
+2025-04-21,Vertex Monitor 27,Displays,North,Retail,K. Tanaka,8,379.0,0.05,2592.36
+2025-04-21,Aurora Laptop 16,Laptops,South,Partner,J. Okafor,1,1699.0,0,1359.2
+2025-04-21,Pulse Headphones,Audio,East,Retail,J. Okafor,5,249.0,0.05,1064.48
+2025-04-21,Aurora Laptop 16,Laptops,South,Retail,M. Silva,4,1699.0,0,6116.4
+2025-04-22,Nimbus Tablet Mini,Tablets,West,Partner,J. Okafor,8,429.0,0.1,2471.04
+2025-04-22,Vertex Monitor 32,Displays,North,Online,L. Dubois,4,549.0,0,2525.4
+2025-04-22,Vertex Monitor 27,Displays,East,Retail,K. Tanaka,13,379.0,0,4434.3
+2025-04-22,Cobalt Mouse,Accessories,South,Retail,K. Tanaka,2,59.0,0,106.2
+2025-04-23,Nimbus Tablet 11,Tablets,West,Retail,K. Tanaka,11,649.0,0,6425.1
+2025-04-23,Cobalt Mouse,Accessories,South,Retail,M. Silva,1,59.0,0.05,50.45
+2025-04-23,Aurora Laptop 16,Laptops,South,Partner,J. Okafor,8,1699.0,0.1,9786.24
+2025-04-23,Cobalt Keyboard,Accessories,North,Partner,M. Silva,1,89.0,0.05,67.64
+2025-04-24,Vertex Monitor 27,Displays,West,Online,M. Silva,6,379.0,0.15,2222.83
+2025-04-24,Nimbus Tablet Mini,Tablets,East,Partner,A. Rahman,8,429.0,0.05,2608.32
+2025-04-25,Cobalt Mouse,Accessories,West,Partner,L. Dubois,8,59.0,0.05,358.72
+2025-04-25,Cobalt Keyboard,Accessories,West,Partner,L. Dubois,12,89.0,0.15,726.24
+2025-04-25,Cobalt Mouse,Accessories,North,Online,M. Silva,9,59.0,0,610.65
+2025-04-25,Nimbus Tablet 11,Tablets,North,Partner,M. Silva,13,649.0,0.05,6412.12
+2025-04-25,Vertex Monitor 27,Displays,North,Online,M. Silva,6,379.0,0,2615.1
+2025-04-26,Cobalt Keyboard,Accessories,South,Retail,L. Dubois,2,89.0,0.15,136.17
+2025-04-26,Cobalt Keyboard,Accessories,South,Retail,K. Tanaka,4,89.0,0,320.4
+2025-04-26,Aurora Laptop 16,Laptops,East,Retail,J. Okafor,5,1699.0,0.15,6498.68
+2025-04-27,Pulse Headphones,Audio,East,Retail,L. Dubois,3,249.0,0,672.3
+2025-04-27,Vertex Monitor 32,Displays,East,Retail,M. Silva,7,549.0,0.05,3285.76
+2025-04-27,Aurora Laptop 16,Laptops,East,Online,A. Rahman,6,1699.0,0.15,9964.63
+2025-04-27,Aurora Laptop 14,Laptops,East,Partner,J. Okafor,7,1299.0,0.15,6183.24
+2025-04-28,Nimbus Tablet 11,Tablets,South,Retail,K. Tanaka,8,649.0,0.1,4205.52
+2025-04-28,Vertex Monitor 32,Displays,South,Retail,K. Tanaka,3,549.0,0.15,1259.96
+2025-04-28,Vertex Monitor 27,Displays,North,Partner,J. Okafor,5,379.0,0.1,1364.4
+2025-04-28,Vertex Monitor 32,Displays,West,Retail,A. Rahman,7,549.0,0,3458.7
+2025-04-28,Cobalt Mouse,Accessories,North,Partner,M. Silva,7,59.0,0,330.4
+2025-04-28,Pulse Earbuds,Audio,South,Retail,L. Dubois,7,129.0,0.05,772.06
+2025-04-29,Cobalt Mouse,Accessories,West,Partner,L. Dubois,8,59.0,0.05,358.72
+2025-04-29,Aurora Laptop 16,Laptops,East,Retail,M. Silva,8,1699.0,0.15,10397.88
+2025-04-29,Cobalt Mouse,Accessories,North,Partner,M. Silva,3,59.0,0,141.6
+2025-04-29,Aurora Laptop 16,Laptops,South,Retail,L. Dubois,6,1699.0,0,9174.6
+2025-04-30,Vertex Monitor 27,Displays,South,Partner,K. Tanaka,6,379.0,0.05,1728.24
+2025-04-30,Nimbus Tablet 11,Tablets,West,Partner,L. Dubois,1,649.0,0,519.2
+2025-04-30,Nimbus Tablet 11,Tablets,West,Retail,J. Okafor,4,649.0,0,2336.4
+2025-04-30,Pulse Earbuds,Audio,West,Partner,K. Tanaka,8,129.0,0,825.6
+2025-04-30,Nimbus Tablet 11,Tablets,South,Retail,L. Dubois,5,649.0,0.1,2628.45
+2025-05-01,Vertex Monitor 27,Displays,West,Retail,A. Rahman,4,379.0,0,1364.4
+2025-05-01,Cobalt Mouse,Accessories,North,Online,A. Rahman,3,59.0,0,203.55
+2025-05-01,Pulse Headphones,Audio,South,Partner,K. Tanaka,4,249.0,0.1,717.12
+2025-05-01,Cobalt Keyboard,Accessories,North,Partner,M. Silva,13,89.0,0,925.6
+2025-05-01,Cobalt Keyboard,Accessories,East,Partner,K. Tanaka,6,89.0,0.15,363.12
+2025-05-02,Nimbus Tablet Mini,Tablets,West,Online,J. Okafor,4,429.0,0.15,1677.39
+2025-05-02,Pulse Headphones,Audio,North,Retail,K. Tanaka,6,249.0,0,1344.6
+2025-05-02,Aurora Laptop 16,Laptops,South,Online,L. Dubois,10,1699.0,0.15,16607.72
+2025-05-02,Pulse Earbuds,Audio,West,Online,A. Rahman,1,129.0,0,148.35
+2025-05-02,Cobalt Mouse,Accessories,East,Partner,L. Dubois,2,59.0,0,94.4
+2025-05-02,Cobalt Keyboard,Accessories,South,Retail,M. Silva,7,89.0,0.1,504.63
+2025-05-03,Aurora Laptop 16,Laptops,South,Retail,M. Silva,3,1699.0,0,4587.3
+2025-05-03,Nimbus Tablet 11,Tablets,South,Online,K. Tanaka,4,649.0,0,2985.4
+2025-05-03,Vertex Monitor 32,Displays,South,Partner,M. Silva,4,549.0,0.15,1493.28
+2025-05-03,Vertex Monitor 27,Displays,West,Retail,K. Tanaka,7,379.0,0,2387.7
+2025-05-03,Cobalt Keyboard,Accessories,East,Partner,K. Tanaka,6,89.0,0,427.2
+2025-05-03,Vertex Monitor 32,Displays,East,Partner,A. Rahman,8,549.0,0.15,2986.56
+2025-05-04,Pulse Earbuds,Audio,North,Partner,J. Okafor,5,129.0,0.05,490.2
+2025-05-04,Vertex Monitor 27,Displays,South,Retail,L. Dubois,3,379.0,0,1023.3
+2025-05-04,Cobalt Mouse,Accessories,South,Partner,M. Silva,6,59.0,0.05,269.04
+2025-05-04,Aurora Laptop 14,Laptops,North,Online,A. Rahman,1,1299.0,0,1493.85
+2025-05-04,Nimbus Tablet 11,Tablets,West,Retail,K. Tanaka,1,649.0,0,584.1
+2025-05-05,Nimbus Tablet 11,Tablets,East,Online,M. Silva,10,649.0,0,7463.5
+2025-05-05,Pulse Headphones,Audio,North,Retail,J. Okafor,2,249.0,0.15,380.97
+2025-05-05,Aurora Laptop 14,Laptops,West,Partner,K. Tanaka,4,1299.0,0,4156.8
+2025-05-06,Aurora Laptop 16,Laptops,North,Online,A. Rahman,12,1699.0,0.05,22273.89
+2025-05-06,Nimbus Tablet 11,Tablets,South,Partner,M. Silva,4,649.0,0.15,1765.28
+2025-05-07,Vertex Monitor 27,Displays,South,Retail,J. Okafor,4,379.0,0,1364.4
+2025-05-07,Vertex Monitor 27,Displays,North,Partner,M. Silva,8,379.0,0,2425.6
+2025-05-08,Vertex Monitor 27,Displays,South,Partner,J. Okafor,3,379.0,0.15,773.16
+2025-05-08,Aurora Laptop 16,Laptops,North,Partner,J. Okafor,5,1699.0,0.15,5776.6
+2025-05-08,Nimbus Tablet 11,Tablets,West,Partner,K. Tanaka,3,649.0,0.15,1323.96
+2025-05-09,Aurora Laptop 16,Laptops,North,Online,M. Silva,7,1699.0,0.05,12993.1
+2025-05-09,Vertex Monitor 27,Displays,East,Online,M. Silva,2,379.0,0,871.7
+2025-05-09,Aurora Laptop 16,Laptops,South,Partner,A. Rahman,1,1699.0,0,1359.2
+2025-05-10,Nimbus Tablet Mini,Tablets,South,Partner,M. Silva,1,429.0,0.05,326.04
+2025-05-10,Aurora Laptop 14,Laptops,South,Retail,L. Dubois,2,1299.0,0.15,1987.47
+2025-05-10,Aurora Laptop 16,Laptops,North,Retail,J. Okafor,6,1699.0,0,9174.6
+2025-05-10,Vertex Monitor 27,Displays,West,Retail,A. Rahman,2,379.0,0.05,648.09
+2025-05-11,Cobalt Mouse,Accessories,North,Online,J. Okafor,4,59.0,0,271.4
+2025-05-11,Aurora Laptop 14,Laptops,North,Retail,K. Tanaka,1,1299.0,0.1,1052.19
+2025-05-12,Vertex Monitor 27,Displays,North,Partner,L. Dubois,7,379.0,0.1,1910.16
+2025-05-12,Cobalt Mouse,Accessories,South,Retail,J. Okafor,5,59.0,0,265.5
+2025-05-12,Cobalt Keyboard,Accessories,East,Retail,A. Rahman,6,89.0,0.1,432.54
+2025-05-12,Pulse Headphones,Audio,West,Partner,A. Rahman,7,249.0,0,1394.4
+2025-05-12,Vertex Monitor 27,Displays,North,Retail,L. Dubois,6,379.0,0.1,1841.94
+2025-05-13,Pulse Headphones,Audio,South,Online,J. Okafor,6,249.0,0,1718.1
+2025-05-13,Vertex Monitor 32,Displays,East,Partner,M. Silva,6,549.0,0.1,2371.68
+2025-05-14,Pulse Earbuds,Audio,South,Partner,A. Rahman,5,129.0,0,516.0
+2025-05-14,Pulse Earbuds,Audio,West,Retail,A. Rahman,3,129.0,0.1,313.47
+2025-05-14,Pulse Headphones,Audio,North,Retail,L. Dubois,4,249.0,0.05,851.58
+2025-05-15,Pulse Earbuds,Audio,South,Retail,L. Dubois,5,129.0,0,580.5
+2025-05-15,Aurora Laptop 16,Laptops,South,Partner,J. Okafor,4,1699.0,0,5436.8
+2025-05-15,Aurora Laptop 14,Laptops,West,Retail,J. Okafor,5,1299.0,0.05,5553.23
+2025-05-16,Aurora Laptop 14,Laptops,West,Online,M. Silva,4,1299.0,0.15,5079.09
+2025-05-16,Pulse Headphones,Audio,North,Partner,A. Rahman,11,249.0,0,2191.2
+2025-05-16,Cobalt Keyboard,Accessories,North,Online,K. Tanaka,8,89.0,0,818.8
+2025-05-17,Vertex Monitor 32,Displays,East,Retail,A. Rahman,7,549.0,0,3458.7
+2025-05-17,Cobalt Keyboard,Accessories,West,Online,L. Dubois,2,89.0,0,204.7
+2025-05-18,Vertex Monitor 32,Displays,East,Partner,J. Okafor,5,549.0,0.05,2086.2
+2025-05-18,Cobalt Keyboard,Accessories,South,Online,L. Dubois,5,89.0,0,511.75
+2025-05-18,Pulse Earbuds,Audio,North,Retail,K. Tanaka,5,129.0,0,580.5
+2025-05-19,Aurora Laptop 16,Laptops,South,Partner,J. Okafor,7,1699.0,0,9514.4
+2025-05-19,Pulse Headphones,Audio,North,Online,L. Dubois,7,249.0,0,2004.45
+2025-05-19,Vertex Monitor 27,Displays,East,Retail,L. Dubois,7,379.0,0,2387.7
+2025-05-19,Nimbus Tablet 11,Tablets,West,Online,L. Dubois,5,649.0,0.1,3358.57
+2025-05-20,Vertex Monitor 27,Displays,South,Online,M. Silva,3,379.0,0.05,1242.17
+2025-05-20,Pulse Earbuds,Audio,West,Retail,A. Rahman,11,129.0,0,1277.1
+2025-05-21,Nimbus Tablet 11,Tablets,North,Online,K. Tanaka,10,649.0,0,7463.5
+2025-05-21,Aurora Laptop 16,Laptops,East,Online,M. Silva,8,1699.0,0.05,14849.26
+2025-05-21,Vertex Monitor 32,Displays,East,Online,L. Dubois,11,549.0,0,6944.85
+2025-05-22,Nimbus Tablet Mini,Tablets,East,Online,J. Okafor,9,429.0,0,4440.15
+2025-05-22,Pulse Earbuds,Audio,West,Partner,A. Rahman,7,129.0,0,722.4
+2025-05-23,Vertex Monitor 32,Displays,South,Online,A. Rahman,5,549.0,0.05,2998.91
+2025-05-23,Nimbus Tablet 11,Tablets,North,Online,J. Okafor,13,649.0,0,9702.55
+2025-05-23,Nimbus Tablet Mini,Tablets,West,Retail,A. Rahman,7,429.0,0.15,2297.29
+2025-05-23,Cobalt Mouse,Accessories,East,Online,K. Tanaka,7,59.0,0.15,403.71
+2025-05-23,Nimbus Tablet 11,Tablets,North,Retail,A. Rahman,7,649.0,0,4088.7
+2025-05-24,Aurora Laptop 14,Laptops,South,Partner,A. Rahman,1,1299.0,0.05,987.24
+2025-05-24,Vertex Monitor 27,Displays,West,Online,J. Okafor,5,379.0,0,2179.25
+2025-05-24,Nimbus Tablet 11,Tablets,East,Retail,L. Dubois,3,649.0,0.1,1577.07
+2025-05-24,Cobalt Mouse,Accessories,South,Partner,K. Tanaka,3,59.0,0,141.6
+2025-05-24,Vertex Monitor 27,Displays,West,Online,J. Okafor,5,379.0,0.05,2070.29
+2025-05-25,Nimbus Tablet Mini,Tablets,North,Retail,M. Silva,6,429.0,0.15,1969.11
+2025-05-25,Vertex Monitor 32,Displays,West,Retail,M. Silva,6,549.0,0.05,2816.37
+2025-05-25,Nimbus Tablet 11,Tablets,North,Retail,J. Okafor,3,649.0,0.1,1577.07
+2025-05-25,Aurora Laptop 14,Laptops,East,Online,L. Dubois,5,1299.0,0,7469.25
+2025-05-25,Nimbus Tablet Mini,Tablets,South,Online,J. Okafor,1,429.0,0,493.35
+2025-05-25,Pulse Headphones,Audio,North,Online,M. Silva,1,249.0,0.05,272.03
+2025-05-26,Nimbus Tablet 11,Tablets,South,Partner,M. Silva,1,649.0,0,519.2
+2025-05-26,Cobalt Mouse,Accessories,North,Partner,J. Okafor,4,59.0,0.1,169.92
+2025-05-26,Cobalt Mouse,Accessories,South,Retail,M. Silva,1,59.0,0.1,47.79
+2025-05-27,Vertex Monitor 32,Displays,North,Online,L. Dubois,12,549.0,0,7576.2
+2025-05-27,Vertex Monitor 32,Displays,North,Retail,J. Okafor,9,549.0,0.1,4002.21
+2025-05-27,Nimbus Tablet 11,Tablets,East,Partner,A. Rahman,8,649.0,0,4153.6
+2025-05-28,Nimbus Tablet 11,Tablets,South,Online,M. Silva,9,649.0,0.1,6045.44
+2025-05-28,Aurora Laptop 16,Laptops,East,Partner,M. Silva,9,1699.0,0,12232.8
+2025-05-29,Pulse Earbuds,Audio,South,Online,K. Tanaka,4,129.0,0.15,504.39
+2025-05-29,Vertex Monitor 32,Displays,East,Online,M. Silva,5,549.0,0.1,2841.07
+2025-05-29,Nimbus Tablet Mini,Tablets,South,Retail,M. Silva,1,429.0,0,386.1
+2025-05-29,Nimbus Tablet 11,Tablets,South,Partner,K. Tanaka,9,649.0,0.1,4205.52
+2025-05-30,Aurora Laptop 14,Laptops,South,Partner,L. Dubois,5,1299.0,0,5196.0
+2025-05-30,Nimbus Tablet Mini,Tablets,North,Retail,M. Silva,11,429.0,0,4247.1
+2025-05-30,Pulse Earbuds,Audio,South,Partner,M. Silva,8,129.0,0,825.6
+2025-05-30,Vertex Monitor 32,Displays,North,Retail,M. Silva,8,549.0,0,3952.8
+2025-05-30,Aurora Laptop 16,Laptops,North,Online,K. Tanaka,13,1699.0,0.05,24130.05
+2025-05-30,Vertex Monitor 27,Displays,South,Retail,K. Tanaka,2,379.0,0.1,613.98
+2025-05-31,Vertex Monitor 32,Displays,South,Online,A. Rahman,3,549.0,0.05,1799.35
+2025-05-31,Aurora Laptop 14,Laptops,East,Online,M. Silva,2,1299.0,0,2987.7
+2025-06-01,Vertex Monitor 27,Displays,South,Partner,L. Dubois,7,379.0,0,2122.4
+2025-06-01,Aurora Laptop 16,Laptops,East,Partner,A. Rahman,9,1699.0,0.15,10397.88
+2025-06-01,Vertex Monitor 27,Displays,South,Partner,J. Okafor,3,379.0,0.05,864.12
+2025-06-02,Aurora Laptop 16,Laptops,East,Online,L. Dubois,9,1699.0,0.1,15826.18
+2025-06-02,Pulse Headphones,Audio,East,Retail,A. Rahman,5,249.0,0,1120.5
+2025-06-03,Vertex Monitor 27,Displays,West,Online,M. Silva,5,379.0,0,2179.25
+2025-06-03,Cobalt Mouse,Accessories,West,Online,A. Rahman,5,59.0,0,339.25
+2025-06-04,Nimbus Tablet 11,Tablets,East,Online,K. Tanaka,4,649.0,0.05,2836.13
+2025-06-04,Vertex Monitor 32,Displays,East,Online,L. Dubois,6,549.0,0.15,3219.88
+2025-06-04,Vertex Monitor 27,Displays,South,Retail,A. Rahman,6,379.0,0.05,1944.27
+2025-06-05,Vertex Monitor 32,Displays,West,Retail,M. Silva,3,549.0,0,1482.3
+2025-06-05,Cobalt Mouse,Accessories,North,Online,M. Silva,7,59.0,0,474.95
+2025-06-05,Cobalt Keyboard,Accessories,West,Partner,L. Dubois,1,89.0,0,71.2
+2025-06-05,Aurora Laptop 14,Laptops,West,Partner,L. Dubois,2,1299.0,0.05,1974.48
+2025-06-06,Vertex Monitor 32,Displays,East,Online,A. Rahman,8,549.0,0.05,4798.26
+2025-06-06,Cobalt Keyboard,Accessories,South,Online,J. Okafor,7,89.0,0,716.45
+2025-06-06,Nimbus Tablet Mini,Tablets,South,Online,A. Rahman,4,429.0,0.05,1874.73
+2025-06-07,Nimbus Tablet Mini,Tablets,South,Partner,A. Rahman,3,429.0,0,1029.6
+2025-06-07,Vertex Monitor 27,Displays,West,Partner,M. Silva,8,379.0,0,2425.6
+2025-06-07,Cobalt Keyboard,Accessories,West,Online,K. Tanaka,4,89.0,0.1,368.46
+2025-06-07,Aurora Laptop 16,Laptops,West,Online,L. Dubois,1,1699.0,0,1953.85
+2025-06-07,Cobalt Mouse,Accessories,North,Online,L. Dubois,4,59.0,0,271.4
+2025-06-08,Vertex Monitor 27,Displays,East,Retail,K. Tanaka,4,379.0,0.15,1159.74
+2025-06-08,Cobalt Mouse,Accessories,West,Online,L. Dubois,4,59.0,0.1,244.26
+2025-06-08,Vertex Monitor 27,Displays,North,Retail,J. Okafor,7,379.0,0,2387.7
+2025-06-08,Aurora Laptop 14,Laptops,West,Retail,M. Silva,4,1299.0,0,4676.4
+2025-06-09,Vertex Monitor 32,Displays,North,Online,M. Silva,7,549.0,0,4419.45
+2025-06-09,Vertex Monitor 32,Displays,East,Retail,J. Okafor,5,549.0,0,2470.5
+2025-06-09,Vertex Monitor 32,Displays,South,Retail,K. Tanaka,1,549.0,0.15,419.99
+2025-06-09,Cobalt Keyboard,Accessories,East,Online,L. Dubois,4,89.0,0,409.4
+2025-06-10,Nimbus Tablet 11,Tablets,North,Online,J. Okafor,7,649.0,0,5224.45
+2025-06-10,Aurora Laptop 14,Laptops,South,Online,J. Okafor,1,1299.0,0.15,1269.77
+2025-06-10,Pulse Headphones,Audio,East,Retail,K. Tanaka,8,249.0,0.1,1613.52
+2025-06-10,Aurora Laptop 16,Laptops,North,Online,K. Tanaka,3,1699.0,0,5861.55
+2025-06-10,Cobalt Mouse,Accessories,East,Retail,M. Silva,9,59.0,0,477.9
+2025-06-11,Pulse Headphones,Audio,North,Retail,J. Okafor,14,249.0,0,3137.4
+2025-06-11,Nimbus Tablet Mini,Tablets,South,Retail,K. Tanaka,6,429.0,0.15,1969.11
+2025-06-12,Aurora Laptop 14,Laptops,North,Retail,A. Rahman,12,1299.0,0.1,12626.28
+2025-06-12,Nimbus Tablet Mini,Tablets,East,Partner,M. Silva,3,429.0,0,1029.6
+2025-06-12,Vertex Monitor 27,Displays,West,Retail,L. Dubois,3,379.0,0,1023.3
+2025-06-12,Cobalt Mouse,Accessories,West,Partner,A. Rahman,6,59.0,0,283.2
+2025-06-12,Cobalt Keyboard,Accessories,East,Partner,A. Rahman,3,89.0,0,213.6
+2025-06-12,Vertex Monitor 32,Displays,North,Retail,M. Silva,3,549.0,0,1482.3
+2025-06-13,Pulse Headphones,Audio,East,Online,L. Dubois,9,249.0,0,2577.15
+2025-06-13,Vertex Monitor 27,Displays,East,Partner,A. Rahman,10,379.0,0,3032.0
+2025-06-13,Vertex Monitor 32,Displays,East,Retail,A. Rahman,8,549.0,0.15,3359.88
+2025-06-13,Cobalt Mouse,Accessories,South,Retail,J. Okafor,3,59.0,0.15,135.41
+2025-06-14,Vertex Monitor 32,Displays,East,Partner,L. Dubois,3,549.0,0.15,1119.96
+2025-06-14,Nimbus Tablet 11,Tablets,East,Online,J. Okafor,5,649.0,0.05,3545.16
+2025-06-14,Pulse Headphones,Audio,South,Partner,M. Silva,5,249.0,0,996.0
+2025-06-14,Nimbus Tablet Mini,Tablets,East,Retail,M. Silva,2,429.0,0,772.2
+2025-06-14,Pulse Headphones,Audio,East,Retail,L. Dubois,5,249.0,0.15,952.43
+2025-06-14,Cobalt Mouse,Accessories,North,Retail,L. Dubois,2,59.0,0,106.2
+2025-06-15,Vertex Monitor 27,Displays,East,Retail,J. Okafor,8,379.0,0,2728.8
+2025-06-15,Pulse Earbuds,Audio,West,Partner,J. Okafor,5,129.0,0.05,490.2
+2025-06-16,Nimbus Tablet 11,Tablets,North,Retail,A. Rahman,2,649.0,0,1168.2
+2025-06-16,Aurora Laptop 14,Laptops,West,Retail,J. Okafor,12,1299.0,0,14029.2
+2025-06-16,Cobalt Mouse,Accessories,South,Retail,L. Dubois,6,59.0,0,318.6
+2025-06-16,Vertex Monitor 27,Displays,West,Retail,K. Tanaka,1,379.0,0.05,324.05
+2025-06-17,Aurora Laptop 14,Laptops,North,Partner,M. Silva,8,1299.0,0,8313.6
+2025-06-17,Cobalt Keyboard,Accessories,South,Online,A. Rahman,7,89.0,0.15,608.98
+2025-06-17,Nimbus Tablet Mini,Tablets,South,Partner,K. Tanaka,6,429.0,0,2059.2
+2025-06-17,Cobalt Keyboard,Accessories,East,Online,A. Rahman,4,89.0,0,409.4
+2025-06-17,Pulse Headphones,Audio,East,Retail,K. Tanaka,5,249.0,0,1120.5
+2025-06-18,Pulse Earbuds,Audio,West,Retail,J. Okafor,1,129.0,0,116.1
+2025-06-18,Vertex Monitor 27,Displays,North,Online,A. Rahman,9,379.0,0,3922.65
+2025-06-18,Cobalt Mouse,Accessories,South,Online,A. Rahman,12,59.0,0,814.2
+2025-06-19,Pulse Headphones,Audio,North,Partner,A. Rahman,13,249.0,0.15,2201.16
+2025-06-19,Aurora Laptop 14,Laptops,North,Retail,K. Tanaka,7,1299.0,0.05,7774.52
+2025-06-19,Aurora Laptop 16,Laptops,East,Retail,A. Rahman,5,1699.0,0.15,6498.68
+2025-06-19,Pulse Headphones,Audio,West,Partner,L. Dubois,3,249.0,0,597.6
+2025-06-19,Pulse Headphones,Audio,South,Retail,L. Dubois,5,249.0,0.15,952.43
+2025-06-20,Pulse Headphones,Audio,North,Online,J. Okafor,5,249.0,0.05,1360.16
+2025-06-20,Cobalt Mouse,Accessories,South,Retail,K. Tanaka,8,59.0,0,424.8
+2025-06-21,Nimbus Tablet 11,Tablets,North,Partner,J. Okafor,1,649.0,0.05,493.24
+2025-06-21,Vertex Monitor 32,Displays,East,Online,L. Dubois,7,549.0,0,4419.45
+2025-06-21,Vertex Monitor 32,Displays,South,Online,A. Rahman,3,549.0,0.1,1704.64
+2025-06-21,Aurora Laptop 16,Laptops,East,Partner,M. Silva,5,1699.0,0,6796.0
+2025-06-22,Aurora Laptop 14,Laptops,North,Online,M. Silva,13,1299.0,0,19420.05
+2025-06-22,Pulse Earbuds,Audio,East,Retail,A. Rahman,4,129.0,0,464.4
+2025-06-22,Nimbus Tablet 11,Tablets,South,Retail,K. Tanaka,2,649.0,0,1168.2
+2025-06-22,Cobalt Mouse,Accessories,East,Partner,A. Rahman,7,59.0,0,330.4
+2025-06-22,Vertex Monitor 27,Displays,West,Retail,K. Tanaka,6,379.0,0,2046.6
+2025-06-23,Vertex Monitor 27,Displays,South,Online,A. Rahman,7,379.0,0,3050.95
+2025-06-23,Vertex Monitor 27,Displays,West,Partner,K. Tanaka,9,379.0,0.15,2319.48
+2025-06-23,Nimbus Tablet 11,Tablets,West,Retail,J. Okafor,1,649.0,0.15,496.49
+2025-06-23,Vertex Monitor 32,Displays,West,Online,K. Tanaka,2,549.0,0.05,1199.56
+2025-06-23,Aurora Laptop 14,Laptops,North,Retail,L. Dubois,7,1299.0,0.15,6956.15
+2025-06-24,Cobalt Mouse,Accessories,South,Partner,L. Dubois,4,59.0,0,188.8
+2025-06-24,Cobalt Keyboard,Accessories,North,Retail,K. Tanaka,6,89.0,0,480.6
+2025-06-24,Nimbus Tablet 11,Tablets,North,Online,J. Okafor,5,649.0,0.15,3171.99
+2025-06-24,Cobalt Keyboard,Accessories,West,Retail,M. Silva,6,89.0,0.05,456.57
+2025-06-24,Nimbus Tablet Mini,Tablets,East,Retail,L. Dubois,5,429.0,0,1930.5
+2025-06-24,Nimbus Tablet Mini,Tablets,West,Retail,L. Dubois,6,429.0,0.05,2200.77
+2025-06-25,Aurora Laptop 16,Laptops,West,Retail,A. Rahman,4,1699.0,0,6116.4
+2025-06-25,Vertex Monitor 32,Displays,North,Online,A. Rahman,6,549.0,0.1,3409.29
+2025-06-25,Aurora Laptop 16,Laptops,East,Partner,J. Okafor,6,1699.0,0.1,7339.68
+2025-06-25,Vertex Monitor 32,Displays,East,Retail,M. Silva,8,549.0,0.05,3755.16
+2025-06-25,Cobalt Keyboard,Accessories,West,Partner,M. Silva,1,89.0,0.15,60.52
+2025-06-26,Aurora Laptop 16,Laptops,North,Partner,M. Silva,8,1699.0,0.15,9242.56
+2025-06-26,Cobalt Keyboard,Accessories,East,Partner,A. Rahman,9,89.0,0,640.8
+2025-06-26,Nimbus Tablet 11,Tablets,West,Online,A. Rahman,7,649.0,0.05,4963.23
+2025-06-26,Pulse Headphones,Audio,South,Online,K. Tanaka,1,249.0,0,286.35
+2025-06-26,Nimbus Tablet Mini,Tablets,West,Online,A. Rahman,5,429.0,0.05,2343.41
+2025-06-27,Aurora Laptop 16,Laptops,West,Retail,L. Dubois,4,1699.0,0.15,5198.94
+2025-06-27,Cobalt Keyboard,Accessories,South,Retail,K. Tanaka,9,89.0,0.1,648.81
+2025-06-27,Cobalt Mouse,Accessories,West,Partner,L. Dubois,5,59.0,0,236.0
+2025-06-27,Nimbus Tablet 11,Tablets,South,Online,L. Dubois,2,649.0,0,1492.7
+2025-06-27,Vertex Monitor 27,Displays,West,Partner,J. Okafor,8,379.0,0.15,2061.76
+2025-06-27,Pulse Headphones,Audio,West,Retail,J. Okafor,8,249.0,0,1792.8
+2025-06-28,Cobalt Mouse,Accessories,East,Partner,M. Silva,3,59.0,0.1,127.44
+2025-06-28,Cobalt Keyboard,Accessories,South,Online,M. Silva,4,89.0,0.15,347.99
+2025-06-28,Nimbus Tablet 11,Tablets,South,Partner,M. Silva,6,649.0,0.1,2803.68
+2025-06-28,Aurora Laptop 16,Laptops,East,Partner,K. Tanaka,1,1699.0,0.15,1155.32
+2025-06-28,Cobalt Keyboard,Accessories,East,Retail,L. Dubois,4,89.0,0,320.4
+2025-06-29,Aurora Laptop 14,Laptops,West,Online,J. Okafor,4,1299.0,0,5975.4
+2025-06-29,Pulse Headphones,Audio,East,Online,M. Silva,4,249.0,0,1145.4
+2025-06-30,Cobalt Keyboard,Accessories,North,Retail,L. Dubois,8,89.0,0.15,544.68
+2025-06-30,Nimbus Tablet Mini,Tablets,West,Online,M. Silva,4,429.0,0.1,1776.06
+2025-06-30,Aurora Laptop 14,Laptops,West,Retail,M. Silva,1,1299.0,0.15,993.73
+2025-07-01,Aurora Laptop 14,Laptops,North,Partner,J. Okafor,10,1299.0,0,10392.0
+2025-07-01,Cobalt Mouse,Accessories,West,Online,M. Silva,9,59.0,0.15,519.05
+2025-07-01,Cobalt Mouse,Accessories,South,Partner,M. Silva,2,59.0,0,94.4
+2025-07-01,Vertex Monitor 32,Displays,South,Partner,L. Dubois,10,549.0,0.15,3733.2
+2025-07-01,Aurora Laptop 16,Laptops,West,Online,M. Silva,8,1699.0,0.05,14849.26
+2025-07-01,Cobalt Keyboard,Accessories,East,Online,M. Silva,9,89.0,0,921.15
+2025-07-02,Nimbus Tablet 11,Tablets,North,Online,L. Dubois,13,649.0,0,9702.55
+2025-07-02,Aurora Laptop 14,Laptops,East,Retail,M. Silva,7,1299.0,0,8183.7
+2025-07-02,Cobalt Keyboard,Accessories,South,Online,A. Rahman,1,89.0,0.1,92.12
+2025-07-02,Cobalt Keyboard,Accessories,South,Retail,J. Okafor,2,89.0,0,160.2
+2025-07-02,Nimbus Tablet Mini,Tablets,East,Retail,M. Silva,5,429.0,0,1930.5
+2025-07-03,Cobalt Mouse,Accessories,West,Partner,A. Rahman,9,59.0,0,424.8
+2025-07-03,Pulse Earbuds,Audio,West,Online,L. Dubois,1,129.0,0.15,126.1
+2025-07-03,Cobalt Mouse,Accessories,South,Online,K. Tanaka,4,59.0,0,271.4
+2025-07-04,Cobalt Keyboard,Accessories,East,Online,M. Silva,3,89.0,0.1,276.34
+2025-07-04,Cobalt Keyboard,Accessories,West,Retail,M. Silva,11,89.0,0,881.1
+2025-07-04,Cobalt Keyboard,Accessories,North,Online,L. Dubois,9,89.0,0,921.15
+2025-07-04,Cobalt Keyboard,Accessories,North,Partner,K. Tanaka,12,89.0,0,854.4
+2025-07-05,Nimbus Tablet Mini,Tablets,West,Partner,J. Okafor,5,429.0,0,1716.0
+2025-07-05,Aurora Laptop 14,Laptops,West,Partner,J. Okafor,3,1299.0,0,3117.6
+2025-07-06,Cobalt Keyboard,Accessories,North,Partner,M. Silva,6,89.0,0,427.2
+2025-07-06,Vertex Monitor 27,Displays,West,Retail,K. Tanaka,2,379.0,0,682.2
+2025-07-06,Aurora Laptop 16,Laptops,North,Partner,L. Dubois,3,1699.0,0.15,3465.96
+2025-07-06,Aurora Laptop 16,Laptops,North,Partner,A. Rahman,6,1699.0,0.1,7339.68
+2025-07-07,Pulse Headphones,Audio,North,Retail,K. Tanaka,4,249.0,0.05,851.58
+2025-07-07,Vertex Monitor 27,Displays,North,Retail,K. Tanaka,8,379.0,0.15,2319.48
+2025-07-07,Cobalt Keyboard,Accessories,East,Partner,M. Silva,8,89.0,0,569.6
+2025-07-07,Pulse Earbuds,Audio,North,Partner,A. Rahman,8,129.0,0,825.6
+2025-07-08,Cobalt Mouse,Accessories,West,Partner,A. Rahman,4,59.0,0.1,169.92
+2025-07-08,Pulse Headphones,Audio,South,Partner,K. Tanaka,4,249.0,0,796.8
+2025-07-08,Cobalt Keyboard,Accessories,South,Online,J. Okafor,1,89.0,0,102.35
+2025-07-08,Cobalt Mouse,Accessories,East,Online,A. Rahman,9,59.0,0.1,549.59
+2025-07-08,Cobalt Keyboard,Accessories,West,Partner,A. Rahman,8,89.0,0.1,512.64
+2025-07-08,Pulse Headphones,Audio,North,Retail,M. Silva,12,249.0,0.05,2554.74
+2025-07-09,Nimbus Tablet 11,Tablets,South,Online,L. Dubois,7,649.0,0,5224.45
+2025-07-09,Aurora Laptop 16,Laptops,South,Retail,M. Silva,2,1699.0,0.15,2599.47
+2025-07-09,Cobalt Mouse,Accessories,South,Partner,M. Silva,5,59.0,0.1,212.4
+2025-07-09,Pulse Earbuds,Audio,West,Online,K. Tanaka,7,129.0,0,1038.45
+2025-07-10,Pulse Earbuds,Audio,South,Partner,M. Silva,5,129.0,0.15,438.6
+2025-07-10,Vertex Monitor 32,Displays,West,Retail,A. Rahman,4,549.0,0.1,1778.76
+2025-07-10,Nimbus Tablet 11,Tablets,North,Retail,L. Dubois,9,649.0,0,5256.9
+2025-07-10,Nimbus Tablet Mini,Tablets,East,Partner,A. Rahman,7,429.0,0,2402.4
+2025-07-11,Aurora Laptop 14,Laptops,West,Partner,A. Rahman,4,1299.0,0,4156.8
+2025-07-11,Cobalt Keyboard,Accessories,East,Partner,J. Okafor,9,89.0,0.15,544.68
+2025-07-11,Pulse Earbuds,Audio,West,Online,M. Silva,3,129.0,0.1,400.54
+2025-07-11,Nimbus Tablet 11,Tablets,West,Partner,A. Rahman,2,649.0,0.1,934.56
+2025-07-11,Nimbus Tablet Mini,Tablets,South,Partner,K. Tanaka,4,429.0,0,1372.8
+2025-07-11,Nimbus Tablet 11,Tablets,South,Partner,K. Tanaka,8,649.0,0,4153.6
+2025-07-12,Aurora Laptop 14,Laptops,South,Retail,A. Rahman,2,1299.0,0,2338.2
+2025-07-12,Pulse Headphones,Audio,East,Online,K. Tanaka,5,249.0,0,1431.75
+2025-07-12,Vertex Monitor 32,Displays,West,Online,M. Silva,4,549.0,0,2525.4
+2025-07-12,Aurora Laptop 16,Laptops,East,Partner,K. Tanaka,4,1699.0,0,5436.8
+2025-07-13,Pulse Earbuds,Audio,North,Partner,K. Tanaka,8,129.0,0,825.6
+2025-07-13,Nimbus Tablet Mini,Tablets,West,Retail,L. Dubois,4,429.0,0.05,1467.18
+2025-07-13,Aurora Laptop 14,Laptops,South,Retail,J. Okafor,2,1299.0,0,2338.2
+2025-07-13,Aurora Laptop 16,Laptops,East,Online,A. Rahman,5,1699.0,0.1,8792.32
+2025-07-13,Nimbus Tablet Mini,Tablets,West,Retail,A. Rahman,4,429.0,0.15,1312.74
+2025-07-14,Vertex Monitor 32,Displays,West,Online,A. Rahman,2,549.0,0.05,1199.56
+2025-07-14,Nimbus Tablet Mini,Tablets,North,Online,L. Dubois,4,429.0,0.1,1776.06
+2025-07-14,Nimbus Tablet 11,Tablets,South,Partner,A. Rahman,1,649.0,0,519.2
+2025-07-14,Nimbus Tablet 11,Tablets,East,Online,K. Tanaka,5,649.0,0.1,3358.57
+2025-07-14,Cobalt Mouse,Accessories,North,Partner,J. Okafor,6,59.0,0,283.2
+2025-07-15,Cobalt Mouse,Accessories,West,Retail,J. Okafor,1,59.0,0,53.1
+2025-07-15,Vertex Monitor 27,Displays,South,Partner,L. Dubois,5,379.0,0.15,1288.6
+2025-07-15,Pulse Headphones,Audio,South,Partner,M. Silva,3,249.0,0.15,507.96
+2025-07-15,Vertex Monitor 32,Displays,North,Online,J. Okafor,6,549.0,0,3788.1
+2025-07-15,Cobalt Keyboard,Accessories,West,Online,A. Rahman,6,89.0,0.1,552.69
+2025-07-16,Vertex Monitor 32,Displays,North,Partner,J. Okafor,5,549.0,0.05,2086.2
+2025-07-16,Cobalt Mouse,Accessories,North,Partner,K. Tanaka,7,59.0,0.15,280.84
+2025-07-16,Cobalt Keyboard,Accessories,West,Retail,J. Okafor,8,89.0,0.05,608.76
+2025-07-17,Vertex Monitor 27,Displays,East,Partner,L. Dubois,2,379.0,0.15,515.44
+2025-07-17,Aurora Laptop 16,Laptops,West,Online,M. Silva,5,1699.0,0,9769.25
+2025-07-17,Cobalt Mouse,Accessories,West,Retail,A. Rahman,10,59.0,0,531.0
+2025-07-17,Aurora Laptop 14,Laptops,North,Partner,M. Silva,12,1299.0,0.15,10599.84
+2025-07-17,Vertex Monitor 27,Displays,East,Online,K. Tanaka,6,379.0,0,2615.1
+2025-07-18,Pulse Headphones,Audio,East,Partner,K. Tanaka,3,249.0,0,597.6
+2025-07-18,Nimbus Tablet Mini,Tablets,West,Partner,K. Tanaka,6,429.0,0.1,1853.28
+2025-07-18,Nimbus Tablet 11,Tablets,East,Partner,L. Dubois,4,649.0,0,2076.8
+2025-07-18,Pulse Earbuds,Audio,West,Partner,A. Rahman,4,129.0,0,412.8
+2025-07-18,Nimbus Tablet Mini,Tablets,West,Partner,K. Tanaka,6,429.0,0.1,1853.28
+2025-07-18,Pulse Earbuds,Audio,North,Online,A. Rahman,6,129.0,0.05,845.59
+2025-07-19,Nimbus Tablet 11,Tablets,West,Partner,M. Silva,3,649.0,0,1557.6
+2025-07-19,Aurora Laptop 16,Laptops,North,Partner,K. Tanaka,5,1699.0,0.05,6456.2
+2025-07-20,Cobalt Keyboard,Accessories,East,Partner,K. Tanaka,5,89.0,0,356.0
+2025-07-20,Vertex Monitor 32,Displays,North,Online,L. Dubois,5,549.0,0.15,2683.24
+2025-07-20,Pulse Headphones,Audio,South,Online,J. Okafor,4,249.0,0.15,973.59
+2025-07-20,Cobalt Mouse,Accessories,South,Partner,M. Silva,1,59.0,0,47.2
+2025-07-20,Nimbus Tablet Mini,Tablets,North,Online,M. Silva,7,429.0,0.05,3280.78
+2025-07-20,Vertex Monitor 27,Displays,West,Partner,L. Dubois,4,379.0,0,1212.8
+2025-07-21,Aurora Laptop 16,Laptops,North,Partner,M. Silva,5,1699.0,0.1,6116.4
+2025-07-21,Pulse Earbuds,Audio,East,Online,J. Okafor,12,129.0,0.1,1602.18
+2025-07-22,Vertex Monitor 27,Displays,North,Retail,A. Rahman,9,379.0,0.1,2762.91
+2025-07-22,Cobalt Keyboard,Accessories,East,Retail,L. Dubois,9,89.0,0,720.9
+2025-07-22,Pulse Headphones,Audio,East,Partner,J. Okafor,3,249.0,0.05,567.72
+2025-07-22,Pulse Earbuds,Audio,West,Partner,L. Dubois,6,129.0,0.05,588.24
+2025-07-22,Aurora Laptop 14,Laptops,West,Online,J. Okafor,5,1299.0,0,7469.25
+2025-07-23,Vertex Monitor 27,Displays,East,Partner,A. Rahman,9,379.0,0.1,2455.92
+2025-07-23,Pulse Headphones,Audio,South,Retail,A. Rahman,8,249.0,0,1792.8
+2025-07-23,Cobalt Keyboard,Accessories,South,Retail,M. Silva,7,89.0,0,560.7
+2025-07-23,Nimbus Tablet Mini,Tablets,East,Online,K. Tanaka,10,429.0,0,4933.5
+2025-07-24,Nimbus Tablet Mini,Tablets,South,Retail,J. Okafor,3,429.0,0,1158.3
+2025-07-24,Nimbus Tablet Mini,Tablets,South,Partner,A. Rahman,2,429.0,0,686.4
+2025-07-24,Vertex Monitor 32,Displays,North,Partner,K. Tanaka,12,549.0,0,5270.4
+2025-07-25,Cobalt Mouse,Accessories,East,Retail,M. Silva,11,59.0,0.1,525.69
+2025-07-25,Vertex Monitor 32,Displays,South,Partner,K. Tanaka,1,549.0,0,439.2
+2025-07-25,Nimbus Tablet Mini,Tablets,South,Online,A. Rahman,2,429.0,0.1,888.03
+2025-07-25,Cobalt Keyboard,Accessories,East,Retail,J. Okafor,5,89.0,0.15,340.43
+2025-07-26,Aurora Laptop 16,Laptops,West,Retail,K. Tanaka,3,1699.0,0,4587.3
+2025-07-26,Cobalt Mouse,Accessories,North,Retail,L. Dubois,4,59.0,0,212.4
+2025-07-26,Pulse Headphones,Audio,South,Partner,M. Silva,3,249.0,0.1,537.84
+2025-07-26,Pulse Earbuds,Audio,South,Retail,J. Okafor,4,129.0,0.05,441.18
+2025-07-26,Vertex Monitor 27,Displays,East,Retail,L. Dubois,5,379.0,0,1705.5
+2025-07-27,Cobalt Mouse,Accessories,South,Online,M. Silva,2,59.0,0.15,115.34
+2025-07-27,Nimbus Tablet Mini,Tablets,West,Retail,J. Okafor,5,429.0,0.15,1640.92
+2025-07-27,Vertex Monitor 32,Displays,North,Online,K. Tanaka,9,549.0,0.05,5398.04
+2025-07-28,Cobalt Keyboard,Accessories,East,Retail,A. Rahman,5,89.0,0.1,360.45
+2025-07-28,Vertex Monitor 27,Displays,North,Partner,A. Rahman,12,379.0,0,3638.4
+2025-07-28,Nimbus Tablet Mini,Tablets,East,Retail,M. Silva,7,429.0,0.15,2297.29
+2025-07-29,Pulse Earbuds,Audio,East,Partner,M. Silva,5,129.0,0.1,464.4
+2025-07-29,Pulse Earbuds,Audio,North,Retail,J. Okafor,12,129.0,0.1,1253.88
+2025-07-29,Cobalt Mouse,Accessories,South,Retail,M. Silva,8,59.0,0,424.8
+2025-07-29,Cobalt Keyboard,Accessories,West,Partner,M. Silva,4,89.0,0.1,256.32
+2025-07-30,Nimbus Tablet 11,Tablets,South,Partner,K. Tanaka,5,649.0,0,2596.0
+2025-07-30,Cobalt Mouse,Accessories,West,Online,M. Silva,7,59.0,0,474.95
+2025-07-30,Pulse Headphones,Audio,East,Partner,K. Tanaka,7,249.0,0.15,1185.24
+2025-07-30,Pulse Headphones,Audio,West,Retail,K. Tanaka,5,249.0,0.05,1064.48
+2025-07-30,Nimbus Tablet 11,Tablets,South,Online,J. Okafor,2,649.0,0,1492.7
+2025-07-31,Aurora Laptop 16,Laptops,South,Online,L. Dubois,4,1699.0,0.05,7424.63
+2025-07-31,Aurora Laptop 14,Laptops,North,Retail,A. Rahman,8,1299.0,0.1,8417.52
+2025-07-31,Aurora Laptop 16,Laptops,East,Partner,M. Silva,8,1699.0,0.05,10329.92
+2025-07-31,Nimbus Tablet Mini,Tablets,South,Partner,K. Tanaka,8,429.0,0,2745.6
+2025-08-01,Nimbus Tablet 11,Tablets,South,Online,K. Tanaka,7,649.0,0,5224.45
+2025-08-01,Vertex Monitor 32,Displays,East,Partner,J. Okafor,6,549.0,0.05,2503.44
+2025-08-01,Cobalt Keyboard,Accessories,South,Partner,L. Dubois,2,89.0,0.15,121.04
+2025-08-02,Cobalt Keyboard,Accessories,East,Retail,L. Dubois,2,89.0,0.05,152.19
+2025-08-02,Nimbus Tablet Mini,Tablets,North,Retail,M. Silva,4,429.0,0,1544.4
+2025-08-02,Aurora Laptop 14,Laptops,North,Partner,M. Silva,7,1299.0,0,7274.4
+2025-08-02,Pulse Headphones,Audio,West,Partner,M. Silva,8,249.0,0.05,1513.92
+2025-08-02,Aurora Laptop 14,Laptops,West,Retail,J. Okafor,4,1299.0,0.1,4208.76
+2025-08-03,Cobalt Keyboard,Accessories,East,Online,J. Okafor,2,89.0,0.05,194.46
+2025-08-03,Nimbus Tablet 11,Tablets,West,Retail,M. Silva,5,649.0,0,2920.5
+2025-08-04,Vertex Monitor 27,Displays,South,Partner,M. Silva,5,379.0,0.15,1288.6
+2025-08-04,Pulse Headphones,Audio,East,Retail,A. Rahman,1,249.0,0,224.1
+2025-08-05,Nimbus Tablet 11,Tablets,East,Online,L. Dubois,3,649.0,0,2239.05
+2025-08-05,Vertex Monitor 32,Displays,South,Retail,J. Okafor,2,549.0,0,988.2
+2025-08-05,Aurora Laptop 14,Laptops,North,Online,K. Tanaka,10,1299.0,0,14938.5
+2025-08-06,Nimbus Tablet Mini,Tablets,North,Online,K. Tanaka,6,429.0,0,2960.1
+2025-08-06,Nimbus Tablet Mini,Tablets,East,Retail,K. Tanaka,4,429.0,0,1544.4
+2025-08-07,Pulse Earbuds,Audio,North,Online,M. Silva,13,129.0,0,1928.55
+2025-08-07,Vertex Monitor 27,Displays,North,Partner,K. Tanaka,5,379.0,0,1516.0
+2025-08-08,Aurora Laptop 16,Laptops,South,Retail,J. Okafor,5,1699.0,0.05,7263.23
+2025-08-08,Aurora Laptop 14,Laptops,South,Retail,J. Okafor,4,1299.0,0.15,3974.94
+2025-08-09,Vertex Monitor 27,Displays,East,Retail,A. Rahman,3,379.0,0,1023.3
+2025-08-09,Cobalt Keyboard,Accessories,North,Retail,A. Rahman,3,89.0,0,240.3
+2025-08-09,Nimbus Tablet Mini,Tablets,North,Online,K. Tanaka,5,429.0,0.15,2096.74
+2025-08-09,Pulse Earbuds,Audio,North,Online,J. Okafor,6,129.0,0.05,845.59
+2025-08-09,Aurora Laptop 14,Laptops,North,Partner,K. Tanaka,1,1299.0,0.15,883.32
+2025-08-10,Nimbus Tablet 11,Tablets,East,Online,L. Dubois,4,649.0,0.15,2537.59
+2025-08-10,Pulse Earbuds,Audio,North,Online,J. Okafor,8,129.0,0,1186.8
+2025-08-10,Cobalt Keyboard,Accessories,North,Online,M. Silva,2,89.0,0.1,184.23
+2025-08-10,Vertex Monitor 32,Displays,South,Online,K. Tanaka,3,549.0,0.15,1609.94
+2025-08-10,Pulse Earbuds,Audio,South,Retail,L. Dubois,5,129.0,0.05,551.48
+2025-08-10,Pulse Headphones,Audio,West,Online,J. Okafor,2,249.0,0.1,515.43
+2025-08-11,Pulse Earbuds,Audio,East,Partner,L. Dubois,1,129.0,0.1,92.88
+2025-08-11,Nimbus Tablet 11,Tablets,North,Partner,K. Tanaka,8,649.0,0,4153.6
+2025-08-11,Pulse Headphones,Audio,East,Partner,L. Dubois,6,249.0,0.15,1015.92
+2025-08-11,Vertex Monitor 27,Displays,South,Online,M. Silva,5,379.0,0.1,1961.32
+2025-08-11,Cobalt Mouse,Accessories,South,Retail,K. Tanaka,4,59.0,0.1,191.16
+2025-08-11,Nimbus Tablet Mini,Tablets,West,Partner,L. Dubois,1,429.0,0,343.2
+2025-08-12,Pulse Earbuds,Audio,West,Partner,A. Rahman,5,129.0,0.15,438.6
+2025-08-12,Aurora Laptop 14,Laptops,South,Online,J. Okafor,6,1299.0,0,8963.1
+2025-08-12,Aurora Laptop 16,Laptops,West,Online,K. Tanaka,8,1699.0,0.05,14849.26
+2025-08-12,Cobalt Keyboard,Accessories,East,Online,J. Okafor,8,89.0,0,818.8
+2025-08-13,Aurora Laptop 16,Laptops,North,Online,K. Tanaka,2,1699.0,0,3907.7
+2025-08-13,Aurora Laptop 14,Laptops,East,Partner,K. Tanaka,1,1299.0,0.15,883.32
+2025-08-13,Pulse Earbuds,Audio,North,Partner,M. Silva,7,129.0,0,722.4
+2025-08-13,Aurora Laptop 16,Laptops,South,Partner,A. Rahman,5,1699.0,0,6796.0
+2025-08-13,Nimbus Tablet Mini,Tablets,West,Online,J. Okafor,7,429.0,0.1,3108.11
+2025-08-13,Cobalt Keyboard,Accessories,West,Partner,L. Dubois,9,89.0,0,640.8
+2025-08-14,Vertex Monitor 32,Displays,West,Online,L. Dubois,6,549.0,0.05,3598.69
+2025-08-14,Pulse Earbuds,Audio,South,Partner,K. Tanaka,6,129.0,0.1,557.28
+2025-08-14,Pulse Earbuds,Audio,East,Partner,K. Tanaka,9,129.0,0,928.8
+2025-08-14,Vertex Monitor 27,Displays,East,Partner,L. Dubois,6,379.0,0,1819.2
+2025-08-15,Nimbus Tablet Mini,Tablets,West,Partner,K. Tanaka,7,429.0,0.05,2282.28
+2025-08-15,Vertex Monitor 27,Displays,North,Partner,M. Silva,6,379.0,0,1819.2
+2025-08-15,Cobalt Mouse,Accessories,North,Partner,M. Silva,12,59.0,0,566.4
+2025-08-15,Nimbus Tablet Mini,Tablets,South,Retail,M. Silva,9,429.0,0,3474.9
+2025-08-15,Cobalt Keyboard,Accessories,South,Online,M. Silva,7,89.0,0,716.45
+2025-08-15,Pulse Earbuds,Audio,South,Online,M. Silva,5,129.0,0,741.75
+2025-08-16,Cobalt Mouse,Accessories,West,Partner,M. Silva,6,59.0,0.15,240.72
+2025-08-16,Vertex Monitor 32,Displays,South,Retail,L. Dubois,2,549.0,0.15,839.97
+2025-08-17,Cobalt Mouse,Accessories,East,Online,A. Rahman,4,59.0,0,271.4
+2025-08-17,Pulse Earbuds,Audio,East,Retail,A. Rahman,1,129.0,0.05,110.3
+2025-08-18,Cobalt Mouse,Accessories,North,Partner,L. Dubois,8,59.0,0,377.6
+2025-08-18,Aurora Laptop 14,Laptops,East,Partner,J. Okafor,3,1299.0,0.1,2805.84
+2025-08-18,Pulse Earbuds,Audio,South,Online,K. Tanaka,9,129.0,0.05,1268.39
+2025-08-19,Cobalt Mouse,Accessories,North,Online,M. Silva,9,59.0,0.05,580.12
+2025-08-19,Vertex Monitor 27,Displays,South,Online,A. Rahman,3,379.0,0.15,1111.42
+2025-08-19,Cobalt Keyboard,Accessories,West,Retail,K. Tanaka,8,89.0,0,640.8
+2025-08-19,Cobalt Keyboard,Accessories,West,Partner,J. Okafor,6,89.0,0.1,384.48
+2025-08-19,Vertex Monitor 32,Displays,West,Partner,J. Okafor,6,549.0,0.1,2371.68
+2025-08-19,Cobalt Keyboard,Accessories,South,Online,L. Dubois,9,89.0,0,921.15
+2025-08-20,Aurora Laptop 16,Laptops,West,Retail,M. Silva,7,1699.0,0,10703.7
+2025-08-20,Nimbus Tablet Mini,Tablets,East,Retail,J. Okafor,5,429.0,0,1930.5
+2025-08-21,Cobalt Mouse,Accessories,West,Partner,K. Tanaka,5,59.0,0,236.0
+2025-08-21,Aurora Laptop 14,Laptops,South,Online,A. Rahman,4,1299.0,0.15,5079.09
+2025-08-21,Aurora Laptop 16,Laptops,North,Online,J. Okafor,5,1699.0,0.1,8792.32
+2025-08-21,Pulse Headphones,Audio,North,Retail,K. Tanaka,6,249.0,0.05,1277.37
+2025-08-22,Pulse Earbuds,Audio,South,Partner,J. Okafor,3,129.0,0.1,278.64
+2025-08-22,Nimbus Tablet Mini,Tablets,East,Partner,A. Rahman,1,429.0,0,343.2
+2025-08-23,Cobalt Mouse,Accessories,North,Retail,A. Rahman,5,59.0,0,265.5
+2025-08-23,Pulse Headphones,Audio,South,Partner,A. Rahman,3,249.0,0.15,507.96
+2025-08-23,Aurora Laptop 16,Laptops,West,Partner,M. Silva,3,1699.0,0,4077.6
+2025-08-23,Aurora Laptop 16,Laptops,North,Retail,K. Tanaka,7,1699.0,0,10703.7
+2025-08-23,Cobalt Keyboard,Accessories,North,Retail,L. Dubois,2,89.0,0.05,152.19
+2025-08-24,Aurora Laptop 16,Laptops,South,Online,A. Rahman,1,1699.0,0.15,1660.77
+2025-08-24,Aurora Laptop 14,Laptops,South,Partner,M. Silva,3,1299.0,0,3117.6
+2025-08-24,Vertex Monitor 32,Displays,West,Partner,M. Silva,5,549.0,0,2196.0
+2025-08-24,Pulse Headphones,Audio,South,Partner,A. Rahman,4,249.0,0,796.8
+2025-08-24,Pulse Headphones,Audio,West,Online,J. Okafor,8,249.0,0,2290.8
+2025-08-24,Pulse Earbuds,Audio,West,Partner,A. Rahman,2,129.0,0,206.4
+2025-08-25,Cobalt Keyboard,Accessories,South,Retail,L. Dubois,5,89.0,0,400.5
+2025-08-25,Pulse Earbuds,Audio,West,Partner,J. Okafor,7,129.0,0,722.4
+2025-08-25,Nimbus Tablet 11,Tablets,South,Online,J. Okafor,3,649.0,0.1,2015.14
+2025-08-25,Vertex Monitor 27,Displays,South,Partner,J. Okafor,8,379.0,0.1,2183.04
+2025-08-25,Pulse Earbuds,Audio,North,Partner,M. Silva,1,129.0,0,103.2
+2025-08-26,Aurora Laptop 14,Laptops,East,Retail,M. Silva,5,1299.0,0.05,5553.23
+2025-08-26,Vertex Monitor 32,Displays,East,Online,A. Rahman,6,549.0,0,3788.1
+2025-08-26,Cobalt Mouse,Accessories,East,Partner,L. Dubois,4,59.0,0.1,169.92
+2025-08-27,Cobalt Mouse,Accessories,South,Online,K. Tanaka,4,59.0,0.15,230.69
+2025-08-27,Nimbus Tablet 11,Tablets,West,Partner,M. Silva,3,649.0,0.15,1323.96
+2025-08-27,Nimbus Tablet 11,Tablets,West,Retail,A. Rahman,4,649.0,0,2336.4
+2025-08-28,Aurora Laptop 14,Laptops,East,Retail,J. Okafor,6,1299.0,0,7014.6
+2025-08-28,Nimbus Tablet Mini,Tablets,North,Online,K. Tanaka,17,429.0,0.1,7548.25
+2025-08-28,Pulse Earbuds,Audio,West,Online,K. Tanaka,2,129.0,0.05,281.86
+2025-08-28,Aurora Laptop 14,Laptops,West,Partner,L. Dubois,4,1299.0,0.15,3533.28
+2025-08-28,Cobalt Mouse,Accessories,North,Partner,K. Tanaka,12,59.0,0,566.4
+2025-08-29,Aurora Laptop 14,Laptops,South,Partner,L. Dubois,1,1299.0,0,1039.2
+2025-08-29,Vertex Monitor 27,Displays,North,Online,K. Tanaka,4,379.0,0,1743.4
+2025-08-29,Vertex Monitor 27,Displays,East,Retail,A. Rahman,3,379.0,0.1,920.97
+2025-08-29,Cobalt Keyboard,Accessories,South,Retail,K. Tanaka,5,89.0,0.15,340.43
+2025-08-29,Aurora Laptop 16,Laptops,North,Online,L. Dubois,9,1699.0,0.15,14946.95
+2025-08-30,Vertex Monitor 27,Displays,West,Retail,A. Rahman,1,379.0,0.05,324.05
+2025-08-30,Nimbus Tablet 11,Tablets,West,Partner,A. Rahman,7,649.0,0.05,3452.68
+2025-08-30,Pulse Headphones,Audio,East,Partner,J. Okafor,1,249.0,0.15,169.32
+2025-08-31,Aurora Laptop 16,Laptops,North,Partner,K. Tanaka,2,1699.0,0.1,2446.56
+2025-08-31,Cobalt Keyboard,Accessories,South,Retail,K. Tanaka,4,89.0,0.1,288.36
+2025-09-01,Nimbus Tablet 11,Tablets,East,Partner,J. Okafor,10,649.0,0,5192.0
+2025-09-01,Nimbus Tablet 11,Tablets,North,Retail,M. Silva,2,649.0,0,1168.2
+2025-09-02,Pulse Headphones,Audio,South,Online,L. Dubois,10,249.0,0,2863.5
+2025-09-02,Pulse Headphones,Audio,North,Retail,K. Tanaka,1,249.0,0.05,212.89
+2025-09-02,Cobalt Keyboard,Accessories,North,Partner,K. Tanaka,9,89.0,0.1,576.72
+2025-09-02,Vertex Monitor 32,Displays,West,Retail,L. Dubois,4,549.0,0,1976.4
+2025-09-02,Cobalt Mouse,Accessories,North,Online,L. Dubois,9,59.0,0.15,519.05
+2025-09-03,Aurora Laptop 14,Laptops,South,Online,M. Silva,3,1299.0,0,4481.55
+2025-09-03,Aurora Laptop 14,Laptops,South,Online,M. Silva,2,1299.0,0,2987.7
+2025-09-03,Aurora Laptop 16,Laptops,North,Online,J. Okafor,1,1699.0,0.05,1856.16
+2025-09-04,Pulse Headphones,Audio,South,Retail,A. Rahman,5,249.0,0,1120.5
+2025-09-04,Pulse Headphones,Audio,East,Retail,A. Rahman,3,249.0,0.05,638.68
+2025-09-04,Vertex Monitor 27,Displays,North,Retail,M. Silva,5,379.0,0,1705.5
+2025-09-05,Vertex Monitor 27,Displays,South,Partner,L. Dubois,5,379.0,0,1516.0
+2025-09-05,Aurora Laptop 14,Laptops,North,Partner,K. Tanaka,6,1299.0,0,6235.2
+2025-09-05,Cobalt Mouse,Accessories,East,Retail,M. Silva,1,59.0,0.1,47.79
+2025-09-05,Pulse Headphones,Audio,East,Online,K. Tanaka,3,249.0,0.15,730.19
+2025-09-05,Vertex Monitor 32,Displays,South,Partner,M. Silva,3,549.0,0,1317.6
+2025-09-05,Nimbus Tablet Mini,Tablets,North,Online,J. Okafor,12,429.0,0,5920.2
+2025-09-06,Vertex Monitor 27,Displays,West,Online,M. Silva,4,379.0,0,1743.4
+2025-09-06,Cobalt Keyboard,Accessories,South,Online,A. Rahman,1,89.0,0,102.35
+2025-09-06,Pulse Headphones,Audio,East,Partner,M. Silva,1,249.0,0.1,179.28
+2025-09-06,Aurora Laptop 14,Laptops,North,Partner,L. Dubois,3,1299.0,0.1,2805.84
+2025-09-06,Aurora Laptop 14,Laptops,South,Online,M. Silva,5,1299.0,0,7469.25
+2025-09-06,Vertex Monitor 32,Displays,West,Online,K. Tanaka,2,549.0,0.15,1073.29
+2025-09-07,Pulse Earbuds,Audio,West,Retail,A. Rahman,2,129.0,0.15,197.37
+2025-09-07,Cobalt Keyboard,Accessories,East,Partner,A. Rahman,4,89.0,0.1,256.32
+2025-09-07,Nimbus Tablet Mini,Tablets,East,Retail,J. Okafor,2,429.0,0,772.2
+2025-09-07,Pulse Headphones,Audio,North,Retail,L. Dubois,8,249.0,0,1792.8
+2025-09-07,Cobalt Mouse,Accessories,West,Online,A. Rahman,3,59.0,0.1,183.19
+2025-09-07,Pulse Headphones,Audio,East,Partner,J. Okafor,6,249.0,0.05,1135.44
+2025-09-08,Vertex Monitor 32,Displays,East,Online,M. Silva,6,549.0,0.1,3409.29
+2025-09-08,Nimbus Tablet 11,Tablets,North,Retail,K. Tanaka,8,649.0,0,4672.8
+2025-09-08,Cobalt Keyboard,Accessories,North,Retail,J. Okafor,1,89.0,0.1,72.09
+2025-09-08,Nimbus Tablet Mini,Tablets,East,Retail,J. Okafor,5,429.0,0,1930.5
+2025-09-09,Cobalt Keyboard,Accessories,South,Online,A. Rahman,2,89.0,0.15,173.99
+2025-09-09,Vertex Monitor 32,Displays,West,Partner,A. Rahman,6,549.0,0,2635.2
+2025-09-10,Aurora Laptop 16,Laptops,East,Retail,A. Rahman,5,1699.0,0,7645.5
+2025-09-10,Cobalt Keyboard,Accessories,East,Online,M. Silva,3,89.0,0,307.05
+2025-09-10,Nimbus Tablet Mini,Tablets,South,Retail,L. Dubois,4,429.0,0,1544.4
+2025-09-10,Pulse Earbuds,Audio,West,Partner,A. Rahman,6,129.0,0,619.2
+2025-09-10,Aurora Laptop 14,Laptops,North,Online,M. Silva,8,1299.0,0.1,10755.72
+2025-09-10,Cobalt Keyboard,Accessories,East,Retail,L. Dubois,9,89.0,0,720.9
+2025-09-11,Nimbus Tablet 11,Tablets,North,Retail,M. Silva,12,649.0,0.1,6308.28
+2025-09-11,Cobalt Keyboard,Accessories,West,Online,A. Rahman,7,89.0,0.15,608.98
+2025-09-11,Aurora Laptop 16,Laptops,West,Online,K. Tanaka,8,1699.0,0,15630.8
+2025-09-12,Nimbus Tablet 11,Tablets,West,Partner,L. Dubois,4,649.0,0,2076.8
+2025-09-12,Aurora Laptop 16,Laptops,West,Partner,A. Rahman,7,1699.0,0,9514.4
+2025-09-12,Vertex Monitor 32,Displays,North,Retail,K. Tanaka,5,549.0,0.05,2346.97
+2025-09-12,Nimbus Tablet Mini,Tablets,South,Online,M. Silva,8,429.0,0.1,3552.12
+2025-09-12,Pulse Earbuds,Audio,West,Online,K. Tanaka,4,129.0,0,593.4
+2025-09-13,Aurora Laptop 14,Laptops,North,Retail,M. Silva,1,1299.0,0,1169.1
+2025-09-13,Vertex Monitor 32,Displays,West,Online,J. Okafor,3,549.0,0.1,1704.64
+2025-09-13,Cobalt Keyboard,Accessories,North,Retail,A. Rahman,7,89.0,0.15,476.59
+2025-09-13,Pulse Earbuds,Audio,North,Retail,J. Okafor,2,129.0,0.05,220.59
+2025-09-13,Cobalt Mouse,Accessories,South,Partner,K. Tanaka,3,59.0,0,141.6
+2025-09-14,Aurora Laptop 16,Laptops,East,Online,L. Dubois,5,1699.0,0.05,9280.79
+2025-09-14,Pulse Earbuds,Audio,South,Online,A. Rahman,1,129.0,0.15,126.1
+2025-09-14,Cobalt Mouse,Accessories,West,Online,A. Rahman,2,59.0,0.1,122.13
+2025-09-14,Vertex Monitor 32,Displays,South,Retail,A. Rahman,2,549.0,0.05,938.79
+2025-09-14,Cobalt Mouse,Accessories,North,Partner,M. Silva,7,59.0,0.05,313.88
+2025-09-15,Aurora Laptop 14,Laptops,North,Online,L. Dubois,1,1299.0,0,1493.85
+2025-09-15,Aurora Laptop 14,Laptops,South,Partner,L. Dubois,6,1299.0,0.05,5923.44
+2025-09-15,Cobalt Mouse,Accessories,West,Online,M. Silva,8,59.0,0,542.8
+2025-09-15,Pulse Headphones,Audio,East,Retail,L. Dubois,4,249.0,0,896.4
+2025-09-15,Aurora Laptop 14,Laptops,West,Online,A. Rahman,1,1299.0,0,1493.85
+2025-09-16,Cobalt Keyboard,Accessories,North,Online,A. Rahman,5,89.0,0,511.75
+2025-09-16,Pulse Headphones,Audio,North,Online,L. Dubois,1,249.0,0.05,272.03
+2025-09-16,Vertex Monitor 27,Displays,East,Partner,J. Okafor,4,379.0,0.1,1091.52
+2025-09-16,Nimbus Tablet 11,Tablets,West,Online,L. Dubois,7,649.0,0,5224.45
+2025-09-17,Pulse Earbuds,Audio,West,Online,J. Okafor,4,129.0,0,593.4
+2025-09-17,Aurora Laptop 14,Laptops,North,Partner,J. Okafor,14,1299.0,0,14548.8
+2025-09-17,Vertex Monitor 32,Displays,West,Online,K. Tanaka,9,549.0,0.05,5398.04
+2025-09-17,Cobalt Mouse,Accessories,West,Partner,K. Tanaka,7,59.0,0,330.4
+2025-09-17,Cobalt Keyboard,Accessories,West,Partner,J. Okafor,6,89.0,0,427.2
+2025-09-18,Cobalt Mouse,Accessories,North,Partner,J. Okafor,4,59.0,0.05,179.36
+2025-09-18,Cobalt Keyboard,Accessories,East,Retail,A. Rahman,9,89.0,0,720.9
+2025-09-18,Cobalt Mouse,Accessories,West,Partner,A. Rahman,4,59.0,0,188.8
+2025-09-18,Cobalt Mouse,Accessories,West,Partner,M. Silva,9,59.0,0.1,382.32
+2025-09-18,Vertex Monitor 32,Displays,North,Partner,A. Rahman,10,549.0,0.1,3952.8
+2025-09-19,Vertex Monitor 32,Displays,North,Partner,L. Dubois,3,549.0,0,1317.6
+2025-09-19,Aurora Laptop 14,Laptops,East,Partner,K. Tanaka,2,1299.0,0,2078.4
+2025-09-19,Vertex Monitor 32,Displays,West,Partner,M. Silva,5,549.0,0,2196.0
+2025-09-20,Aurora Laptop 14,Laptops,East,Partner,M. Silva,2,1299.0,0.1,1870.56
+2025-09-20,Aurora Laptop 14,Laptops,West,Partner,L. Dubois,4,1299.0,0,4156.8
+2025-09-20,Aurora Laptop 14,Laptops,East,Retail,J. Okafor,5,1299.0,0,5845.5
+2025-09-21,Aurora Laptop 16,Laptops,East,Retail,A. Rahman,5,1699.0,0,7645.5
+2025-09-21,Aurora Laptop 16,Laptops,South,Partner,J. Okafor,4,1699.0,0.15,4621.28
+2025-09-21,Vertex Monitor 32,Displays,East,Online,J. Okafor,4,549.0,0.05,2399.13
+2025-09-21,Cobalt Keyboard,Accessories,North,Retail,J. Okafor,9,89.0,0,720.9
+2025-09-21,Cobalt Mouse,Accessories,South,Retail,J. Okafor,3,59.0,0.05,151.34
+2025-09-21,Vertex Monitor 32,Displays,South,Online,M. Silva,1,549.0,0.1,568.22
+2025-09-22,Pulse Headphones,Audio,North,Online,K. Tanaka,9,249.0,0,2577.15
+2025-09-22,Cobalt Keyboard,Accessories,South,Retail,K. Tanaka,7,89.0,0.15,476.59
+2025-09-23,Pulse Headphones,Audio,South,Partner,K. Tanaka,5,249.0,0.05,946.2
+2025-09-23,Pulse Earbuds,Audio,North,Online,M. Silva,7,129.0,0.1,934.61
+2025-09-23,Vertex Monitor 27,Displays,East,Retail,L. Dubois,5,379.0,0,1705.5
+2025-09-23,Vertex Monitor 27,Displays,West,Partner,J. Okafor,10,379.0,0.15,2577.2
+2025-09-23,Cobalt Mouse,Accessories,South,Partner,M. Silva,3,59.0,0,141.6
+2025-09-24,Aurora Laptop 14,Laptops,North,Online,K. Tanaka,12,1299.0,0,17926.2
+2025-09-24,Aurora Laptop 16,Laptops,North,Partner,M. Silva,5,1699.0,0,6796.0
+2025-09-24,Nimbus Tablet Mini,Tablets,North,Online,A. Rahman,8,429.0,0.1,3552.12
+2025-09-24,Aurora Laptop 14,Laptops,South,Partner,A. Rahman,2,1299.0,0,2078.4
+2025-09-24,Cobalt Mouse,Accessories,South,Retail,L. Dubois,2,59.0,0.15,90.27
+2025-09-24,Nimbus Tablet 11,Tablets,North,Partner,A. Rahman,8,649.0,0.15,3530.56
+2025-09-25,Pulse Headphones,Audio,West,Partner,M. Silva,7,249.0,0.15,1185.24
+2025-09-25,Pulse Headphones,Audio,South,Online,M. Silva,4,249.0,0.05,1088.13
+2025-09-25,Aurora Laptop 14,Laptops,East,Retail,K. Tanaka,7,1299.0,0,8183.7
+2025-09-25,Aurora Laptop 16,Laptops,West,Online,A. Rahman,4,1699.0,0.05,7424.63
+2025-09-25,Nimbus Tablet 11,Tablets,West,Online,A. Rahman,4,649.0,0.1,2686.86
+2025-09-26,Pulse Headphones,Audio,North,Online,K. Tanaka,11,249.0,0,3149.85
+2025-09-26,Aurora Laptop 14,Laptops,West,Online,A. Rahman,7,1299.0,0.15,8888.41
+2025-09-26,Aurora Laptop 14,Laptops,West,Retail,L. Dubois,7,1299.0,0.05,7774.52
+2025-09-26,Aurora Laptop 14,Laptops,West,Retail,K. Tanaka,7,1299.0,0.05,7774.52
+2025-09-26,Aurora Laptop 16,Laptops,South,Online,A. Rahman,2,1699.0,0.05,3712.31
+2025-09-27,Cobalt Keyboard,Accessories,East,Retail,M. Silva,6,89.0,0.15,408.51
+2025-09-27,Vertex Monitor 27,Displays,North,Partner,L. Dubois,9,379.0,0,2728.8
+2025-09-27,Pulse Earbuds,Audio,North,Retail,J. Okafor,5,129.0,0,580.5
+2025-09-27,Nimbus Tablet 11,Tablets,North,Retail,A. Rahman,4,649.0,0.05,2219.58
+2025-09-27,Pulse Earbuds,Audio,West,Online,K. Tanaka,2,129.0,0.15,252.19
+2025-09-27,Nimbus Tablet Mini,Tablets,South,Online,J. Okafor,4,429.0,0.1,1776.06
+2025-09-28,Vertex Monitor 27,Displays,North,Partner,M. Silva,9,379.0,0.15,2319.48
+2025-09-28,Vertex Monitor 32,Displays,West,Online,A. Rahman,4,549.0,0.15,2146.59
+2025-09-28,Vertex Monitor 27,Displays,North,Online,L. Dubois,5,379.0,0.15,1852.36
+2025-09-28,Vertex Monitor 32,Displays,South,Partner,J. Okafor,1,549.0,0,439.2
+2025-09-28,Vertex Monitor 32,Displays,North,Retail,A. Rahman,2,549.0,0.1,889.38
+2025-09-29,Nimbus Tablet 11,Tablets,North,Online,K. Tanaka,2,649.0,0,1492.7
+2025-09-29,Cobalt Mouse,Accessories,South,Partner,A. Rahman,1,59.0,0,47.2
+2025-09-29,Aurora Laptop 16,Laptops,West,Partner,K. Tanaka,6,1699.0,0,8155.2
+2025-09-30,Vertex Monitor 27,Displays,East,Online,L. Dubois,4,379.0,0.15,1481.89
+2025-09-30,Cobalt Keyboard,Accessories,South,Retail,L. Dubois,7,89.0,0,560.7
+2025-09-30,Nimbus Tablet 11,Tablets,East,Online,M. Silva,1,649.0,0,746.35
+2025-09-30,Nimbus Tablet 11,Tablets,West,Online,J. Okafor,4,649.0,0.05,2836.13
+2025-10-01,Aurora Laptop 14,Laptops,South,Online,L. Dubois,2,1299.0,0.15,2539.54
+2025-10-01,Vertex Monitor 27,Displays,South,Online,J. Okafor,8,379.0,0,3486.8
+2025-10-01,Aurora Laptop 16,Laptops,East,Retail,K. Tanaka,7,1699.0,0.15,9098.15
+2025-10-01,Nimbus Tablet 11,Tablets,South,Online,J. Okafor,4,649.0,0.05,2836.13
+2025-10-01,Nimbus Tablet 11,Tablets,North,Partner,K. Tanaka,5,649.0,0,2596.0
+2025-10-01,Cobalt Mouse,Accessories,North,Partner,A. Rahman,13,59.0,0.05,582.92
+2025-10-02,Nimbus Tablet Mini,Tablets,South,Online,A. Rahman,4,429.0,0.1,1776.06
+2025-10-02,Cobalt Mouse,Accessories,East,Partner,J. Okafor,4,59.0,0.15,160.48
+2025-10-02,Pulse Headphones,Audio,North,Online,J. Okafor,10,249.0,0,2863.5
+2025-10-02,Vertex Monitor 32,Displays,West,Online,M. Silva,13,549.0,0,8207.55
+2025-10-02,Pulse Headphones,Audio,South,Retail,M. Silva,14,249.0,0,3137.4
+2025-10-02,Cobalt Mouse,Accessories,West,Online,J. Okafor,9,59.0,0.1,549.59
+2025-10-03,Aurora Laptop 14,Laptops,West,Partner,A. Rahman,9,1299.0,0,9352.8
+2025-10-03,Nimbus Tablet Mini,Tablets,West,Partner,M. Silva,4,429.0,0.15,1166.88
+2025-10-03,Nimbus Tablet Mini,Tablets,North,Retail,A. Rahman,8,429.0,0,3088.8
+2025-10-04,Vertex Monitor 27,Displays,South,Retail,K. Tanaka,5,379.0,0.1,1534.95
+2025-10-04,Aurora Laptop 14,Laptops,West,Online,L. Dubois,5,1299.0,0,7469.25
+2025-10-04,Vertex Monitor 32,Displays,South,Retail,M. Silva,3,549.0,0,1482.3
+2025-10-05,Nimbus Tablet Mini,Tablets,East,Online,L. Dubois,8,429.0,0,3946.8
+2025-10-05,Aurora Laptop 14,Laptops,East,Online,J. Okafor,9,1299.0,0.05,12772.42
+2025-10-05,Pulse Earbuds,Audio,South,Retail,J. Okafor,7,129.0,0.1,731.43
+2025-10-05,Cobalt Mouse,Accessories,South,Partner,K. Tanaka,10,59.0,0,472.0
+2025-10-06,Vertex Monitor 32,Displays,South,Partner,K. Tanaka,6,549.0,0.05,2503.44
+2025-10-06,Pulse Headphones,Audio,North,Partner,M. Silva,1,249.0,0,199.2
+2025-10-06,Vertex Monitor 27,Displays,South,Partner,L. Dubois,10,379.0,0,3032.0
+2025-10-06,Aurora Laptop 14,Laptops,West,Online,A. Rahman,12,1299.0,0.1,16133.58
+2025-10-06,Vertex Monitor 27,Displays,West,Retail,A. Rahman,9,379.0,0.15,2609.41
+2025-10-06,Vertex Monitor 32,Displays,West,Online,K. Tanaka,14,549.0,0.15,7513.06
+2025-10-07,Nimbus Tablet 11,Tablets,East,Retail,A. Rahman,12,649.0,0,7009.2
+2025-10-07,Aurora Laptop 14,Laptops,West,Partner,L. Dubois,6,1299.0,0.1,5611.68
+2025-10-07,Aurora Laptop 14,Laptops,West,Retail,K. Tanaka,14,1299.0,0,16367.4
+2025-10-08,Pulse Earbuds,Audio,West,Partner,K. Tanaka,2,129.0,0,206.4
+2025-10-08,Pulse Earbuds,Audio,North,Retail,M. Silva,2,129.0,0.05,220.59
+2025-10-08,Cobalt Mouse,Accessories,South,Partner,A. Rahman,14,59.0,0.15,561.68
+2025-10-09,Pulse Earbuds,Audio,North,Online,M. Silva,16,129.0,0.05,2254.92
+2025-10-09,Vertex Monitor 32,Displays,North,Retail,A. Rahman,5,549.0,0.15,2099.93
+2025-10-09,Cobalt Keyboard,Accessories,South,Online,J. Okafor,11,89.0,0,1125.85
+2025-10-09,Cobalt Keyboard,Accessories,North,Partner,J. Okafor,1,89.0,0.1,64.08
+2025-10-09,Nimbus Tablet Mini,Tablets,East,Retail,L. Dubois,10,429.0,0,3861.0
+2025-10-09,Vertex Monitor 27,Displays,East,Online,L. Dubois,13,379.0,0.05,5382.75
+2025-10-10,Aurora Laptop 16,Laptops,West,Partner,L. Dubois,9,1699.0,0.1,11009.52
+2025-10-10,Pulse Headphones,Audio,West,Partner,A. Rahman,4,249.0,0.15,677.28
+2025-10-10,Nimbus Tablet Mini,Tablets,West,Online,K. Tanaka,12,429.0,0,5920.2
+2025-10-10,Nimbus Tablet 11,Tablets,East,Online,J. Okafor,11,649.0,0.15,6978.37
+2025-10-10,Vertex Monitor 32,Displays,South,Online,A. Rahman,9,549.0,0.1,5113.94
+2025-10-10,Pulse Headphones,Audio,West,Partner,K. Tanaka,6,249.0,0,1195.2
+2025-10-11,Aurora Laptop 14,Laptops,East,Online,A. Rahman,5,1299.0,0,7469.25
+2025-10-11,Nimbus Tablet Mini,Tablets,East,Retail,K. Tanaka,2,429.0,0,772.2
+2025-10-11,Cobalt Mouse,Accessories,West,Retail,L. Dubois,3,59.0,0,159.3
+2025-10-11,Nimbus Tablet 11,Tablets,East,Online,M. Silva,6,649.0,0,4478.1
+2025-10-11,Aurora Laptop 14,Laptops,South,Retail,K. Tanaka,3,1299.0,0,3507.3
+2025-10-12,Cobalt Mouse,Accessories,South,Partner,J. Okafor,3,59.0,0,141.6
+2025-10-12,Nimbus Tablet 11,Tablets,South,Online,M. Silva,4,649.0,0,2985.4
+2025-10-12,Cobalt Mouse,Accessories,South,Retail,A. Rahman,5,59.0,0.1,238.95
+2025-10-13,Pulse Earbuds,Audio,South,Retail,L. Dubois,9,129.0,0.05,992.66
+2025-10-13,Nimbus Tablet 11,Tablets,East,Online,J. Okafor,13,649.0,0.05,9217.42
+2025-10-13,Vertex Monitor 32,Displays,East,Online,L. Dubois,6,549.0,0,3788.1
+2025-10-13,Cobalt Keyboard,Accessories,East,Partner,L. Dubois,7,89.0,0,498.4
+2025-10-14,Cobalt Mouse,Accessories,West,Retail,A. Rahman,3,59.0,0.15,135.41
+2025-10-14,Vertex Monitor 32,Displays,North,Online,K. Tanaka,9,549.0,0,5682.15
+2025-10-14,Cobalt Mouse,Accessories,South,Retail,A. Rahman,5,59.0,0,265.5
+2025-10-15,Aurora Laptop 14,Laptops,South,Partner,J. Okafor,1,1299.0,0,1039.2
+2025-10-15,Aurora Laptop 14,Laptops,North,Partner,A. Rahman,9,1299.0,0.05,8885.16
+2025-10-15,Cobalt Keyboard,Accessories,West,Online,A. Rahman,2,89.0,0.1,184.23
+2025-10-15,Pulse Earbuds,Audio,West,Online,K. Tanaka,8,129.0,0.15,1008.78
+2025-10-16,Vertex Monitor 27,Displays,East,Online,L. Dubois,8,379.0,0.05,3312.46
+2025-10-16,Aurora Laptop 16,Laptops,South,Partner,K. Tanaka,10,1699.0,0.05,12912.4
+2025-10-16,Vertex Monitor 32,Displays,East,Online,K. Tanaka,13,549.0,0.05,7797.17
+2025-10-16,Nimbus Tablet 11,Tablets,North,Online,M. Silva,1,649.0,0,746.35
+2025-10-17,Cobalt Keyboard,Accessories,East,Online,A. Rahman,14,89.0,0.05,1361.25
+2025-10-17,Aurora Laptop 14,Laptops,West,Partner,K. Tanaka,6,1299.0,0,6235.2
+2025-10-17,Nimbus Tablet 11,Tablets,West,Partner,J. Okafor,1,649.0,0,519.2
+2025-10-17,Vertex Monitor 27,Displays,East,Partner,A. Rahman,4,379.0,0.05,1152.16
+2025-10-17,Pulse Headphones,Audio,East,Retail,A. Rahman,4,249.0,0,896.4
+2025-10-18,Pulse Headphones,Audio,East,Partner,K. Tanaka,5,249.0,0.15,846.6
+2025-10-18,Aurora Laptop 16,Laptops,East,Retail,J. Okafor,9,1699.0,0.15,11697.61
+2025-10-18,Aurora Laptop 14,Laptops,North,Retail,A. Rahman,15,1299.0,0.05,16659.67
+2025-10-19,Pulse Earbuds,Audio,West,Partner,K. Tanaka,3,129.0,0.15,263.16
+2025-10-19,Aurora Laptop 16,Laptops,East,Partner,L. Dubois,7,1699.0,0.15,8087.24
+2025-10-19,Aurora Laptop 14,Laptops,East,Online,J. Okafor,4,1299.0,0.05,5676.63
+2025-10-19,Pulse Earbuds,Audio,South,Online,M. Silva,4,129.0,0,593.4
+2025-10-19,Vertex Monitor 27,Displays,East,Online,L. Dubois,5,379.0,0,2179.25
+2025-10-19,Nimbus Tablet Mini,Tablets,South,Online,J. Okafor,8,429.0,0.1,3552.12
+2025-10-20,Pulse Earbuds,Audio,East,Partner,M. Silva,10,129.0,0.15,877.2
+2025-10-20,Aurora Laptop 16,Laptops,East,Online,J. Okafor,5,1699.0,0,9769.25
+2025-10-20,Cobalt Keyboard,Accessories,East,Retail,A. Rahman,9,89.0,0,720.9
+2025-10-20,Nimbus Tablet Mini,Tablets,South,Partner,J. Okafor,3,429.0,0,1029.6
+2025-10-20,Cobalt Keyboard,Accessories,North,Retail,A. Rahman,8,89.0,0,640.8
+2025-10-20,Vertex Monitor 32,Displays,East,Retail,M. Silva,9,549.0,0.15,3779.86
+2025-10-21,Vertex Monitor 32,Displays,East,Online,J. Okafor,8,549.0,0,5050.8
+2025-10-21,Nimbus Tablet 11,Tablets,South,Partner,M. Silva,6,649.0,0,3115.2
+2025-10-21,Nimbus Tablet 11,Tablets,South,Online,A. Rahman,11,649.0,0,8209.85
+2025-10-22,Vertex Monitor 32,Displays,West,Online,A. Rahman,7,549.0,0,4419.45
+2025-10-22,Aurora Laptop 14,Laptops,North,Retail,M. Silva,13,1299.0,0,15198.3
+2025-10-23,Aurora Laptop 16,Laptops,North,Partner,L. Dubois,13,1699.0,0,17669.6
+2025-10-23,Nimbus Tablet Mini,Tablets,South,Partner,M. Silva,6,429.0,0.15,1750.32
+2025-10-24,Pulse Earbuds,Audio,East,Online,L. Dubois,10,129.0,0.1,1335.15
+2025-10-24,Nimbus Tablet Mini,Tablets,North,Online,J. Okafor,14,429.0,0.1,6216.21
+2025-10-24,Nimbus Tablet Mini,Tablets,East,Online,A. Rahman,2,429.0,0.1,888.03
+2025-10-24,Aurora Laptop 16,Laptops,South,Partner,L. Dubois,9,1699.0,0.15,10397.88
+2025-10-24,Nimbus Tablet 11,Tablets,West,Partner,J. Okafor,4,649.0,0,2076.8
+2025-10-24,Pulse Earbuds,Audio,West,Retail,M. Silva,8,129.0,0,928.8
+2025-10-25,Vertex Monitor 32,Displays,North,Partner,K. Tanaka,10,549.0,0,4392.0
+2025-10-25,Pulse Earbuds,Audio,East,Partner,A. Rahman,6,129.0,0.05,588.24
+2025-10-26,Pulse Headphones,Audio,West,Partner,M. Silva,4,249.0,0.15,677.28
+2025-10-26,Vertex Monitor 32,Displays,South,Partner,J. Okafor,1,549.0,0.05,417.24
+2025-10-26,Aurora Laptop 16,Laptops,West,Partner,J. Okafor,10,1699.0,0,13592.0
+2025-10-26,Aurora Laptop 14,Laptops,West,Partner,A. Rahman,8,1299.0,0.15,7066.56
+2025-10-26,Aurora Laptop 16,Laptops,South,Retail,L. Dubois,6,1699.0,0.05,8715.87
+2025-10-27,Nimbus Tablet 11,Tablets,North,Retail,K. Tanaka,15,649.0,0.1,7885.35
+2025-10-27,Aurora Laptop 16,Laptops,South,Retail,K. Tanaka,6,1699.0,0.15,7798.41
+2025-10-28,Cobalt Mouse,Accessories,East,Partner,L. Dubois,13,59.0,0.15,521.56
+2025-10-28,Vertex Monitor 27,Displays,West,Partner,J. Okafor,6,379.0,0,1819.2
+2025-10-28,Vertex Monitor 32,Displays,North,Online,J. Okafor,10,549.0,0.15,5366.47
+2025-10-28,Aurora Laptop 14,Laptops,North,Partner,A. Rahman,17,1299.0,0,17666.4
+2025-10-29,Aurora Laptop 14,Laptops,South,Retail,L. Dubois,4,1299.0,0,4676.4
+2025-10-29,Cobalt Mouse,Accessories,North,Online,L. Dubois,7,59.0,0.15,403.71
+2025-10-29,Vertex Monitor 32,Displays,West,Online,M. Silva,6,549.0,0.1,3409.29
+2025-10-29,Cobalt Keyboard,Accessories,East,Partner,A. Rahman,14,89.0,0.1,897.12
+2025-10-29,Aurora Laptop 14,Laptops,West,Online,K. Tanaka,5,1299.0,0.05,7095.79
+2025-10-30,Aurora Laptop 14,Laptops,North,Online,M. Silva,14,1299.0,0.1,18822.51
+2025-10-30,Nimbus Tablet 11,Tablets,West,Retail,A. Rahman,12,649.0,0.05,6658.74
+2025-10-30,Cobalt Mouse,Accessories,West,Partner,L. Dubois,13,59.0,0.1,552.24
+2025-10-30,Cobalt Mouse,Accessories,West,Retail,K. Tanaka,6,59.0,0,318.6
+2025-10-30,Pulse Headphones,Audio,West,Partner,L. Dubois,7,249.0,0.05,1324.68
+2025-10-31,Pulse Headphones,Audio,East,Online,M. Silva,10,249.0,0,2863.5
+2025-10-31,Cobalt Mouse,Accessories,North,Partner,K. Tanaka,11,59.0,0,519.2
+2025-10-31,Aurora Laptop 16,Laptops,West,Retail,J. Okafor,12,1699.0,0,18349.2
+2025-10-31,Nimbus Tablet Mini,Tablets,South,Partner,L. Dubois,7,429.0,0,2402.4
+2025-11-01,Aurora Laptop 16,Laptops,East,Online,A. Rahman,6,1699.0,0,11723.1
+2025-11-01,Vertex Monitor 32,Displays,West,Partner,K. Tanaka,6,549.0,0.1,2371.68
+2025-11-02,Aurora Laptop 14,Laptops,West,Partner,K. Tanaka,8,1299.0,0.1,7482.24
+2025-11-02,Pulse Earbuds,Audio,North,Retail,J. Okafor,8,129.0,0,928.8
+2025-11-02,Pulse Earbuds,Audio,West,Partner,L. Dubois,7,129.0,0,722.4
+2025-11-02,Pulse Headphones,Audio,East,Retail,K. Tanaka,1,249.0,0,224.1
+2025-11-03,Cobalt Keyboard,Accessories,South,Retail,K. Tanaka,7,89.0,0.1,504.63
+2025-11-03,Nimbus Tablet Mini,Tablets,North,Partner,A. Rahman,15,429.0,0.1,4633.2
+2025-11-04,Pulse Earbuds,Audio,East,Online,J. Okafor,3,129.0,0.05,422.8
+2025-11-04,Pulse Earbuds,Audio,North,Partner,L. Dubois,8,129.0,0,825.6
+2025-11-04,Pulse Headphones,Audio,West,Partner,M. Silva,5,249.0,0.05,946.2
+2025-11-04,Cobalt Mouse,Accessories,West,Partner,J. Okafor,7,59.0,0.1,297.36
+2025-11-04,Aurora Laptop 14,Laptops,South,Partner,K. Tanaka,1,1299.0,0.15,883.32
+2025-11-04,Pulse Headphones,Audio,West,Partner,A. Rahman,8,249.0,0.15,1354.56
+2025-11-05,Nimbus Tablet Mini,Tablets,East,Retail,M. Silva,10,429.0,0.15,3281.85
+2025-11-05,Vertex Monitor 27,Displays,West,Retail,J. Okafor,10,379.0,0,3411.0
+2025-11-05,Vertex Monitor 27,Displays,East,Retail,J. Okafor,6,379.0,0.1,1841.94
+2025-11-05,Vertex Monitor 27,Displays,South,Online,J. Okafor,5,379.0,0,2179.25
+2025-11-05,Aurora Laptop 14,Laptops,South,Retail,K. Tanaka,2,1299.0,0.05,2221.29
+2025-11-05,Aurora Laptop 14,Laptops,South,Online,J. Okafor,8,1299.0,0,11950.8
+2025-11-06,Pulse Headphones,Audio,East,Partner,K. Tanaka,2,249.0,0,398.4
+2025-11-06,Aurora Laptop 14,Laptops,North,Online,L. Dubois,8,1299.0,0,11950.8
+2025-11-07,Aurora Laptop 16,Laptops,West,Retail,J. Okafor,4,1699.0,0.05,5810.58
+2025-11-07,Nimbus Tablet Mini,Tablets,North,Partner,L. Dubois,1,429.0,0.15,291.72
+2025-11-07,Aurora Laptop 16,Laptops,East,Retail,M. Silva,11,1699.0,0,16820.1
+2025-11-07,Pulse Earbuds,Audio,West,Partner,J. Okafor,6,129.0,0.15,526.32
+2025-11-08,Nimbus Tablet Mini,Tablets,South,Online,K. Tanaka,8,429.0,0.05,3749.46
+2025-11-08,Pulse Headphones,Audio,North,Retail,M. Silva,16,249.0,0.1,3227.04
+2025-11-08,Aurora Laptop 16,Laptops,East,Partner,J. Okafor,2,1699.0,0,2718.4
+2025-11-08,Pulse Earbuds,Audio,West,Partner,M. Silva,7,129.0,0,722.4
+2025-11-08,Aurora Laptop 14,Laptops,North,Partner,J. Okafor,2,1299.0,0.15,1766.64
+2025-11-09,Cobalt Keyboard,Accessories,West,Retail,M. Silva,1,89.0,0.15,68.08
+2025-11-09,Aurora Laptop 16,Laptops,South,Retail,M. Silva,1,1699.0,0.05,1452.64
+2025-11-09,Pulse Headphones,Audio,North,Online,J. Okafor,12,249.0,0,3436.2
+2025-11-09,Nimbus Tablet 11,Tablets,West,Partner,K. Tanaka,3,649.0,0.15,1323.96
+2025-11-10,Pulse Headphones,Audio,North,Retail,K. Tanaka,19,249.0,0.05,4045.01
+2025-11-10,Pulse Earbuds,Audio,West,Online,A. Rahman,11,129.0,0.1,1468.66
+2025-11-11,Vertex Monitor 27,Displays,East,Retail,A. Rahman,2,379.0,0.15,579.87
+2025-11-11,Aurora Laptop 14,Laptops,South,Partner,K. Tanaka,2,1299.0,0,2078.4
+2025-11-11,Nimbus Tablet Mini,Tablets,East,Retail,A. Rahman,11,429.0,0.1,3822.39
+2025-11-11,Aurora Laptop 16,Laptops,South,Online,J. Okafor,1,1699.0,0.15,1660.77
+2025-11-12,Vertex Monitor 27,Displays,East,Retail,J. Okafor,7,379.0,0.05,2268.32
+2025-11-12,Pulse Headphones,Audio,South,Partner,J. Okafor,4,249.0,0,796.8
+2025-11-12,Aurora Laptop 16,Laptops,West,Retail,K. Tanaka,6,1699.0,0,9174.6
+2025-11-12,Vertex Monitor 27,Displays,South,Online,L. Dubois,15,379.0,0.15,5557.09
+2025-11-12,Nimbus Tablet Mini,Tablets,North,Retail,M. Silva,6,429.0,0,2316.6
+2025-11-12,Nimbus Tablet 11,Tablets,North,Retail,A. Rahman,5,649.0,0,2920.5
+2025-11-13,Nimbus Tablet 11,Tablets,North,Online,L. Dubois,5,649.0,0.15,3171.99
+2025-11-13,Vertex Monitor 27,Displays,West,Partner,J. Okafor,5,379.0,0,1516.0
+2025-11-13,Pulse Headphones,Audio,East,Partner,K. Tanaka,9,249.0,0.05,1703.16
+2025-11-13,Nimbus Tablet 11,Tablets,West,Online,J. Okafor,1,649.0,0,746.35
+2025-11-14,Nimbus Tablet 11,Tablets,West,Online,M. Silva,1,649.0,0,746.35
+2025-11-14,Pulse Headphones,Audio,South,Partner,K. Tanaka,4,249.0,0.1,717.12
+2025-11-14,Aurora Laptop 16,Laptops,North,Retail,M. Silva,12,1699.0,0,18349.2
+2025-11-14,Vertex Monitor 27,Displays,South,Partner,M. Silva,4,379.0,0.1,1091.52
+2025-11-14,Aurora Laptop 16,Laptops,North,Partner,A. Rahman,14,1699.0,0,19028.8
+2025-11-15,Nimbus Tablet Mini,Tablets,West,Retail,A. Rahman,12,429.0,0.1,4169.88
+2025-11-15,Aurora Laptop 14,Laptops,East,Partner,K. Tanaka,6,1299.0,0.1,5611.68
+2025-11-15,Pulse Headphones,Audio,West,Partner,A. Rahman,1,249.0,0.1,179.28
+2025-11-15,Cobalt Mouse,Accessories,South,Retail,L. Dubois,10,59.0,0,531.0
+2025-11-16,Pulse Earbuds,Audio,West,Online,J. Okafor,9,129.0,0.05,1268.39
+2025-11-16,Pulse Headphones,Audio,North,Retail,J. Okafor,10,249.0,0,2241.0
+2025-11-16,Vertex Monitor 32,Displays,East,Partner,L. Dubois,4,549.0,0,1756.8
+2025-11-16,Pulse Headphones,Audio,East,Retail,M. Silva,8,249.0,0,1792.8
+2025-11-16,Vertex Monitor 32,Displays,South,Partner,A. Rahman,7,549.0,0.05,2920.68
+2025-11-17,Nimbus Tablet 11,Tablets,North,Online,A. Rahman,4,649.0,0,2985.4
+2025-11-17,Vertex Monitor 32,Displays,East,Online,A. Rahman,7,549.0,0.05,4198.48
+2025-11-17,Vertex Monitor 32,Displays,East,Partner,K. Tanaka,4,549.0,0.1,1581.12
+2025-11-18,Vertex Monitor 32,Displays,North,Partner,J. Okafor,12,549.0,0,5270.4
+2025-11-18,Pulse Headphones,Audio,South,Online,L. Dubois,5,249.0,0.15,1216.99
+2025-11-18,Pulse Headphones,Audio,South,Partner,J. Okafor,7,249.0,0.1,1254.96
+2025-11-18,Vertex Monitor 27,Displays,North,Online,A. Rahman,10,379.0,0.05,4140.57
+2025-11-18,Pulse Earbuds,Audio,North,Retail,M. Silva,7,129.0,0.05,772.06
+2025-11-19,Aurora Laptop 16,Laptops,East,Online,A. Rahman,2,1699.0,0,3907.7
+2025-11-19,Vertex Monitor 32,Displays,West,Retail,A. Rahman,5,549.0,0.15,2099.93
+2025-11-19,Pulse Earbuds,Audio,North,Partner,K. Tanaka,7,129.0,0.1,650.16
+2025-11-19,Pulse Earbuds,Audio,South,Online,M. Silva,11,129.0,0,1631.85
+2025-11-19,Aurora Laptop 14,Laptops,North,Partner,K. Tanaka,3,1299.0,0.1,2805.84
+2025-11-19,Aurora Laptop 16,Laptops,West,Retail,A. Rahman,12,1699.0,0.05,17431.74
+2025-11-20,Nimbus Tablet Mini,Tablets,South,Retail,M. Silva,16,429.0,0.05,5868.72
+2025-11-20,Nimbus Tablet 11,Tablets,North,Retail,L. Dubois,5,649.0,0,2920.5
+2025-11-21,Pulse Earbuds,Audio,North,Retail,J. Okafor,11,129.0,0.1,1149.39
+2025-11-21,Vertex Monitor 32,Displays,West,Retail,A. Rahman,3,549.0,0.05,1408.18
+2025-11-21,Vertex Monitor 27,Displays,East,Partner,K. Tanaka,10,379.0,0,3032.0
+2025-11-22,Aurora Laptop 16,Laptops,North,Partner,J. Okafor,5,1699.0,0,6796.0
+2025-11-22,Vertex Monitor 32,Displays,North,Retail,K. Tanaka,11,549.0,0.05,5163.35
+2025-11-22,Aurora Laptop 16,Laptops,West,Retail,J. Okafor,6,1699.0,0,9174.6
+2025-11-22,Cobalt Keyboard,Accessories,West,Retail,A. Rahman,7,89.0,0.1,504.63
+2025-11-22,Cobalt Keyboard,Accessories,North,Online,A. Rahman,3,89.0,0.05,291.7
+2025-11-23,Cobalt Mouse,Accessories,East,Retail,L. Dubois,6,59.0,0,318.6
+2025-11-23,Aurora Laptop 16,Laptops,North,Online,K. Tanaka,7,1699.0,0,13676.95
+2025-11-23,Aurora Laptop 14,Laptops,North,Retail,M. Silva,3,1299.0,0.15,2981.2
+2025-11-23,Pulse Earbuds,Audio,West,Partner,J. Okafor,1,129.0,0,103.2
+2025-11-23,Nimbus Tablet Mini,Tablets,South,Online,L. Dubois,6,429.0,0.15,2516.09
+2025-11-24,Aurora Laptop 16,Laptops,West,Partner,J. Okafor,12,1699.0,0,16310.4
+2025-11-24,Vertex Monitor 32,Displays,West,Partner,L. Dubois,8,549.0,0.05,3337.92
+2025-11-24,Vertex Monitor 32,Displays,East,Partner,K. Tanaka,11,549.0,0.15,4106.52
+2025-11-24,Pulse Headphones,Audio,North,Online,A. Rahman,3,249.0,0,859.05
+2025-11-25,Aurora Laptop 16,Laptops,North,Partner,K. Tanaka,21,1699.0,0,28543.2
+2025-11-25,Nimbus Tablet 11,Tablets,South,Retail,L. Dubois,6,649.0,0.15,2978.91
+2025-11-25,Nimbus Tablet Mini,Tablets,North,Retail,A. Rahman,11,429.0,0.05,4034.75
+2025-11-26,Nimbus Tablet 11,Tablets,South,Partner,K. Tanaka,5,649.0,0.15,2206.6
+2025-11-26,Vertex Monitor 32,Displays,West,Online,M. Silva,11,549.0,0,6944.85
+2025-11-27,Vertex Monitor 27,Displays,North,Retail,A. Rahman,5,379.0,0,1705.5
+2025-11-27,Vertex Monitor 27,Displays,West,Retail,M. Silva,7,379.0,0.1,2148.93
+2025-11-27,Aurora Laptop 14,Laptops,West,Retail,L. Dubois,2,1299.0,0.05,2221.29
+2025-11-27,Cobalt Mouse,Accessories,West,Online,L. Dubois,7,59.0,0.05,451.2
+2025-11-27,Pulse Earbuds,Audio,North,Retail,K. Tanaka,4,129.0,0.15,394.74
+2025-11-27,Vertex Monitor 32,Displays,North,Retail,K. Tanaka,5,549.0,0.05,2346.97
+2025-11-28,Nimbus Tablet 11,Tablets,East,Partner,K. Tanaka,4,649.0,0,2076.8
+2025-11-28,Pulse Earbuds,Audio,West,Online,M. Silva,2,129.0,0.15,252.19
+2025-11-29,Vertex Monitor 32,Displays,South,Retail,K. Tanaka,5,549.0,0.15,2099.93
+2025-11-29,Vertex Monitor 27,Displays,East,Retail,J. Okafor,8,379.0,0.1,2455.92
+2025-11-29,Pulse Headphones,Audio,North,Partner,J. Okafor,1,249.0,0.05,189.24
+2025-11-29,Nimbus Tablet 11,Tablets,South,Online,K. Tanaka,4,649.0,0.05,2836.13
+2025-11-29,Pulse Headphones,Audio,South,Online,A. Rahman,4,249.0,0.1,1030.86
+2025-11-29,Aurora Laptop 14,Laptops,East,Retail,A. Rahman,5,1299.0,0.1,5260.95
+2025-11-30,Pulse Earbuds,Audio,West,Online,J. Okafor,7,129.0,0.1,934.61
+2025-11-30,Aurora Laptop 16,Laptops,South,Retail,A. Rahman,5,1699.0,0,7645.5
+2025-12-01,Pulse Headphones,Audio,South,Partner,L. Dubois,10,249.0,0.1,1792.8
+2025-12-01,Aurora Laptop 16,Laptops,North,Retail,A. Rahman,15,1699.0,0,22936.5
+2025-12-01,Cobalt Mouse,Accessories,North,Partner,L. Dubois,1,59.0,0,47.2
+2025-12-01,Aurora Laptop 16,Laptops,South,Partner,J. Okafor,9,1699.0,0,12232.8
+2025-12-01,Pulse Headphones,Audio,West,Partner,A. Rahman,10,249.0,0.05,1892.4
+2025-12-01,Nimbus Tablet 11,Tablets,East,Retail,K. Tanaka,10,649.0,0,5841.0
+2025-12-02,Aurora Laptop 14,Laptops,South,Retail,M. Silva,5,1299.0,0,5845.5
+2025-12-02,Cobalt Keyboard,Accessories,South,Online,M. Silva,6,89.0,0.05,583.39
+2025-12-02,Nimbus Tablet Mini,Tablets,South,Partner,J. Okafor,13,429.0,0.05,4238.52
+2025-12-02,Nimbus Tablet 11,Tablets,West,Retail,M. Silva,15,649.0,0.1,7885.35
+2025-12-02,Aurora Laptop 14,Laptops,West,Online,L. Dubois,3,1299.0,0,4481.55
+2025-12-03,Aurora Laptop 16,Laptops,East,Retail,A. Rahman,2,1699.0,0.05,2905.29
+2025-12-03,Vertex Monitor 27,Displays,North,Partner,J. Okafor,16,379.0,0.15,4123.52
+2025-12-04,Aurora Laptop 14,Laptops,East,Retail,M. Silva,3,1299.0,0.1,3156.57
+2025-12-04,Pulse Earbuds,Audio,East,Online,L. Dubois,13,129.0,0,1928.55
+2025-12-04,Cobalt Mouse,Accessories,South,Partner,L. Dubois,3,59.0,0.1,127.44
+2025-12-04,Cobalt Mouse,Accessories,West,Partner,K. Tanaka,11,59.0,0,519.2
+2025-12-04,Nimbus Tablet Mini,Tablets,East,Online,J. Okafor,13,429.0,0.15,5451.52
+2025-12-04,Cobalt Keyboard,Accessories,East,Online,L. Dubois,10,89.0,0,1023.5
+2025-12-05,Pulse Headphones,Audio,East,Partner,L. Dubois,9,249.0,0.1,1613.52
+2025-12-05,Pulse Headphones,Audio,South,Retail,K. Tanaka,8,249.0,0.15,1523.88
+2025-12-05,Cobalt Keyboard,Accessories,North,Partner,L. Dubois,15,89.0,0.15,907.8
+2025-12-05,Pulse Earbuds,Audio,North,Online,A. Rahman,12,129.0,0.15,1513.17
+2025-12-05,Vertex Monitor 32,Displays,East,Partner,L. Dubois,8,549.0,0,3513.6
+2025-12-05,Cobalt Mouse,Accessories,South,Retail,M. Silva,3,59.0,0,159.3
+2025-12-06,Nimbus Tablet 11,Tablets,West,Partner,L. Dubois,5,649.0,0.1,2336.4
+2025-12-06,Nimbus Tablet Mini,Tablets,East,Retail,J. Okafor,4,429.0,0,1544.4
+2025-12-06,Vertex Monitor 27,Displays,West,Online,K. Tanaka,8,379.0,0,3486.8
+2025-12-06,Nimbus Tablet Mini,Tablets,West,Online,L. Dubois,7,429.0,0,3453.45
+2025-12-06,Vertex Monitor 27,Displays,West,Retail,K. Tanaka,2,379.0,0.05,648.09
+2025-12-06,Vertex Monitor 27,Displays,South,Online,J. Okafor,3,379.0,0.1,1176.8
+2025-12-07,Vertex Monitor 32,Displays,South,Partner,J. Okafor,2,549.0,0.15,746.64
+2025-12-07,Vertex Monitor 32,Displays,West,Online,J. Okafor,5,549.0,0.15,2683.24
+2025-12-07,Cobalt Keyboard,Accessories,East,Online,M. Silva,3,89.0,0,307.05
+2025-12-07,Cobalt Mouse,Accessories,East,Online,J. Okafor,4,59.0,0.1,244.26
+2025-12-07,Aurora Laptop 16,Laptops,East,Retail,A. Rahman,9,1699.0,0.05,13073.8
+2025-12-08,Nimbus Tablet 11,Tablets,West,Online,M. Silva,8,649.0,0,5970.8
+2025-12-08,Nimbus Tablet Mini,Tablets,South,Partner,A. Rahman,5,429.0,0,1716.0
+2025-12-08,Aurora Laptop 14,Laptops,West,Retail,M. Silva,8,1299.0,0.1,8417.52
+2025-12-09,Vertex Monitor 32,Displays,East,Retail,J. Okafor,1,549.0,0.1,444.69
+2025-12-09,Nimbus Tablet 11,Tablets,West,Retail,K. Tanaka,9,649.0,0.15,4468.36
+2025-12-09,Nimbus Tablet 11,Tablets,East,Online,K. Tanaka,11,649.0,0.05,7799.36
+2025-12-09,Nimbus Tablet Mini,Tablets,West,Retail,A. Rahman,2,429.0,0.1,694.98
+2025-12-09,Vertex Monitor 32,Displays,East,Partner,L. Dubois,11,549.0,0,4831.2
+2025-12-09,Pulse Headphones,Audio,North,Partner,A. Rahman,12,249.0,0.1,2151.36
+2025-12-10,Cobalt Mouse,Accessories,North,Partner,A. Rahman,1,59.0,0.1,42.48
+2025-12-10,Aurora Laptop 16,Laptops,South,Online,J. Okafor,6,1699.0,0,11723.1
+2025-12-10,Nimbus Tablet Mini,Tablets,West,Online,L. Dubois,10,429.0,0.05,4686.82
+2025-12-11,Vertex Monitor 32,Displays,North,Retail,J. Okafor,3,549.0,0.05,1408.18
+2025-12-11,Vertex Monitor 27,Displays,North,Partner,A. Rahman,9,379.0,0,2728.8
+2025-12-12,Nimbus Tablet 11,Tablets,East,Online,M. Silva,12,649.0,0,8956.2
+2025-12-12,Aurora Laptop 16,Laptops,South,Retail,L. Dubois,12,1699.0,0,18349.2
+2025-12-12,Pulse Earbuds,Audio,South,Online,A. Rahman,5,129.0,0.15,630.49
+2025-12-12,Pulse Headphones,Audio,West,Online,M. Silva,6,249.0,0,1718.1
+2025-12-12,Vertex Monitor 27,Displays,North,Online,J. Okafor,15,379.0,0,6537.75
+2025-12-12,Cobalt Mouse,Accessories,South,Retail,M. Silva,3,59.0,0,159.3
+2025-12-13,Pulse Earbuds,Audio,West,Partner,A. Rahman,5,129.0,0.05,490.2
+2025-12-13,Vertex Monitor 32,Displays,North,Retail,M. Silva,1,549.0,0,494.1
+2025-12-14,Cobalt Mouse,Accessories,North,Online,J. Okafor,1,59.0,0.1,61.06
+2025-12-14,Pulse Headphones,Audio,West,Retail,J. Okafor,9,249.0,0,2016.9
+2025-12-14,Pulse Earbuds,Audio,South,Online,K. Tanaka,7,129.0,0.1,934.61
+2025-12-14,Cobalt Keyboard,Accessories,West,Online,M. Silva,9,89.0,0.1,829.03
+2025-12-14,Nimbus Tablet 11,Tablets,North,Online,M. Silva,7,649.0,0.05,4963.23
+2025-12-14,Cobalt Mouse,Accessories,East,Partner,J. Okafor,4,59.0,0.15,160.48
+2025-12-15,Cobalt Keyboard,Accessories,East,Online,L. Dubois,12,89.0,0,1228.2
+2025-12-15,Cobalt Mouse,Accessories,North,Retail,L. Dubois,17,59.0,0,902.7
+2025-12-15,Pulse Headphones,Audio,West,Online,L. Dubois,11,249.0,0.1,2834.86
+2025-12-15,Pulse Earbuds,Audio,East,Partner,M. Silva,8,129.0,0.05,784.32
+2025-12-15,Nimbus Tablet Mini,Tablets,East,Retail,K. Tanaka,16,429.0,0,6177.6
+2025-12-15,Cobalt Mouse,Accessories,East,Online,L. Dubois,11,59.0,0,746.35
+2025-12-16,Aurora Laptop 14,Laptops,North,Partner,K. Tanaka,9,1299.0,0,9352.8
+2025-12-16,Cobalt Keyboard,Accessories,West,Retail,A. Rahman,1,89.0,0.15,68.08
+2025-12-16,Cobalt Keyboard,Accessories,North,Partner,A. Rahman,8,89.0,0.05,541.12
+2025-12-16,Pulse Earbuds,Audio,West,Partner,A. Rahman,6,129.0,0.15,526.32
+2025-12-16,Aurora Laptop 16,Laptops,West,Retail,K. Tanaka,10,1699.0,0,15291.0
+2025-12-17,Nimbus Tablet Mini,Tablets,North,Retail,A. Rahman,7,429.0,0,2702.7
+2025-12-17,Cobalt Mouse,Accessories,East,Partner,J. Okafor,2,59.0,0,94.4
+2025-12-18,Pulse Earbuds,Audio,North,Retail,J. Okafor,2,129.0,0.1,208.98
+2025-12-18,Aurora Laptop 14,Laptops,South,Partner,A. Rahman,7,1299.0,0.05,6910.68
+2025-12-18,Pulse Headphones,Audio,West,Online,L. Dubois,2,249.0,0.1,515.43
+2025-12-18,Cobalt Mouse,Accessories,South,Online,J. Okafor,5,59.0,0.1,305.32
+2025-12-18,Aurora Laptop 16,Laptops,South,Retail,M. Silva,14,1699.0,0.1,19266.66
+2025-12-19,Aurora Laptop 14,Laptops,East,Partner,K. Tanaka,5,1299.0,0.1,4676.4
+2025-12-19,Aurora Laptop 14,Laptops,West,Partner,K. Tanaka,5,1299.0,0,5196.0
+2025-12-19,Vertex Monitor 27,Displays,East,Online,L. Dubois,3,379.0,0.15,1111.42
+2025-12-20,Vertex Monitor 32,Displays,East,Partner,A. Rahman,6,549.0,0,2635.2
+2025-12-20,Pulse Headphones,Audio,West,Partner,M. Silva,1,249.0,0.05,189.24
+2025-12-20,Aurora Laptop 14,Laptops,West,Online,J. Okafor,2,1299.0,0,2987.7
+2025-12-20,Vertex Monitor 27,Displays,North,Online,J. Okafor,14,379.0,0,6101.9
+2025-12-20,Pulse Earbuds,Audio,East,Online,K. Tanaka,5,129.0,0.05,704.66
+2025-12-21,Cobalt Mouse,Accessories,East,Retail,A. Rahman,5,59.0,0,265.5
+2025-12-21,Vertex Monitor 32,Displays,South,Retail,J. Okafor,7,549.0,0.1,3112.83
+2025-12-22,Cobalt Mouse,Accessories,West,Online,K. Tanaka,1,59.0,0.15,57.67
+2025-12-22,Cobalt Mouse,Accessories,North,Online,M. Silva,22,59.0,0.05,1418.06
+2025-12-23,Nimbus Tablet 11,Tablets,North,Retail,M. Silva,8,649.0,0,4672.8
+2025-12-23,Cobalt Mouse,Accessories,West,Online,M. Silva,9,59.0,0,610.65
+2025-12-24,Vertex Monitor 27,Displays,North,Partner,J. Okafor,11,379.0,0.05,3168.44
+2025-12-24,Cobalt Mouse,Accessories,North,Retail,L. Dubois,3,59.0,0.1,143.37
+2025-12-24,Aurora Laptop 16,Laptops,East,Partner,A. Rahman,14,1699.0,0.15,16174.48
+2025-12-24,Vertex Monitor 32,Displays,East,Partner,A. Rahman,9,549.0,0.1,3557.52
+2025-12-24,Cobalt Mouse,Accessories,South,Partner,L. Dubois,9,59.0,0,424.8
+2025-12-25,Pulse Earbuds,Audio,West,Retail,J. Okafor,7,129.0,0,812.7
+2025-12-25,Aurora Laptop 14,Laptops,North,Online,L. Dubois,5,1299.0,0,7469.25
+2025-12-25,Vertex Monitor 27,Displays,East,Retail,J. Okafor,4,379.0,0,1364.4
+2025-12-25,Vertex Monitor 32,Displays,East,Partner,M. Silva,6,549.0,0,2635.2
+2025-12-26,Aurora Laptop 14,Laptops,South,Online,A. Rahman,7,1299.0,0.1,9411.25
+2025-12-26,Vertex Monitor 27,Displays,East,Online,J. Okafor,17,379.0,0,7409.45
+2025-12-26,Aurora Laptop 16,Laptops,East,Online,L. Dubois,5,1699.0,0.05,9280.79
+2025-12-26,Pulse Earbuds,Audio,East,Partner,K. Tanaka,3,129.0,0,309.6
+2025-12-27,Nimbus Tablet 11,Tablets,North,Retail,J. Okafor,13,649.0,0.05,7213.64
+2025-12-27,Aurora Laptop 14,Laptops,South,Partner,K. Tanaka,1,1299.0,0,1039.2
+2025-12-27,Cobalt Mouse,Accessories,South,Online,K. Tanaka,1,59.0,0,67.85
+2025-12-27,Nimbus Tablet Mini,Tablets,West,Online,M. Silva,6,429.0,0,2960.1
+2025-12-28,Aurora Laptop 16,Laptops,East,Online,J. Okafor,4,1699.0,0.05,7424.63
+2025-12-28,Cobalt Mouse,Accessories,East,Online,J. Okafor,5,59.0,0,339.25
+2025-12-29,Pulse Headphones,Audio,South,Online,L. Dubois,11,249.0,0,3149.85
+2025-12-29,Nimbus Tablet Mini,Tablets,South,Online,J. Okafor,3,429.0,0,1480.05
+2025-12-29,Pulse Headphones,Audio,North,Online,A. Rahman,12,249.0,0.15,2920.77
+2025-12-30,Nimbus Tablet Mini,Tablets,East,Retail,M. Silva,6,429.0,0,2316.6
+2025-12-30,Pulse Earbuds,Audio,South,Partner,A. Rahman,20,129.0,0.05,1960.8
+2025-12-30,Aurora Laptop 16,Laptops,South,Online,J. Okafor,5,1699.0,0,9769.25
+2025-12-30,Cobalt Keyboard,Accessories,West,Partner,J. Okafor,4,89.0,0.15,242.08
+2025-12-31,Cobalt Mouse,Accessories,South,Partner,J. Okafor,10,59.0,0,472.0
+2025-12-31,Pulse Earbuds,Audio,South,Online,L. Dubois,5,129.0,0,741.75
