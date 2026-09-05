@@ -1,81 +1,179 @@
 """
-File handler — loads uploaded files into usable formats.
-Supports CSV, Excel, PDF, and images.
+File loading for uploaded CSV, Excel, PDF and image files.
+
+Every loader guards size before parsing - an unbounded `read_csv` on a large
+upload will exhaust memory long before it raises anything useful.
 """
 
 import base64
-import pandas as pd
-from pypdf import PdfReader
+
+from backend.config import MAX_UPLOAD_MB
+
+DATA_EXTENSIONS = (".csv", ".xlsx", ".xls")
+IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg", ".gif", ".webp")
+PDF_EXTENSIONS = (".pdf",)
+
+# Extension -> MIME, so a JPEG is not announced to the vision model as a PNG.
+MIME_TYPES = {
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".gif": "image/gif",
+    ".webp": "image/webp",
+}
 
 
-def load_file(file):
+class FileError(ValueError):
+    """An upload that could not be read, with a message fit for the UI."""
+
+
+def get_file_type(filename):
     """
-    Load an uploaded file and return the appropriate data structure.
+    Categorise an upload by extension.
 
     Args:
-        file: A Streamlit UploadedFile object.
+        filename: The uploaded file's name.
 
     Returns:
-        - pd.DataFrame for CSV/Excel files
-        - str for PDF files (extracted text)
-        - None for unsupported files
+        str: One of "data", "pdf", "image", "unknown".
+    """
+    name = filename.lower()
+    if name.endswith(DATA_EXTENSIONS):
+        return "data"
+    if name.endswith(PDF_EXTENSIONS):
+        return "pdf"
+    if name.endswith(IMAGE_EXTENSIONS):
+        return "image"
+    return "unknown"
+
+
+def get_mime_type(filename):
+    """Return the image MIME type for a filename, defaulting to PNG."""
+    name = filename.lower()
+    for ext, mime in MIME_TYPES.items():
+        if name.endswith(ext):
+            return mime
+    return "image/png"
+
+
+def check_size(file):
+    """
+    Reject uploads above the configured limit.
 
     Raises:
-        ValueError: If the file cannot be parsed.
+        FileError: If the file exceeds MAX_UPLOAD_MB.
     """
+    size = getattr(file, "size", None)
+    if size is None:
+        return
+    megabytes = size / (1024 * 1024)
+    if megabytes > MAX_UPLOAD_MB:
+        raise FileError(
+            f"File is {megabytes:.1f} MB, above the {MAX_UPLOAD_MB} MB limit. "
+            "Sample or split it before uploading."
+        )
+
+
+def load_dataframe(file):
+    """
+    Load a CSV or Excel upload into a DataFrame.
+
+    Returns:
+        pd.DataFrame
+
+    Raises:
+        FileError: If the file is too large, empty, or unparseable.
+    """
+    import pandas as pd
+
+    check_size(file)
     name = file.name.lower()
 
     try:
-        if name.endswith(".csv"):
-            return pd.read_csv(file)
-        elif name.endswith(".xlsx") or name.endswith(".xls"):
-            return pd.read_excel(file)
-        elif name.endswith(".pdf"):
-            reader = PdfReader(file)
-            text = "\n".join(
-                page.extract_text() or "" for page in reader.pages
-            )
-            if not text.strip():
-                raise ValueError("PDF appears to be empty or contains only images.")
-            return text
-        else:
-            return None
-    except ValueError:
-        raise
-    except Exception as e:
-        raise ValueError(f"Failed to read file '{file.name}': {str(e)}")
+        df = pd.read_csv(file) if name.endswith(".csv") else pd.read_excel(file)
+    except Exception as exc:
+        raise FileError(f"Could not read {file.name}: {exc}") from exc
+
+    if df.empty:
+        raise FileError(f"{file.name} contains no rows.")
+
+    return drop_index_column(df)
 
 
-def encode_image_to_base64(file):
+def drop_index_column(df):
     """
-    Read an uploaded image file and return its base64-encoded string.
+    Drop a leading unnamed column that is only a re-exported row index.
+
+    Exported CSVs routinely carry an "Unnamed: 0" column holding 0..n-1. It is
+    not data, and leaving it in pollutes the schema the planner reasons over.
+    Removed only when it matches the row numbers exactly, so real data is safe.
 
     Args:
-        file: A Streamlit UploadedFile object (image).
+        df: The freshly loaded DataFrame.
 
     Returns:
-        str: Base64-encoded image data.
+        pd.DataFrame: The frame, with the stray index column removed if present.
     """
-    file_bytes = file.read()
-    return base64.b64encode(file_bytes).decode("utf-8")
+    import pandas as pd
+
+    if df.empty:
+        return df
+
+    first = df.columns[0]
+    if not (isinstance(first, str) and first.startswith("Unnamed:")):
+        return df
+
+    column = df[first]
+    if column.dtype.kind in "iu" and column.reset_index(drop=True).equals(
+        pd.Series(range(len(df)))
+    ):
+        return df.drop(columns=[first])
+
+    return df
 
 
-def get_file_type(file):
+def load_pdf(file):
     """
-    Determine the type category of an uploaded file.
-
-    Args:
-        file: A Streamlit UploadedFile object.
+    Extract text from a PDF upload.
 
     Returns:
-        str: One of 'data' (CSV/Excel), 'pdf', 'image', or 'unknown'.
+        str: The extracted text.
+
+    Raises:
+        FileError: If the file is too large or has no extractable text.
     """
-    name = file.name.lower()
-    if name.endswith((".csv", ".xlsx", ".xls")):
-        return "data"
-    elif name.endswith(".pdf"):
-        return "pdf"
-    elif name.endswith((".png", ".jpg", ".jpeg", ".gif", ".webp")):
-        return "image"
-    else:
-        return "unknown"
+    from pypdf import PdfReader
+
+    check_size(file)
+
+    try:
+        reader = PdfReader(file)
+        text = "\n".join(page.extract_text() or "" for page in reader.pages)
+    except Exception as exc:
+        raise FileError(f"Could not read {file.name}: {exc}") from exc
+
+    if not text.strip():
+        raise FileError(
+            f"No text found in {file.name}. Scanned PDFs need OCR before upload."
+        )
+
+    return text
+
+
+def load_image(file):
+    """
+    Read an image upload as base64.
+
+    Returns:
+        tuple[str, str]: (base64 data, MIME type).
+
+    Raises:
+        FileError: If the file is too large or empty.
+    """
+    check_size(file)
+
+    data = file.read()
+    if not data:
+        raise FileError(f"{file.name} is empty.")
+
+    return base64.b64encode(data).decode("utf-8"), get_mime_type(file.name)
