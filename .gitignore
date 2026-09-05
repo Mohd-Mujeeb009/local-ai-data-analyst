@@ -1,8 +1,11 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
 *.so
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # Virtual environments
 venv/
@@ -14,22 +17,18 @@ ENV/
 .vscode/
 .idea/
 *.swp
-*.swo
 
-# Environment variables
+# Secrets
 .env
 .env.local
+.streamlit/secrets.toml
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 
-# Uploaded data (don't commit user data)
+# User uploads only - examples/ is intentionally tracked so the demo works
 uploads/
-*.csv
-*.xlsx
-*.xls
-*.pdf
 
 # Distribution
 dist/
