@@ -16,6 +16,33 @@ runs it against your real file, and explains the actual numbers it computed.
 
 ---
 
+## Does it actually work?
+
+The claim below — that computing beats guessing — is measurable, so it is
+measured. 50 questions over the sample dataset, ground truth computed with
+pandas and frozen in [`evals/questions.yaml`](evals/questions.yaml), run against
+both the current pipeline and the sampled-prompt approach it replaced.
+
+<!-- EVAL_RESULTS_START -->
+> **Not yet run.** The harness is built and tested; the numbers below need a
+> Groq API key to produce. Run it yourself:
+>
+> ```bash
+> python evals/run_eval.py --key gsk_... --write-readme
+> ```
+>
+> That command replaces this block with the measured results. No figures are
+> published here until they have actually been measured.
+<!-- EVAL_RESULTS_END -->
+
+The 50 questions span simple aggregates, group-bys, filters, top-N, date ranges
+and multi-column derivations — plus 5 that the dataset genuinely **cannot**
+answer (profit margin, customer identity, shipping cost, prior-year comparison,
+satisfaction scores). Those five are the interesting ones: a system that invents
+a plausible number for them is worse than one that says it cannot know.
+
+---
+
 ## Why this is different
 
 Most "chat with your CSV" tools paste a handful of sample rows into the prompt
@@ -44,10 +71,11 @@ the work instead of trusting it.
 
 ## Features
 
-- **Computed answers.** Real pandas over your full dataset, not a sampled guess.
+- **Computed answers.** Real pandas over your full dataset, not a sampled guess -
+  with a [benchmark](#does-it-actually-work) measuring the difference.
 - **Verifiable.** The generated code is shown alongside every answer.
-- **Sandboxed execution.** Model-written code is screened by an AST whitelist and
-  run with no builtins, no imports, no filesystem, and a wall-clock timeout.
+- **Sandboxed execution.** Model-written code passes an AST allowlist, then runs
+  in a separate process with memory, CPU and wall-clock limits.
 - **Charts that match the question.** The model picks the chart type and columns
   as part of its plan, instead of keyword-matching its own prose.
 - **Streaming responses.** Answers type themselves out as Groq generates them.
@@ -121,8 +149,9 @@ budget, code timeout, and history depth.
 │   ├── app.py              # Streamlit UI
 │   ├── state.py            # session state
 │   └── charts.py           # spec-driven chart rendering
+├── evals/                  # 50-question benchmark + baseline comparison
 ├── examples/               # sample dataset
-└── tests/                  # 127 tests
+└── tests/                  # 181 tests
 ```
 
 ### The sandbox
@@ -186,6 +215,25 @@ ruff check .                # lint
 ```
 
 CI runs lint and tests on Python 3.9, 3.11 and 3.12 for every push and PR.
+
+### Evaluation
+
+```bash
+python evals/run_eval.py --key gsk_...              # both systems, 50 questions
+python evals/run_eval.py --limit 5 --system pipeline # quick smoke run
+python evals/run_eval.py --key gsk_... --write-readme # update the table above
+python evals/build_questions.py                      # rebuild ground truth
+```
+
+The harness reports accuracy (split out for the unanswerable questions), mean
+latency and mean cost per query. Cost uses the price table in
+[`evals/run_eval.py`](evals/run_eval.py); a model absent from that table reports
+`n/a` rather than being priced with a guess.
+
+Grading normalises both systems' output before comparing — the pipeline returns
+real pandas objects and the baseline returns JSON, and neither should be marked
+wrong for shape when the answer inside is right. That normalisation is itself
+tested in [`tests/test_evals.py`](tests/test_evals.py), in both directions.
 
 ---
 

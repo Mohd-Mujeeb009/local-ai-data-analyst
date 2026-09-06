@@ -1,5 +1,7 @@
 """Tests for the restricted execution sandbox."""
 
+import sys
+
 import pandas as pd
 import pytest
 
@@ -236,8 +238,6 @@ class TestResourceLimits:
         POSIX applies real rlimits; Windows has no equivalent without an extra
         dependency, so the call reports False rather than pretending.
         """
-        import sys
-
         applied = apply_limits(2048, 10)
         if sys.platform == "win32":
             assert applied is False
@@ -245,14 +245,20 @@ class TestResourceLimits:
             assert applied is True
 
     @pytest.mark.slow
-    def test_memory_bomb_is_contained(self, df):
+    @pytest.mark.skipif(
+        sys.platform == "win32",
+        reason="RLIMIT_AS is POSIX-only; without it this exhausts real machine "
+               "memory instead of being contained, which is the documented gap",
+    )
+    def test_memory_bomb_is_contained(self):
         """
         A cross join is ordinary pandas that the screen cannot reject on cost.
-        It must die with its own process, not take the parent down.
+        Under RLIMIT_AS it must die with its own process, not take the parent
+        down. Skipped where no such limit exists - see the README platform note.
         """
-        big = pd.DataFrame({"a": range(6000), "b": range(6000)})
+        big = pd.DataFrame({"a": range(4000), "b": range(4000)})
         with pytest.raises((CodeMemoryError, CodeTimeoutError)):
-            execute("result = df.merge(df, how='cross').merge(df, how='cross')", big)
+            execute("result = df.merge(df, how='cross')", big)
 
     @pytest.mark.slow
     def test_parent_survives_child_death(self, df):

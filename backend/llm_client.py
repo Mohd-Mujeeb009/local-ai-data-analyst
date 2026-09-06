@@ -125,7 +125,8 @@ def _translate(exc):
     return LLMError(f"Groq API error: {exc}")
 
 
-def complete(api_key, messages, model=None, temperature=ANSWER_TEMPERATURE, json_mode=False):
+def complete(api_key, messages, model=None, temperature=ANSWER_TEMPERATURE,
+             json_mode=False, return_usage=False):
     """
     Run a non-streaming completion.
 
@@ -135,16 +136,21 @@ def complete(api_key, messages, model=None, temperature=ANSWER_TEMPERATURE, json
         model: Model ID. Resolved automatically when omitted.
         temperature: Sampling temperature.
         json_mode: Constrain the response to a JSON object.
+        return_usage: Also return the provider's token counts. Used by the
+            evaluation harness to report real cost per query; the app itself
+            ignores it.
 
     Returns:
-        str: The response text.
+        str: The response text, or (text, usage_dict) when return_usage is set.
+        The usage dict carries "prompt_tokens", "completion_tokens" and "model".
 
     Raises:
         LLMError: On any provider failure.
     """
     client = _client(api_key)
+    resolved = model or resolve_model(api_key, "text")
     kwargs = {
-        "model": model or resolve_model(api_key, "text"),
+        "model": resolved,
         "messages": messages,
         "temperature": temperature,
         "max_tokens": MAX_TOKENS,
@@ -154,9 +160,19 @@ def complete(api_key, messages, model=None, temperature=ANSWER_TEMPERATURE, json
 
     try:
         response = client.chat.completions.create(**kwargs)
-        return response.choices[0].message.content or ""
+        text = response.choices[0].message.content or ""
     except Exception as exc:
         raise _translate(exc) from exc
+
+    if not return_usage:
+        return text
+
+    usage = getattr(response, "usage", None)
+    return text, {
+        "prompt_tokens": getattr(usage, "prompt_tokens", 0) or 0,
+        "completion_tokens": getattr(usage, "completion_tokens", 0) or 0,
+        "model": resolved,
+    }
 
 
 def stream(api_key, messages, model=None, temperature=ANSWER_TEMPERATURE):

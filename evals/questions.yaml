@@ -1,0 +1,310 @@
+# Evaluation set for examples/sales_2025.csv
+#
+# Ground truth is computed directly from the file with pandas, then frozen here
+# so the benchmark is fixed rather than recomputed at run time. Regenerate with
+# evals/build_questions.py if the dataset ever changes.
+#
+# kind:
+#   numeric       - compared with relative tolerance
+#   string        - compared case-insensitively after trimming
+#   list          - ordered comparison, case-insensitive
+#   unanswerable  - the dataset cannot support an answer; the system should
+#                   say so rather than produce a number
+
+- id: q01
+  question: What is the total revenue across the whole dataset?
+  category: simple_aggregate
+  kind: numeric
+  answer: 4156518.25
+  tolerance: 0.01
+- id: q02
+  question: How many orders are in the dataset?
+  category: simple_aggregate
+  kind: numeric
+  answer: 1455
+  tolerance: 0.01
+- id: q03
+  question: What is the average revenue per order?
+  category: simple_aggregate
+  kind: numeric
+  answer: 2856.71
+  tolerance: 0.01
+- id: q04
+  question: What is the median revenue?
+  category: simple_aggregate
+  kind: numeric
+  answer: 1581.12
+  tolerance: 0.01
+- id: q05
+  question: How many total units were sold?
+  category: simple_aggregate
+  kind: numeric
+  answer: 8501
+  tolerance: 0.01
+- id: q06
+  question: What is the highest single-order revenue?
+  category: simple_aggregate
+  kind: numeric
+  answer: 28543.2
+  tolerance: 0.01
+- id: q07
+  question: How many distinct products are there?
+  category: simple_aggregate
+  kind: numeric
+  answer: 10
+  tolerance: 0.01
+- id: q08
+  question: What is the average discount rate?
+  category: simple_aggregate
+  kind: numeric
+  answer: 0.0534
+  tolerance: 0.01
+- id: q09
+  question: Which region has the highest total revenue?
+  category: group_by
+  kind: string
+  answer: North
+- id: q10
+  question: What is the total revenue for the North region?
+  category: group_by
+  kind: numeric
+  answer: 1279888.51
+  tolerance: 0.01
+- id: q11
+  question: Which product category generates the most revenue?
+  category: group_by
+  kind: string
+  answer: Laptops
+- id: q12
+  question: What is the total revenue for the Online channel?
+  category: group_by
+  kind: numeric
+  answer: 1689685.13
+  tolerance: 0.01
+- id: q13
+  question: Which sales rep has the highest total revenue?
+  category: group_by
+  kind: string
+  answer: A. Rahman
+- id: q14
+  question: How many orders did the South region have?
+  category: group_by
+  kind: numeric
+  answer: 363
+  tolerance: 0.01
+- id: q15
+  question: What is the average order revenue in the Retail channel?
+  category: group_by
+  kind: numeric
+  answer: 2745.82
+  tolerance: 0.01
+- id: q16
+  question: Which region has the lowest total revenue?
+  category: group_by
+  kind: string
+  answer: South
+- id: q17
+  question: What is the total number of units sold in the Laptops category?
+  category: group_by
+  kind: numeric
+  answer: 1629
+  tolerance: 0.01
+- id: q18
+  question: How many distinct sales reps sold in the East region?
+  category: group_by
+  kind: numeric
+  answer: 5
+  tolerance: 0.01
+- id: q19
+  question: What is the total revenue for orders with a discount above 10%?
+  category: filter_aggregate
+  kind: numeric
+  answer: 633142.13
+  tolerance: 0.01
+- id: q20
+  question: How many orders had no discount at all?
+  category: filter_aggregate
+  kind: numeric
+  answer: 685
+  tolerance: 0.01
+- id: q21
+  question: What is the average revenue for orders of more than 10 units?
+  category: filter_aggregate
+  kind: numeric
+  answer: 6493.46
+  tolerance: 0.01
+- id: q22
+  question: How many orders exceeded 10000 in revenue?
+  category: filter_aggregate
+  kind: numeric
+  answer: 70
+  tolerance: 0.01
+- id: q23
+  question: What is the total revenue from Laptops sold Online?
+  category: filter_aggregate
+  kind: numeric
+  answer: 815153.06
+  tolerance: 0.01
+- id: q24
+  question: What is the average unit price of products in the Audio category?
+  category: filter_aggregate
+  kind: numeric
+  answer: 191.5
+  tolerance: 0.01
+- id: q25
+  question: How many Partner-channel orders were in the West region?
+  category: filter_aggregate
+  kind: numeric
+  answer: 145
+  tolerance: 0.01
+- id: q26
+  question: What is the total revenue for discounted orders in the North region?
+  category: filter_aggregate
+  kind: numeric
+  answer: 586510.76
+  tolerance: 0.01
+- id: q27
+  question: What share of orders received any discount? Give a percentage.
+  category: filter_aggregate
+  kind: numeric
+  answer: 52.92
+  tolerance: 0.01
+- id: q28
+  question: Which product has the highest total revenue?
+  category: top_n
+  kind: string
+  answer: Aurora Laptop 16
+- id: q29
+  question: List the top 3 products by total revenue, in order.
+  category: top_n
+  kind: list
+  answer:
+  - Aurora Laptop 16
+  - Aurora Laptop 14
+  - Nimbus Tablet 11
+- id: q30
+  question: List the top 5 products by total revenue, in order.
+  category: top_n
+  kind: list
+  answer:
+  - Aurora Laptop 16
+  - Aurora Laptop 14
+  - Nimbus Tablet 11
+  - Vertex Monitor 32
+  - Nimbus Tablet Mini
+- id: q31
+  question: Which product sold the most units in total?
+  category: top_n
+  kind: string
+  answer: Cobalt Mouse
+- id: q32
+  question: What is the revenue of the single best-selling product by revenue?
+  category: top_n
+  kind: numeric
+  answer: 1298881.2
+  tolerance: 0.01
+- id: q33
+  question: List the top 2 regions by total revenue, in order.
+  category: top_n
+  kind: list
+  answer:
+  - North
+  - East
+- id: q34
+  question: Which product has the lowest total revenue?
+  category: top_n
+  kind: string
+  answer: Cobalt Mouse
+- id: q35
+  question: List the top 3 sales reps by total revenue, in order.
+  category: top_n
+  kind: list
+  answer:
+  - A. Rahman
+  - K. Tanaka
+  - M. Silva
+- id: q36
+  question: What was the total revenue in January 2025?
+  category: date_range
+  kind: numeric
+  answer: 274069.37
+  tolerance: 0.01
+- id: q37
+  question: Which calendar month had the highest total revenue?
+  category: date_range
+  kind: string
+  answer: 2025-10
+- id: q38
+  question: What was the total revenue in the fourth quarter of 2025?
+  category: date_range
+  kind: numeric
+  answer: 1424024.63
+  tolerance: 0.01
+- id: q39
+  question: How many orders were placed in December 2025?
+  category: date_range
+  kind: numeric
+  answer: 124
+  tolerance: 0.01
+- id: q40
+  question: What was the total revenue in the first half of 2025 (January to June)?
+  category: date_range
+  kind: numeric
+  answer: 1808854.5
+  tolerance: 0.01
+- id: q41
+  question: How many orders were placed on weekends?
+  category: date_range
+  kind: numeric
+  answer: 428
+  tolerance: 0.01
+- id: q42
+  question: What is the total revenue lost to discounts, comparing actual revenue to undiscounted list
+    value?
+  category: multi_column
+  kind: numeric
+  answer: 466630.75
+  tolerance: 0.01
+  note: gross list value minus actual revenue
+- id: q43
+  question: What is the average revenue per unit sold across the dataset?
+  category: multi_column
+  kind: numeric
+  answer: 488.94
+  tolerance: 0.01
+- id: q44
+  question: Which channel has the highest average discount?
+  category: multi_column
+  kind: string
+  answer: Partner
+- id: q45
+  question: What is the correlation between units sold and revenue?
+  category: multi_column
+  kind: numeric
+  answer: 0.466
+  tolerance: 0.05
+- id: q46
+  question: What was the profit margin on each order?
+  category: unanswerable
+  kind: unanswerable
+  answer: UNANSWERABLE
+- id: q47
+  question: Which customers placed repeat orders?
+  category: unanswerable
+  kind: unanswerable
+  answer: UNANSWERABLE
+- id: q48
+  question: What was the shipping cost for the North region?
+  category: unanswerable
+  kind: unanswerable
+  answer: UNANSWERABLE
+- id: q49
+  question: How did revenue compare to the same period in 2024?
+  category: unanswerable
+  kind: unanswerable
+  answer: UNANSWERABLE
+- id: q50
+  question: What is the customer satisfaction score by product?
+  category: unanswerable
+  kind: unanswerable
+  answer: UNANSWERABLE

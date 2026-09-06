@@ -18,7 +18,12 @@ from backend.config import CODE_TEMPERATURE, MAX_RESULT_CHARS
 from backend.context import describe_schema
 from backend.llm_client import LLMError, complete, resolve_model, stream
 from backend.prompts import EXPLAINER_PROMPT, PLANNER_PROMPT
-from backend.sandbox import CodeTimeoutError, UnsafeCodeError, execute
+from backend.sandbox import (
+    CodeMemoryError,
+    CodeTimeoutError,
+    UnsafeCodeError,
+    execute,
+)
 
 VALID_CHART_TYPES = {"bar", "line", "area", "scatter", "none"}
 
@@ -111,7 +116,7 @@ def plan_analysis(api_key, question, df, history=None):
         history: Prior messages, for follow-up questions.
 
     Returns:
-        dict: A validated plan from `parse_plan`.
+        dict: A validated plan from `parse_plan`, plus a "usage" record.
 
     Raises:
         AnalysisError: If planning fails.
@@ -126,17 +131,18 @@ def plan_analysis(api_key, question, df, history=None):
     messages.append({"role": "user", "content": question})
 
     try:
-        raw = complete(
+        raw, usage = complete(
             api_key,
             messages,
             model=resolve_model(api_key, "text"),
             temperature=CODE_TEMPERATURE,
             json_mode=True,
+            return_usage=True,
         )
     except LLMError as exc:
         raise AnalysisError(str(exc)) from exc
 
-    return parse_plan(raw)
+    return {**parse_plan(raw), "usage": usage}
 
 
 def run_analysis(api_key, question, df, history=None):
@@ -153,19 +159,21 @@ def run_analysis(api_key, question, df, history=None):
         history: Prior messages, for follow-up questions.
 
     Returns:
-        dict: {"code", "chart", "explanation", "result", "output"}.
+        dict: {"code", "chart", "explanation", "result", "output", "usage"}.
 
     Raises:
         AnalysisError: If both attempts fail.
     """
     attempt_history = list(history or [])
     last_error = None
+    spent = []  # token usage across attempts, so a retry's cost is counted too
 
     for attempt in range(2):
         plan = plan_analysis(api_key, question, df, attempt_history)
+        spent.append(plan["usage"])
         try:
             result = execute(plan["code"], df)
-        except (UnsafeCodeError, CodeTimeoutError, RuntimeError) as exc:
+        except (UnsafeCodeError, CodeTimeoutError, CodeMemoryError, RuntimeError) as exc:
             last_error = exc
             if attempt == 0:
                 # Feed the failure back so the retry is informed, not random.
@@ -178,7 +186,12 @@ def run_analysis(api_key, question, df, history=None):
                 continue
             raise AnalysisError(f"Could not complete the analysis: {exc}") from exc
 
-        return {**plan, "result": result, "output": format_result(result)}
+        return {
+            **plan,
+            "result": result,
+            "output": format_result(result),
+            "usage": spent,
+        }
 
     raise AnalysisError(f"Could not complete the analysis: {last_error}")
 
