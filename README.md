@@ -157,7 +157,7 @@ budget, code timeout, and history depth.
 ├── docs/                   # README assets
 ├── evals/                  # 50-question benchmark + baseline comparison
 ├── examples/               # sample dataset
-└── tests/                  # 217 tests
+└── tests/                  # 238 tests
 ```
 
 ### The sandbox
@@ -261,6 +261,44 @@ relation that finds it. So documents get retrieval and spreadsheets get code.
 Every answer cites the passages it used, and the UI shows each one in full
 beneath the response.
 
+### Does the retrieval actually help?
+
+50 questions over 5 synthetic reports, each targeting a section known by
+construction — so recall is measured directly, with no model in the loop and no
+API key required.
+
+<!-- RETRIEVAL_RESULTS_START -->
+| Configuration | Recall@1 | Recall@1 beyond 12k | Latency |
+|---|---|---|---|
+| Truncation at 12k (old) | 68% | **0%** | 0ms |
+| Dense only | 74% | 69% | 385ms |
+| Hybrid (BM25 + dense + RRF) | **84%** | **75%** | **54ms** |
+| Hybrid + rerank | 82% | 75% | 11,148ms |
+
+<sub>50 questions over 5 reports of 16–21k characters, in
+[`evals/pdf_questions.yaml`](evals/pdf_questions.yaml). Reproduce with
+`python evals/run_pdf_eval.py --top-k 1`.</sub>
+<!-- RETRIEVAL_RESULTS_END -->
+
+Two things worth reading carefully.
+
+**Truncation scores 0% on questions whose answer lies past 12,000 characters** —
+32% of the set. Not "often wrong": structurally incapable, because that text was
+never in the context. That is the gap retrieval closes, and it is the reason for
+the change.
+
+**The cross-encoder reranker did not earn its place, so it is off by default.**
+84% → 82% is one question out of fifty — noise — for roughly 200× the latency.
+The honest caveat: these documents produce only ~17 chunks each, so the
+candidate pool never approaches the 50 the reranker is designed to sort. On a
+200-page report it may well pay for itself. It is implemented, tested, and one
+flag away (`RERANK_BY_DEFAULT` in [`backend/config.py`](backend/config.py)) —
+but the default follows the measurement rather than the theory.
+
+At Recall@5 all three retrieval configurations reach 100%, because top-5 of ~17
+chunks is a third of the document. That measurement is saturated and tells you
+nothing; Recall@1 is the one that discriminates.
+
 > **Optional install.** Retrieval needs `pip install -r requirements-rag.txt` —
 > torch plus about a gigabyte of model weights. Without it the app runs normally
 > and answers PDF questions from truncated context, as it did before. Embeddings
@@ -288,6 +326,7 @@ you get locally.
 
 ```bash
 python evals/run_eval.py --key gsk_...              # both systems, 50 questions
+python evals/run_pdf_eval.py --top-k 1               # retrieval, no API key needed
 python evals/run_eval.py --limit 5 --system pipeline # quick smoke run
 python evals/run_eval.py --key gsk_... --write-readme # update the table above
 python evals/build_questions.py                      # rebuild ground truth

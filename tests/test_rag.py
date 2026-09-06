@@ -249,6 +249,8 @@ class TestEndToEnd:
         monkeypatch.setattr(retriever, "rerank", refuse)
 
         doc_id, _ = indexed
-        results = rag.retrieve(doc_id, "How did EMEA perform?", top_k=3)
+        results = rag.retrieve(
+            doc_id, "How did EMEA perform?", top_k=3, use_reranker=True
+        )
         assert results
         assert all(c["reranked"] is False for c in results)

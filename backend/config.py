@@ -40,6 +40,23 @@ ANSWER_TEMPERATURE = 0.3
 MAX_TOKENS = 4096
 
 # --- Limits -----------------------------------------------------------------
+# --- Retrieval --------------------------------------------------------------
+# Cross-encoder reranking is implemented and available, but OFF by default,
+# because the measurement did not support paying for it. On the retrieval
+# benchmark (evals/run_pdf_eval.py, 50 questions over 5 reports):
+#
+#     hybrid            Recall@1 84%,  54ms/query
+#     hybrid + rerank   Recall@1 82%,  11,148ms/query
+#
+# That is one question's difference on fifty - noise - for roughly 200x the
+# latency, which is not a trade worth making in an interactive app. The caveat
+# is that these documents produce only ~17 chunks each, so the candidate pool
+# never approaches the 50 the reranker is designed to sort; on a long report it
+# may well pay for itself. Set RERANK_BY_DEFAULT to True, or pass
+# use_reranker=True, to turn it on and measure against your own corpus.
+RERANK_BY_DEFAULT = False
+RETRIEVAL_TOP_K = 5           # passages handed to the model per question
+
 MAX_UPLOAD_MB = 50            # reject uploads above this before pandas touches them
 MAX_PDF_CHARS = 12_000        # keep PDF context inside the model window
 MAX_PREVIEW_ROWS = 5          # sample rows shown to the model

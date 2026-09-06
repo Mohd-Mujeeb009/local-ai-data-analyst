@@ -1,0 +1,309 @@
+# Retrieval evaluation set.
+#
+# Each question targets a known section, so Recall@k is measurable
+# without an LLM. `beyond_truncation` marks questions whose answer
+# lies past the first 12,000 characters - the ones a truncated
+# context provably cannot reach.
+#
+# Regenerate with evals/build_documents.py
+
+- id: acme_annual_2025_1_q1
+  doc: acme_annual_2025
+  question: What was ACME group revenue?
+  target_heading: Executive Summary
+  target_offset: 720
+  beyond_truncation: false
+- id: acme_annual_2025_1_q2
+  doc: acme_annual_2025
+  question: What was ACME's operating margin?
+  target_heading: Executive Summary
+  target_offset: 720
+  beyond_truncation: false
+- id: acme_annual_2025_2_1_q1
+  doc: acme_annual_2025
+  question: How did the Industrial Products segment perform?
+  target_heading: Industrial Products
+  target_offset: 3543
+  beyond_truncation: false
+- id: acme_annual_2025_2_2_q1
+  doc: acme_annual_2025
+  question: How did ACME Consumer Goods perform?
+  target_heading: Consumer Goods
+  target_offset: 4951
+  beyond_truncation: false
+- id: acme_annual_2025_2_2_q2
+  doc: acme_annual_2025
+  question: Why did Consumer Goods decline?
+  target_heading: Consumer Goods
+  target_offset: 4951
+  beyond_truncation: false
+- id: acme_annual_2025_3_1_q1
+  doc: acme_annual_2025
+  question: How much of ACME's growth was organic?
+  target_heading: Revenue Analysis
+  target_offset: 7773
+  beyond_truncation: false
+- id: acme_annual_2025_3_2_q1
+  doc: acme_annual_2025
+  question: What was ACME's cost of goods sold?
+  target_heading: Cost of Goods Sold
+  target_offset: 9185
+  beyond_truncation: false
+- id: acme_annual_2025_3_3_q1
+  doc: acme_annual_2025
+  question: How much did ACME spend on restructuring?
+  target_heading: Operating Expenses
+  target_offset: 10599
+  beyond_truncation: false
+- id: acme_annual_2025_4_1_q1
+  doc: acme_annual_2025
+  question: How long would a manufacturing disruption delay shipments?
+  target_heading: Supply Chain Concentration
+  target_offset: 13440
+  beyond_truncation: true
+- id: acme_annual_2025_4_2_q1
+  doc: acme_annual_2025
+  question: What proportion of ACME revenue is in foreign currency?
+  target_heading: Currency Exposure
+  target_offset: 14937
+  beyond_truncation: true
+- id: acme_annual_2025_4_3_q1
+  doc: acme_annual_2025
+  question: What is the expected cost of pending environmental rules?
+  target_heading: Regulatory Compliance
+  target_offset: 16382
+  beyond_truncation: true
+- id: acme_annual_2025_5_q1
+  doc: acme_annual_2025
+  question: How often did the ACME board meet?
+  target_heading: Governance
+  target_offset: 17819
+  beyond_truncation: true
+- id: acme_annual_2025_6_q1
+  doc: acme_annual_2025
+  question: What is ACME's revenue outlook?
+  target_heading: Outlook
+  target_offset: 19199
+  beyond_truncation: true
+- id: northwind_q3_1_q1
+  doc: northwind_q3
+  question: What happened to Northwind revenue per shipment?
+  target_heading: Highlights
+  target_offset: 715
+  beyond_truncation: false
+- id: northwind_q3_1_q2
+  doc: northwind_q3
+  question: How much did Northwind freight volumes rise?
+  target_heading: Highlights
+  target_offset: 715
+  beyond_truncation: false
+- id: northwind_q3_2_1_q1
+  doc: northwind_q3
+  question: Which corridor grew fastest for Northwind?
+  target_heading: Transatlantic
+  target_offset: 3497
+  beyond_truncation: false
+- id: northwind_q3_2_2_q1
+  doc: northwind_q3
+  question: Why were Northwind's Intra-Asia volumes flat?
+  target_heading: Intra-Asia
+  target_offset: 4909
+  beyond_truncation: false
+- id: northwind_q3_3_1_q1
+  doc: northwind_q3
+  question: How many vehicles does Northwind own?
+  target_heading: Owned Fleet
+  target_offset: 7699
+  beyond_truncation: false
+- id: northwind_q3_3_2_q1
+  doc: northwind_q3
+  question: What share of Northwind capacity is chartered?
+  target_heading: Chartered Capacity
+  target_offset: 9142
+  beyond_truncation: false
+- id: northwind_q3_4_1_q1
+  doc: northwind_q3
+  question: What is Northwind's sensitivity to fuel prices?
+  target_heading: Fuel
+  target_offset: 11908
+  beyond_truncation: false
+- id: northwind_q3_4_2_q1
+  doc: northwind_q3
+  question: Why did Northwind's labour costs rise?
+  target_heading: Labour
+  target_offset: 13367
+  beyond_truncation: true
+- id: northwind_q3_5_q1
+  doc: northwind_q3
+  question: What volume growth does Northwind expect?
+  target_heading: Outlook
+  target_offset: 14776
+  beyond_truncation: true
+- id: helios_product_2_1_q1
+  doc: helios_product
+  question: What is the Helios ingestion throughput?
+  target_heading: Ingestion Layer
+  target_offset: 3483
+  beyond_truncation: false
+- id: helios_product_2_2_q1
+  doc: helios_product
+  question: How long does Helios retain events?
+  target_heading: Storage Layer
+  target_offset: 4898
+  beyond_truncation: false
+- id: helios_product_2_2_q2
+  doc: helios_product
+  question: How long is Helios cold storage retention?
+  target_heading: Storage Layer
+  target_offset: 4898
+  beyond_truncation: false
+- id: helios_product_2_3_q1
+  doc: helios_product
+  question: What is the Helios query latency target?
+  target_heading: Query Layer
+  target_offset: 6317
+  beyond_truncation: false
+- id: helios_product_3_1_q1
+  doc: helios_product
+  question: How fast is Helios regional failover?
+  target_heading: Regional Failover
+  target_offset: 9096
+  beyond_truncation: false
+- id: helios_product_4_1_q1
+  doc: helios_product
+  question: What encryption does Helios use?
+  target_heading: Encryption
+  target_offset: 11882
+  beyond_truncation: false
+- id: helios_product_4_2_q1
+  doc: helios_product
+  question: How many roles can a Helios tenant define?
+  target_heading: Access Control
+  target_offset: 13290
+  beyond_truncation: true
+- id: helios_product_5_q1
+  doc: helios_product
+  question: What are the default Helios tenant quotas?
+  target_heading: Limits and Quotas
+  target_offset: 14706
+  beyond_truncation: true
+- id: helios_product_6_q1
+  doc: helios_product
+  question: What is the Helios priority one response time?
+  target_heading: Support
+  target_offset: 16134
+  beyond_truncation: true
+- id: vertex_market_1_q1
+  doc: vertex_market
+  question: How large is the market in the Vertex outlook?
+  target_heading: Summary
+  target_offset: 705
+  beyond_truncation: false
+- id: vertex_market_2_1_q1
+  doc: vertex_market
+  question: What is the enterprise adoption rate?
+  target_heading: Enterprise Adoption
+  target_offset: 3465
+  beyond_truncation: false
+- id: vertex_market_2_2_q1
+  doc: vertex_market
+  question: Why is small business adoption low?
+  target_heading: Small Business
+  target_offset: 4882
+  beyond_truncation: false
+- id: vertex_market_3_1_q1
+  doc: vertex_market
+  question: What share do the top three vendors hold?
+  target_heading: Market Share
+  target_offset: 7686
+  beyond_truncation: false
+- id: vertex_market_3_2_q1
+  doc: vertex_market
+  question: What happened to average selling prices?
+  target_heading: Pricing Trends
+  target_offset: 9110
+  beyond_truncation: false
+- id: vertex_market_4_1_q1
+  doc: vertex_market
+  question: What share of the market is North America?
+  target_heading: North America
+  target_offset: 11897
+  beyond_truncation: false
+- id: vertex_market_4_1_q2
+  doc: vertex_market
+  question: How fast did North America grow?
+  target_heading: North America
+  target_offset: 11897
+  beyond_truncation: false
+- id: vertex_market_4_2_q1
+  doc: vertex_market
+  question: How long are European procurement cycles?
+  target_heading: Europe
+  target_offset: 13290
+  beyond_truncation: true
+- id: vertex_market_4_3_q1
+  doc: vertex_market
+  question: Which region grew fastest in the Vertex outlook?
+  target_heading: Asia Pacific
+  target_offset: 14712
+  beyond_truncation: true
+- id: vertex_market_5_q1
+  doc: vertex_market
+  question: What is the forecast growth rate?
+  target_heading: Forecast
+  target_offset: 16128
+  beyond_truncation: true
+- id: orion_policy_2_1_q1
+  doc: orion_policy
+  question: How many days on site are required at Orion?
+  target_heading: Hybrid Working
+  target_offset: 3476
+  beyond_truncation: false
+- id: orion_policy_2_2_q1
+  doc: orion_policy
+  question: What are Orion's core hours?
+  target_heading: Core Hours
+  target_offset: 4880
+  beyond_truncation: false
+- id: orion_policy_3_1_q1
+  doc: orion_policy
+  question: How much annual leave do Orion employees get?
+  target_heading: Annual Leave
+  target_offset: 7649
+  beyond_truncation: false
+- id: orion_policy_3_1_q2
+  doc: orion_policy
+  question: Are public holidays included in Orion annual leave?
+  target_heading: Annual Leave
+  target_offset: 7649
+  beyond_truncation: false
+- id: orion_policy_3_2_q1
+  doc: orion_policy
+  question: What parental leave does Orion offer secondary carers?
+  target_heading: Parental Leave
+  target_offset: 9068
+  beyond_truncation: false
+- id: orion_policy_3_3_q1
+  doc: orion_policy
+  question: How many leave days can be carried over at Orion?
+  target_heading: Carry Over
+  target_offset: 10489
+  beyond_truncation: false
+- id: orion_policy_4_1_q1
+  doc: orion_policy
+  question: When can Orion staff fly business class?
+  target_heading: Travel
+  target_offset: 13259
+  beyond_truncation: true
+- id: orion_policy_4_2_q1
+  doc: orion_policy
+  question: What is Orion's home office equipment allowance?
+  target_heading: Equipment
+  target_offset: 14696
+  beyond_truncation: true
+- id: orion_policy_5_q1
+  doc: orion_policy
+  question: How long does Orion's disciplinary response take?
+  target_heading: Conduct
+  target_offset: 16115
+  beyond_truncation: true

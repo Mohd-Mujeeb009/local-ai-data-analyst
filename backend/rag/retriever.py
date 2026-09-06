@@ -16,21 +16,25 @@ returns [-1, 1]; normalising those onto a shared scale requires tuning that
 does not transfer between corpora. RRF only reads rank positions, so it needs
 no tuning and cannot be dominated by whichever scorer happens to be louder.
 
-**Cross-encoder reranking** is what actually buys the accuracy. Bi-encoders
-embed the query and the chunk separately, so they never compare them directly;
-a cross-encoder reads both together and can tell that a chunk mentioning the
-right entity answers the wrong question. It is far too slow to run over a whole
-corpus, which is why it runs last, over the ~50 candidates the cheap stages
-surfaced.
+**Cross-encoder reranking** is available but off by default. Bi-encoders embed
+the query and the chunk separately and never compare them directly; a
+cross-encoder reads both together and can tell that a chunk mentioning the right
+entity answers the wrong question. That is the theory, and it is why the stage
+exists. The measurement did not bear it out on the benchmark corpus - 82% vs 84%
+Recall@1 for roughly 200x the latency - so the default follows the evidence
+rather than the theory. See config.RERANK_BY_DEFAULT for the numbers and the
+caveat about corpus size.
 """
 
 import re
+
+from backend.config import RERANK_BY_DEFAULT, RETRIEVAL_TOP_K
 
 RERANKER_NAME = "BAAI/bge-reranker-base"
 
 FUSION_K = 60          # RRF damping; 60 is the value from the original paper
 CANDIDATES = 50        # how many the cheap stages hand to the reranker
-DEFAULT_TOP_K = 5      # how many survive
+DEFAULT_TOP_K = RETRIEVAL_TOP_K
 
 _reranker = None
 TOKEN = re.compile(r"[a-z0-9]+")
@@ -158,7 +162,7 @@ def rerank(question, candidates, top_k):
 
 
 def retrieve(doc_id, question, top_k=DEFAULT_TOP_K, candidates=CANDIDATES,
-             use_reranker=True):
+             use_reranker=None):
     """
     Run the full hybrid pipeline for one question.
 
@@ -167,14 +171,19 @@ def retrieve(doc_id, question, top_k=DEFAULT_TOP_K, candidates=CANDIDATES,
         question: The user's question.
         top_k: How many chunks to return.
         candidates: How many the cheap stages hand to the reranker.
-        use_reranker: Set False to return fused results directly. Used by the
-            evaluation harness to isolate the reranker's contribution.
+        use_reranker: Whether to run the cross-encoder. Defaults to
+            config.RERANK_BY_DEFAULT, which is off - see the measurement
+            recorded there. The evaluation harness sets it explicitly to
+            isolate each stage's contribution.
 
     Returns:
         list[dict]: The chosen chunks, best first, each with "id",
             "heading_path", "body" and its stage scores.
     """
     from backend.rag import embedder, store
+
+    if use_reranker is None:
+        use_reranker = RERANK_BY_DEFAULT
 
     chunks = store.all_chunks(doc_id)
     if not chunks:

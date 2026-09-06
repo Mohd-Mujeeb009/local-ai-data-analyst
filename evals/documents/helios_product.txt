@@ -1,0 +1,99 @@
+HELIOS PLATFORM TECHNICAL SPECIFICATION
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+1 Introduction
+
+This document specifies the Helios platform.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+2 Architecture
+
+Helios is a distributed system.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+2.1 Ingestion Layer
+
+The ingestion layer accepts up to 40,000 events per second per region.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+2.2 Storage Layer
+
+Events are retained for 90 days in hot storage and 400 days in cold storage.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+2.3 Query Layer
+
+The query layer targets a p99 latency of 250 milliseconds.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+3 Deployment
+
+Helios deploys to three regions.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+3.1 Regional Failover
+
+Failover between regions completes within four minutes of detection.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+4 Security
+
+Security controls are described below.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+4.1 Encryption
+
+Data is encrypted with AES-256 at rest and TLS 1.3 in transit.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+4.2 Access Control
+
+Access uses role-based control with a maximum of 64 roles per tenant.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+5 Limits and Quotas
+
+Each tenant is limited to 500 concurrent queries and 2 terabytes of hot storage by default.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+6 Support
+
+Priority one incidents receive a response within 15 minutes.
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
+
+Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. Management continues to monitor conditions across the portfolio and to allocate capital toward the highest-returning opportunities available. The board reviewed performance against plan and against the prior comparable period, and considered the sensitivity of the outlook to the assumptions described elsewhere in this document. 
