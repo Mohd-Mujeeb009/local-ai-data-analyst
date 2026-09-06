@@ -24,12 +24,17 @@ Two independent layers, because either alone is insufficient:
 import ast
 import os
 import pickle
+import signal
 import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
 from backend.config import CODE_TIMEOUT_SECONDS, SANDBOX_MEMORY_MB
+
+# signal.SIGXCPU does not exist on Windows, where RLIMIT_CPU cannot fire
+# either. 24 is its POSIX number; the constant just keeps the check readable.
+SIGXCPU = getattr(signal, "SIGXCPU", 24)
 
 # Builtins the generated code is allowed to touch. Everything else - including
 # open, eval, exec, __import__, getattr, compile - is absent from the namespace.
@@ -375,15 +380,25 @@ def execute(code, df):
 
         if not output_path.exists():
             detail = (stderr or b"").decode("utf-8", "replace").strip()
-            # A child killed by the kernel's OOM reaper or an rlimit leaves no
-            # output file; MemoryError in the message distinguishes it from a
-            # genuine crash.
-            if "MemoryError" in detail or process.returncode in (-9, 137):
+            code = process.returncode
+
+            # A child stopped by an rlimit dies from a signal and writes no
+            # output file, so the exit code is the only evidence of why.
+            # SIGXCPU means RLIMIT_CPU fired: on POSIX that races the parent's
+            # wall-clock kill and usually wins, since CPU-bound work burns CPU
+            # at roughly wall speed. Reporting it as a generic crash would make
+            # the same runaway snippet surface differently on Linux and Windows.
+            if code in (-SIGXCPU, 128 + SIGXCPU):
+                raise CodeTimeoutError(
+                    f"Analysis exceeded its {CODE_TIMEOUT_SECONDS}s CPU budget "
+                    "and was terminated."
+                )
+            if "MemoryError" in detail or code in (-9, 137):
                 raise CodeMemoryError(
                     f"Analysis exceeded the {SANDBOX_MEMORY_MB} MB memory limit."
                 )
             raise RuntimeError(
-                f"Analysis process exited with code {process.returncode}"
+                f"Analysis process exited with code {code}"
                 + (f": {detail.splitlines()[-1]}" if detail else "")
             )
 

@@ -267,6 +267,31 @@ class TestResourceLimits:
             execute("result = sum(x for x in range(10**11))", df)
         assert execute("result = df['revenue'].sum()", df) == 575
 
+    def test_cpu_limit_reports_as_timeout(self, df, monkeypatch):
+        """
+        On POSIX, RLIMIT_CPU races the parent's wall-clock kill and usually
+        wins, so the child dies from SIGXCPU with no output file. That must
+        surface as a timeout, not as a generic crash - otherwise the same
+        runaway snippet reports differently on Linux and Windows.
+        """
+        import subprocess as sp
+
+        from backend import sandbox
+
+        class Killed:
+            returncode = -sandbox.SIGXCPU
+
+            def communicate(self, timeout=None):
+                return b"", b""
+
+            def is_alive(self):
+                return False
+
+        monkeypatch.setattr(sp, "Popen", lambda *a, **k: Killed())
+
+        with pytest.raises(CodeTimeoutError, match="CPU budget"):
+            execute("result = df['revenue'].sum()", df)
+
     def test_child_crash_reported_not_hung(self, df):
         """A snippet that kills the interpreter surfaces as an error."""
         with pytest.raises(RuntimeError):

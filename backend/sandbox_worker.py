@@ -37,7 +37,9 @@ def apply_limits(memory_mb, cpu_seconds):
     try:
         limit_bytes = memory_mb * 1024 * 1024
         resource.setrlimit(resource.RLIMIT_AS, (limit_bytes, limit_bytes))
-        resource.setrlimit(resource.RLIMIT_CPU, (cpu_seconds, cpu_seconds))
+        # Sit just above the parent's wall-clock kill so that path normally
+        # wins and produces the clearer message; this is the backstop.
+        resource.setrlimit(resource.RLIMIT_CPU, (cpu_seconds + 5, cpu_seconds + 5))
         return True
     except (ValueError, OSError):
         return False
