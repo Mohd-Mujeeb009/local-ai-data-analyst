@@ -79,7 +79,8 @@ the work instead of trusting it.
 - **Charts that match the question.** The model picks the chart type and columns
   as part of its plan, instead of keyword-matching its own prose.
 - **Streaming responses.** Answers type themselves out as Groq generates them.
-- **PDF Q&A** with explicit truncation notices, so a partial answer says so.
+- **PDF retrieval** with inline citations — hybrid search over the whole
+  document, not a truncated prefix. Optional install; degrades gracefully.
 - **Image analysis** through a vision model, with correct MIME handling.
 - **Self-correcting.** If generated code fails, the error is fed back for one
   informed retry.
@@ -144,14 +145,19 @@ budget, code timeout, and history depth.
 │   ├── sandbox.py          # AST allowlist + subprocess isolation
 │   ├── sandbox_worker.py   # the isolated child process
 │   ├── analysis.py         # plan → execute → explain pipeline
-│   └── llm_client.py       # Groq client, streaming, model resolution
+│   ├── llm_client.py       # Groq client, streaming, model resolution
+│   └── rag/                # PDF retrieval (optional install)
+│       ├── chunker.py      # structure-aware split, heading-path prefix
+│       ├── embedder.py     # local bge-small, cached by content hash
+│       ├── store.py        # persistent ChromaDB index
+│       └── retriever.py    # BM25 + dense → RRF → cross-encoder rerank
 ├── frontend/
 │   ├── app.py              # Streamlit UI
 │   ├── state.py            # session state
 │   └── charts.py           # spec-driven chart rendering
 ├── evals/                  # 50-question benchmark + baseline comparison
 ├── examples/               # sample dataset
-└── tests/                  # 181 tests
+└── tests/                  # 217 tests
 ```
 
 ### The sandbox
@@ -200,6 +206,66 @@ call that costs several.
 
 This is defence in depth for a single-user tool. It is not a substitute for
 container or VM isolation if you expose the app to untrusted users.
+
+---
+
+## Two file types, two pipelines — on purpose
+
+Spreadsheets and documents fail in opposite ways, so they get opposite treatment.
+
+| | Spreadsheets (CSV/Excel) | Documents (PDF) |
+|---|---|---|
+| Pipeline | Plan → execute pandas | Retrieve → cite |
+| The model sees | The schema only | The passages retrieved |
+| Answers come from | Code run over every row | Quoted source text |
+| Failure it prevents | Inventing an aggregate | Answering past the context window |
+
+**Retrieval is deliberately not applied to tabular data.** It is tempting —
+embed the rows, retrieve the relevant ones, answer from those — and it is
+wrong, because the questions people ask of a spreadsheet are arithmetic over
+*all* the rows, not lookups of a few.
+
+Ask *"what is total revenue?"* of a 100,000-row file. Semantic search returns
+the k rows most similar to the phrase "total revenue" — but the answer depends
+on every row, and no k is the right k. Ask *"which region grew fastest?"* and
+the correct answer may live in rows that resemble the question least. Similarity
+is simply not the relation that connects the question to its answer; `groupby`
+is. A retrieval layer here would produce fluent answers computed from an
+arbitrary subset, which is the exact failure this project exists to eliminate —
+reintroduced through a more sophisticated-looking door.
+
+Documents invert every one of those properties. A 200-page report genuinely
+does not fit in a context window, the answer to a question about EMEA revenue
+genuinely does live in a small findable region, and similarity genuinely is the
+relation that finds it. So documents get retrieval and spreadsheets get code.
+
+### How PDF retrieval works
+
+1. **Chunk on structure**, not a fixed window, and **prepend the heading path**
+   before embedding. A chunk reading *"revenue fell 12%"* is unretrievable
+   alone; as *"Segment Performance > EMEA: revenue fell 12%"* it is findable.
+   The prefix is stored separately from the body, so citations quote clean text.
+2. **Search twice.** BM25 catches exact tokens embeddings blur — product codes,
+   defined terms, section numbers. Dense catches paraphrase BM25 cannot —
+   *"headcount reductions"* against *"we reduced staffing by 8%"*.
+3. **Fuse with reciprocal rank fusion.** BM25 returns unbounded scores and
+   cosine returns [-1, 1]; normalising them onto one scale needs tuning that
+   does not transfer between corpora. RRF reads rank position only, so neither
+   scorer can dominate by being louder.
+4. **Rerank with a cross-encoder.** Bi-encoders embed query and chunk
+   separately and never compare them directly. A cross-encoder reads both
+   together and can tell that a passage mentioning the right entity answers the
+   wrong question. Too slow for a whole corpus — which is why it runs last, over
+   the ~50 candidates the cheap stages surfaced, narrowing to 5.
+
+Every answer cites the passages it used, and the UI shows each one in full
+beneath the response.
+
+> **Optional install.** Retrieval needs `pip install -r requirements-rag.txt` —
+> torch plus about a gigabyte of model weights. Without it the app runs normally
+> and answers PDF questions from truncated context, as it did before. Embeddings
+> run locally, so document text never leaves the machine, and are cached by
+> content hash so re-uploading a document skips the work entirely.
 
 ---
 

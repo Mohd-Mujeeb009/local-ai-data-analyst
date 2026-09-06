@@ -15,6 +15,8 @@ DEFAULTS = {
     "file_name": None,     # currently loaded file
     "file_type": None,     # "data" | "pdf" | "image"
     "show_code": True,     # reveal generated pandas alongside answers
+    "doc_id": None,        # retrieval index id for the loaded PDF, if indexed
+    "doc_chunks": 0,       # how many passages that index holds
 }
 
 
@@ -28,7 +30,7 @@ def init_state():
 def clear_file():
     """Drop the loaded file and everything derived from it."""
     for key in ("df", "pdf_text", "image_base64", "image_mime",
-                "image_bytes", "file_name", "file_type"):
+                "image_bytes", "file_name", "file_type", "doc_id", "doc_chunks"):
         st.session_state[key] = DEFAULTS[key]
 
 

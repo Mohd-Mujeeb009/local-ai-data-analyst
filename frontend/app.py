@@ -12,6 +12,7 @@ import streamlit as st
 # Support `streamlit run frontend/app.py` as well as the root-level app.py shim.
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+from backend import rag  # noqa: E402
 from backend.analysis import AnalysisError, run_analysis, stream_explanation  # noqa: E402
 from backend.config import HISTORY_TURNS, MAX_UPLOAD_MB  # noqa: E402
 from backend.context import summarize_pdf  # noqa: E402
@@ -23,7 +24,11 @@ from backend.file_handler import (  # noqa: E402
     load_pdf,
 )
 from backend.llm_client import LLMError, check_connection, stream, stream_vision  # noqa: E402
-from backend.prompts import CHAT_PROMPT, DOCUMENT_PROMPT  # noqa: E402
+from backend.prompts import (  # noqa: E402
+    CHAT_PROMPT,
+    DOCUMENT_PROMPT,
+    RETRIEVAL_PROMPT,
+)
 from frontend import charts  # noqa: E402
 from frontend.state import clear_chat, clear_file, init_state, text_history  # noqa: E402
 
@@ -96,6 +101,13 @@ def render_sidebar():
                 left, right = st.columns(2)
                 left.metric("Rows", f"{len(df):,}")
                 right.metric("Columns", len(df.columns))
+            elif st.session_state.file_type == "pdf":
+                if st.session_state.doc_id:
+                    st.caption(
+                        f"Indexed: {st.session_state.doc_chunks} passages searchable"
+                    )
+                else:
+                    st.caption("Not indexed - answering from truncated context")
 
         st.divider()
 
@@ -125,6 +137,7 @@ def handle_upload(upload):
             st.session_state.df = load_dataframe(upload)
         elif file_type == "pdf":
             st.session_state.pdf_text = load_pdf(upload)
+            index_pdf(upload, st.session_state.pdf_text)
         elif file_type == "image":
             st.session_state.image_bytes = upload.getvalue()
             upload.seek(0)
@@ -147,7 +160,17 @@ def handle_upload(upload):
 # Message rendering
 # --------------------------------------------------------------------------
 def render_analysis(analysis, key):
-    """Draw the code, chart and result attached to an assistant turn."""
+    """Draw the code, chart, result or citations attached to an assistant turn."""
+    passages = analysis.get("passages")
+    if passages:
+        st.caption(f"Sources — {len(passages)} passages retrieved")
+        for index, passage in enumerate(passages, 1):
+            heading = passage.get("heading_path") or "(untitled section)"
+            with st.expander(f"[{index}] {heading}"):
+                st.markdown(f"> {passage['body']}")
+                st.caption(f"`{passage['id']}`")
+        return
+
     if st.session_state.show_code and analysis.get("code"):
         with st.expander("How this was calculated"):
             if analysis.get("explanation"):
@@ -222,8 +245,60 @@ def answer_dataframe(question):
     }
 
 
+def index_pdf(upload, text):
+    """
+    Build a retrieval index for an uploaded PDF, if the stack is installed.
+
+    Failure here is never fatal: the app falls back to truncated-context
+    answering, which is what it did before retrieval existed.
+    """
+    if not rag.available():
+        return
+
+    try:
+        upload.seek(0)
+        raw = upload.getvalue()
+    except Exception:
+        raw = None
+
+    status = st.empty()
+    try:
+        doc_id, chunks = rag.ingest(
+            text, raw, progress=lambda m: status.caption(f"{m}...")
+        )
+        st.session_state.doc_id = doc_id
+        st.session_state.doc_chunks = chunks
+    except rag.RagUnavailable as exc:
+        st.warning(f"Retrieval unavailable, using truncated context: {exc}")
+    except Exception as exc:
+        st.warning(f"Could not index the document, using truncated context: {exc}")
+    finally:
+        status.empty()
+
+
 def answer_document(question):
-    """Answer a question grounded in the extracted PDF text."""
+    """
+    Answer a question about the loaded PDF.
+
+    Uses retrieval when the document was indexed, falling back to truncated
+    whole-document context otherwise.
+    """
+    if st.session_state.doc_id:
+        try:
+            passages = rag.retrieve(st.session_state.doc_id, question)
+        except rag.RagUnavailable:
+            passages = []
+
+        if passages:
+            messages = [
+                {"role": "system",
+                 "content": RETRIEVAL_PROMPT.format(
+                     context=rag.format_citations(passages))},
+                *text_history(HISTORY_TURNS),
+            ]
+            text = stream_into_chat(stream(st.session_state.api_key, messages))
+            return text, ({"passages": passages} if text else None)
+
     messages = [
         {"role": "system", "content": DOCUMENT_PROMPT},
         {"role": "system", "content": summarize_pdf(st.session_state.pdf_text)},

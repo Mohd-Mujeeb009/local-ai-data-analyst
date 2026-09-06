@@ -1,0 +1,13 @@
+# Optional dependencies for PDF retrieval.
+#
+# Kept out of requirements.txt on purpose. These pull in torch and roughly a
+# gigabyte of model weights on first run, which would triple install time and CI
+# duration for a feature that only applies to PDF uploads. Without them the app
+# runs normally and answers PDF questions from truncated context instead.
+#
+#   pip install -r requirements-rag.txt
+
+-r requirements.txt
+sentence-transformers>=3.0.0
+chromadb>=0.5.0
+rank-bm25>=0.2.2
