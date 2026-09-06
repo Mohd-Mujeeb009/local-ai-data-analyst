@@ -154,7 +154,7 @@ budget, code timeout, and history depth.
 │   ├── app.py              # Streamlit UI
 │   ├── state.py            # session state
 │   └── charts.py           # spec-driven chart rendering
-├── docs/                   # README assets
+├── docs/                   # README assets + rebuild changelog
 ├── evals/                  # 50-question benchmark + baseline comparison
 ├── examples/               # sample dataset
 └── tests/                  # 238 tests
@@ -361,6 +361,15 @@ tested in [`tests/test_evals.py`](tests/test_evals.py), in both directions.
 - [ ] Multi-file analysis with joins
 - [ ] Export a session as a notebook
 - [ ] Local model support via Ollama
+
+---
+
+## Project history
+
+[`docs/CHANGES.md`](docs/CHANGES.md) records the rebuild: what the project was
+before, what changed, and the reasoning behind each decision — including the two
+sandbox escapes, the measurements that turned reranking off, and the bugs the
+tests found while being written.
 
 ---
 

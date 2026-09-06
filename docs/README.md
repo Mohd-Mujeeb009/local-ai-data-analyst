@@ -2,6 +2,9 @@
 
 Assets referenced by the top-level [README](../README.md).
 
+- [CHANGES.md](CHANGES.md) — what the rebuild changed, before and after,
+  and why each decision was made.
+
 ## demo.gif — not yet recorded
 
 The main README has a commented-out `![Demo](docs/demo.gif)` near the top,
