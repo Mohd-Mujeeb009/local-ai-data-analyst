@@ -124,7 +124,8 @@ def embed_documents(texts, use_cache=True):
             normalize_embeddings=True,
             show_progress_bar=False,
         )
-        for index, vector in zip(pending, fresh):
+        # Lengths must match: one vector per pending text.
+        for index, vector in zip(pending, fresh, strict=True):
             as_list = [float(v) for v in vector]
             vectors[index] = as_list
             if use_cache:

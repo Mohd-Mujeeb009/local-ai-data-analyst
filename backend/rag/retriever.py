@@ -79,7 +79,10 @@ def bm25_search(chunks, question, top_k):
     bm25 = BM25Okapi(corpus)
     scores = bm25.get_scores(tokenize(question))
 
-    ranked = sorted(zip(chunks, scores), key=lambda pair: pair[1], reverse=True)
+    # BM25 returns exactly one score per document.
+    ranked = sorted(
+        zip(chunks, scores, strict=True), key=lambda pair: pair[1], reverse=True
+    )
     return [{**chunk, "score": float(score)} for chunk, score in ranked[:top_k]]
 
 
@@ -148,7 +151,7 @@ def rerank(question, candidates, top_k):
 
     scored = [
         {**chunk, "rerank_score": float(score)}
-        for chunk, score in zip(candidates, scores)
+        for chunk, score in zip(candidates, scores, strict=True)
     ]
     scored.sort(key=lambda c: c["rerank_score"], reverse=True)
     return scored[:top_k]

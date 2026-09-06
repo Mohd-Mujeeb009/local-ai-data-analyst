@@ -206,7 +206,7 @@ def grade(expected, actual, kind, tolerance=0.01):
             return False
         return all(
             str(a).strip().lower() == str(e).strip().lower()
-            for a, e in zip(actual, expected)
+            for a, e in zip(actual, expected, strict=True)
         )
 
     return False

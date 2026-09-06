@@ -130,8 +130,9 @@ def all_chunks(doc_id):
             "heading_path": (meta or {}).get("heading_path", ""),
             "order": (meta or {}).get("order", 0),
         }
+        # Chroma returns these three lists in lockstep.
         for cid, body, meta in zip(
-            stored["ids"], stored["documents"], stored["metadatas"]
+            stored["ids"], stored["documents"], stored["metadatas"], strict=True
         )
     ]
     return sorted(chunks, key=lambda c: c["order"])
@@ -155,7 +156,7 @@ def search(doc_id, query_vector, top_k):
     results = []
     for cid, body, meta, distance in zip(
         found["ids"][0], found["documents"][0],
-        found["metadatas"][0], found["distances"][0],
+        found["metadatas"][0], found["distances"][0], strict=True,
     ):
         results.append({
             "id": cid,

@@ -3,15 +3,14 @@
 **Chat with your data — and get answers that are actually computed, not guessed.**
 
 [![CI](https://github.com/Mohd-Mujeeb009/ai-data-analyst/actions/workflows/ci.yml/badge.svg)](https://github.com/Mohd-Mujeeb009/ai-data-analyst/actions/workflows/ci.yml)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 Upload a spreadsheet and ask questions in plain English. The app writes pandas,
 runs it against your real file, and explains the actual numbers it computed.
 
-<!-- Record a 15-second GIF of a real session and drop it here. This is the
-     single highest-impact thing you can add to this README. -->
+<!-- Recording notes and what to capture: docs/README.md -->
 <!-- ![Demo](docs/demo.gif) -->
 
 ---
@@ -155,6 +154,7 @@ budget, code timeout, and history depth.
 │   ├── app.py              # Streamlit UI
 │   ├── state.py            # session state
 │   └── charts.py           # spec-driven chart rendering
+├── docs/                   # README assets
 ├── evals/                  # 50-question benchmark + baseline comparison
 ├── examples/               # sample dataset
 └── tests/                  # 217 tests
@@ -280,7 +280,9 @@ pytest --cov=backend --cov=frontend
 ruff check .                # lint
 ```
 
-CI runs lint and tests on Python 3.9, 3.11 and 3.12 for every push and PR.
+CI runs lint and tests on Python 3.12 and 3.13 for every push and PR.
+Dependencies are pinned exactly, so the versions CI resolves are the versions
+you get locally.
 
 ### Evaluation
 

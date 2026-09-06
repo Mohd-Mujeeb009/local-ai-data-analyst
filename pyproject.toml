@@ -2,7 +2,7 @@
 name = "ai-data-analyst"
 version = "1.0.0"
 description = "Chat with your data. Answers are computed with real pandas, not guessed by an LLM."
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -11,7 +11,7 @@ addopts = "-q"
 
 [tool.ruff]
 line-length = 100
-target-version = "py39"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B", "SIM"]

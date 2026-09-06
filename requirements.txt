@@ -1,6 +1,13 @@
-streamlit>=1.40.0
-pandas>=2.0.0
-numpy>=1.24.0
-groq>=0.11.0
-openpyxl>=3.1.0
-pypdf>=4.0.0
+# Exact pins: the same versions CI resolves are the ones you get locally, so a
+# green CI run is evidence about your machine too. Regenerate deliberately with
+# `pip install -U <pkg>` followed by `pip freeze`, not by drifting.
+#
+# These pins set the floor on Python: numpy 2.5 requires >=3.12 and pandas 3.0
+# requires >=3.11, so the project targets 3.12+.
+
+streamlit==1.58.0
+pandas==3.0.3
+numpy==2.5.0
+groq==1.5.0
+openpyxl==3.1.5
+pypdf==6.14.2
