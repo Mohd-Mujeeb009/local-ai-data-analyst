@@ -17,9 +17,24 @@ from backend.rag.retriever import (
     tokenize,
 )
 
+
+def _importable(name):
+    """Whether a module can be imported, tolerating hooks that raise."""
+    from importlib.util import find_spec
+
+    try:
+        return find_spec(name) is not None
+    except (ImportError, ValueError):
+        return False
+
+
 needs_stack = pytest.mark.skipif(
     not rag.available(),
     reason="optional retrieval stack not installed (pip install -r requirements-rag.txt)",
+)
+
+needs_bm25 = pytest.mark.skipif(
+    not _importable("rank_bm25"), reason="rank_bm25 not installed"
 )
 
 REPORT = """QUARTERLY REPORT Q4 2025
@@ -137,6 +152,7 @@ class TestLexicalSearch:
             "revenue", "fell", "12", "sharply"
         ]
 
+    @needs_bm25
     def test_finds_exact_rare_token(self):
         """
         BM25 exists in the pipeline precisely for literals that embeddings blur.
@@ -188,12 +204,11 @@ class TestCitations:
 
 class TestAvailability:
     def test_available_matches_importability(self):
-        from importlib.util import find_spec
-
         expected = all(
-            find_spec(m) for m in ("chromadb", "rank_bm25", "sentence_transformers")
+            _importable(m)
+            for m in ("chromadb", "rank_bm25", "sentence_transformers")
         )
-        assert rag.available() is bool(expected)
+        assert rag.available() is expected
 
 
 @pytest.fixture(scope="module")

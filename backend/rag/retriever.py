@@ -64,6 +64,9 @@ def bm25_search(chunks, question, top_k):
     Raises:
         RetrievalUnavailable: If rank_bm25 is not installed.
     """
+    if not chunks:
+        return []  # nothing to score; no need to require the library
+
     try:
         from rank_bm25 import BM25Okapi
     except ImportError as exc:
@@ -71,9 +74,6 @@ def bm25_search(chunks, question, top_k):
             "PDF retrieval needs the optional RAG dependencies. "
             "Install them with: pip install -r requirements-rag.txt"
         ) from exc
-
-    if not chunks:
-        return []
 
     # Score against the heading-prefixed form, so a section title is matchable
     # even when the body never repeats it.

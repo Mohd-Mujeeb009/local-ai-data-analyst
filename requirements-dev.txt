@@ -4,3 +4,7 @@ pytest==9.1.1
 pytest-cov==7.1.0
 ruff==0.16.6
 PyYAML==6.0.3
+
+# Pure Python and tiny, so the lexical retrieval tests run in CI.
+# The model-backed halves stay in requirements-rag.txt.
+rank-bm25==0.2.2
